@@ -1,28 +1,32 @@
-|SumSub
+|SumSub6bit
 S[0] <= FullAdder:inst3.S
 S[1] <= FullAdder:inst2.S
 S[2] <= FullAdder:inst1.S
 S[3] <= FullAdder:inst.S
-PLUSMINUS => Selector:inst7.SEL
-PLUSMINUS => Selector:inst8.SEL
-PLUSMINUS => Selector:inst9.SEL
-PLUSMINUS => Selector:inst10.SEL
-PLUSMINUS => FullAdder:inst3.Cin
+S[4] <= FullAdder:inst22.S
+S[5] <= FullAdder:inst23.S
+B[0] => Selector:inst17.N
 B[0] => inst14.IN0
-B[0] => Selector:inst10.L
+B[1] => Selector:inst16.N
 B[1] => inst13.IN0
-B[1] => Selector:inst9.L
+B[2] => Selector:inst15.N
 B[2] => inst12.IN0
-B[2] => Selector:inst8.L
+B[3] => Selector:inst10.N
 B[3] => inst11.IN0
-B[3] => Selector:inst7.L
+PLUSMINUS => Selector:inst10.SEL
+PLUSMINUS => Selector:inst15.SEL
+PLUSMINUS => Selector:inst16.SEL
+PLUSMINUS => Selector:inst17.SEL
+PLUSMINUS => FullAdder:inst3.Cin
+PLUSMINUS => Selector:inst18.SEL
+PLUSMINUS => Selector:inst19.SEL
 A[0] => FullAdder:inst3.A
 A[1] => FullAdder:inst2.A
 A[2] => FullAdder:inst1.A
 A[3] => FullAdder:inst.A
 
 
-|SumSub|FullAdder:inst
+|SumSub6bit|FullAdder:inst
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -35,14 +39,15 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SumSub|Selector:inst7
-OUT <= inst.DB_MAX_OUTPUT_PORT_TYPE
-R => inst.IN0
-L => inst.IN1
-SEL => ~NO_FANOUT~
+|SumSub6bit|Selector:inst10
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+SEL => inst1.IN1
+SEL => inst3.IN0
+N => inst.IN0
 
 
-|SumSub|FullAdder:inst1
+|SumSub6bit|FullAdder:inst1
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -55,14 +60,15 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SumSub|Selector:inst8
-OUT <= inst.DB_MAX_OUTPUT_PORT_TYPE
-R => inst.IN0
-L => inst.IN1
-SEL => ~NO_FANOUT~
+|SumSub6bit|Selector:inst15
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+SEL => inst1.IN1
+SEL => inst3.IN0
+N => inst.IN0
 
 
-|SumSub|FullAdder:inst2
+|SumSub6bit|FullAdder:inst2
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -75,14 +81,15 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SumSub|Selector:inst9
-OUT <= inst.DB_MAX_OUTPUT_PORT_TYPE
-R => inst.IN0
-L => inst.IN1
-SEL => ~NO_FANOUT~
+|SumSub6bit|Selector:inst16
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+SEL => inst1.IN1
+SEL => inst3.IN0
+N => inst.IN0
 
 
-|SumSub|FullAdder:inst3
+|SumSub6bit|FullAdder:inst3
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -95,10 +102,53 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SumSub|Selector:inst10
-OUT <= inst.DB_MAX_OUTPUT_PORT_TYPE
-R => inst.IN0
-L => inst.IN1
-SEL => ~NO_FANOUT~
+|SumSub6bit|Selector:inst17
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+SEL => inst1.IN1
+SEL => inst3.IN0
+N => inst.IN0
+
+
+|SumSub6bit|FullAdder:inst22
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumSub6bit|Selector:inst18
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+SEL => inst1.IN1
+SEL => inst3.IN0
+N => inst.IN0
+
+
+|SumSub6bit|FullAdder:inst23
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumSub6bit|Selector:inst19
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+SEL => inst1.IN1
+SEL => inst3.IN0
+N => inst.IN0
 
 

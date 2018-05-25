@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ula
-Thu May 24 12:15:08 2018
+Thu May 24 21:42:09 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,16 +41,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 24 12:15:08 2018           ;
+; Analysis & Synthesis Status        ; Successful - Thu May 24 21:42:09 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ula                                             ;
-; Top-level Entity Name              ; SumSub                                          ;
+; Top-level Entity Name              ; SumSub6bit                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 5                                               ;
-;     Total combinational functions  ; 5                                               ;
+; Total logic elements               ; 11                                              ;
+;     Total combinational functions  ; 11                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 13                                              ;
+; Total pins                         ; 15                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; SumSub             ; ula                ;
+; Top-level entity name                                                      ; SumSub6bit         ; ula                ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -154,15 +154,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                         ; Library ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------+---------+
-; FullAdder.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/santosdanilo/Documents/CD/ula/FullAdder.bdf ;         ;
-; Selector.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/santosdanilo/Documents/CD/ula/Selector.bdf  ;         ;
-; SumSub.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/santosdanilo/Documents/CD/ula/SumSub.bdf    ;         ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
+; FullAdder.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/FullAdder.bdf  ;         ;
+; Selector.bdf                     ; yes             ; User Block Diagram/Schematic File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/Selector.bdf   ;         ;
+; SumSub6bit.bdf                   ; yes             ; User Block Diagram/Schematic File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/SumSub6bit.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -170,42 +170,45 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 5         ;
+; Estimated Total logic elements              ; 11        ;
 ;                                             ;           ;
-; Total combinational functions               ; 5         ;
+; Total combinational functions               ; 11        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 2         ;
-;     -- 3 input functions                    ; 1         ;
+;     -- 4 input functions                    ; 7         ;
+;     -- 3 input functions                    ; 2         ;
 ;     -- <=2 input functions                  ; 2         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 5         ;
+;     -- normal mode                          ; 11        ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
 ; Total registers                             ; 0         ;
 ;     -- Dedicated logic registers            ; 0         ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 13        ;
+; I/O pins                                    ; 15        ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; PLUSMINUS ;
-; Maximum fan-out                             ; 4         ;
-; Total fan-out                               ; 19        ;
-; Average fan-out                             ; 1.06      ;
+; Maximum fan-out                             ; 8         ;
+; Total fan-out                               ; 44        ;
+; Average fan-out                             ; 1.69      ;
 +---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                             ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
-; |SumSub                    ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |SumSub                 ; work         ;
-;    |FullAdder:inst1|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SumSub|FullAdder:inst1 ; work         ;
-;    |FullAdder:inst2|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SumSub|FullAdder:inst2 ; work         ;
-;    |FullAdder:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SumSub|FullAdder:inst3 ; work         ;
-;    |FullAdder:inst|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SumSub|FullAdder:inst  ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                  ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
+; |SumSub6bit                ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |SumSub6bit                  ; work         ;
+;    |FullAdder:inst1|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SumSub6bit|FullAdder:inst1  ; work         ;
+;    |FullAdder:inst22|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SumSub6bit|FullAdder:inst22 ; work         ;
+;    |FullAdder:inst23|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SumSub6bit|FullAdder:inst23 ; work         ;
+;    |FullAdder:inst2|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SumSub6bit|FullAdder:inst2  ; work         ;
+;    |FullAdder:inst3|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SumSub6bit|FullAdder:inst3  ; work         ;
+;    |FullAdder:inst|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SumSub6bit|FullAdder:inst   ; work         ;
+;    |Selector:inst16|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SumSub6bit|Selector:inst16  ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -239,38 +242,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 24 12:15:06 2018
+    Info: Processing started: Thu May 24 21:42:08 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ula -c ula
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file fulladder.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file FullAdder.bdf
     Info (12023): Found entity 1: FullAdder
-Info (12021): Found 1 design units, including 1 entities, in source file mult.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file Mult.bdf
     Info (12023): Found entity 1: Mult
-Info (12021): Found 1 design units, including 1 entities, in source file selector.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file Selector.bdf
     Info (12023): Found entity 1: Selector
-Info (12021): Found 1 design units, including 1 entities, in source file sumsub.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file SumSub.bdf
     Info (12023): Found entity 1: SumSub
-Info (12127): Elaborating entity "SumSub" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file SumSub6bit.bdf
+    Info (12023): Found entity 1: SumSub6bit
+Info (12021): Found 1 design units, including 1 entities, in source file ula_full.bdf
+    Info (12023): Found entity 1: ula_full
+Info (12127): Elaborating entity "SumSub6bit" for the top level hierarchy
 Warning (275008): Primitive "GND" of instance "inst4" not used
 Info (12128): Elaborating entity "FullAdder" for hierarchy "FullAdder:inst"
-Info (12128): Elaborating entity "Selector" for hierarchy "Selector:inst7"
-Warning (275009): Pin "SEL" not connected
-Warning (275008): Primitive "GND" of instance "inst2" not used
+Info (12128): Elaborating entity "Selector" for hierarchy "Selector:inst10"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "B[3]"
-    Warning (15610): No output dependent on input pin "B[2]"
-    Warning (15610): No output dependent on input pin "B[1]"
-    Warning (15610): No output dependent on input pin "B[0]"
-Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 5 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 531 megabytes
-    Info: Processing ended: Thu May 24 12:15:08 2018
-    Info: Elapsed time: 00:00:02
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 11 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 604 megabytes
+    Info: Processing ended: Thu May 24 21:42:09 2018
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

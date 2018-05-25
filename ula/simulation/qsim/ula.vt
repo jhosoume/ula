@@ -18,15 +18,15 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/24/2018 12:24:25"
+// Generated on "05/24/2018 20:01:31"
                                                                         
-// Verilog Self-Checking Test Bench (with test vectors) for design :    SumSub
+// Verilog Self-Checking Test Bench (with test vectors) for design :    SumSub6bit
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module SumSub_vlg_sample_tst(
+module SumSub6bit_vlg_sample_tst(
 	A,
 	B,
 	PLUSMINUS,
@@ -58,20 +58,20 @@ end
 assign sampler_tx = sample;
 endmodule
 
-module SumSub_vlg_check_tst (
+module SumSub6bit_vlg_check_tst (
 	S,
 	sampler_rx
 );
-input [3:0] S;
+input [5:0] S;
 input sampler_rx;
 
-reg [3:0] S_expected;
+reg [5:0] S_expected;
 
-reg [3:0] S_prev;
+reg [5:0] S_prev;
 
-reg [3:0] S_expected_prev;
+reg [5:0] S_expected_prev;
 
-reg [3:0] last_S_exp;
+reg [5:0] last_S_exp;
 
 reg trigger;
 
@@ -104,25 +104,41 @@ begin
 end
 
 
-// expected S[ 3 ]
+
+// expected S[5]
 initial
 begin
-	S_expected[3] = 1'bX;
+	S_expected[5] = 1'b0;
 end 
-// expected S[ 2 ]
+
+// expected S[4]
 initial
 begin
-	S_expected[2] = 1'bX;
+	S_expected[4] = 1'b0;
 end 
-// expected S[ 1 ]
+
+// expected S[3]
 initial
 begin
-	S_expected[1] = 1'bX;
+	S_expected[3] = 1'b0;
 end 
-// expected S[ 0 ]
+
+// expected S[2]
 initial
 begin
-	S_expected[0] = 1'bX;
+	S_expected[2] = 1'b0;
+end 
+
+// expected S[1]
+initial
+begin
+	S_expected[1] = 1'b0;
+end 
+
+// expected S[0]
+initial
+begin
+	S_expected[0] = 1'b0;
 end 
 // generate trigger
 always @(S_expected or S)
@@ -190,6 +206,32 @@ begin
 		on_first_change[1] = 1'b0;
 		last_S_exp[3] = S_expected_prev[3];
 	end
+	if (
+		( S_expected_prev[4] !== 1'bx ) && ( S_prev[4] !== S_expected_prev[4] )
+		&& ((S_expected_prev[4] !== last_S_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_expected_prev);
+		$display ("     Real value = %b", S_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_S_exp[4] = S_expected_prev[4];
+	end
+	if (
+		( S_expected_prev[5] !== 1'bx ) && ( S_prev[5] !== S_expected_prev[5] )
+		&& ((S_expected_prev[5] !== last_S_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_expected_prev);
+		$display ("     Real value = %b", S_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_S_exp[5] = S_expected_prev[5];
+	end
 
 	trigger <= ~trigger;
 end
@@ -197,28 +239,28 @@ initial
 
 begin 
 $timeformat(-12,3," ps",6);
-#320000;
+#5120000;
 if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
 	$display ("Simulation passed !");
-$finish;
+$stop;
 end 
 endmodule
 
-module SumSub_vlg_vec_tst();
+module SumSub6bit_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg [3:0] A;
 reg [3:0] B;
 reg PLUSMINUS;
 // wires                                               
-wire [3:0] S;
+wire [5:0] S;
 
 wire sampler;                             
 
 // assign statements (if any)                          
-SumSub i1 (
+SumSub6bit i1 (
 // port map - connection between master ports and signals/registers   
 	.A(A),
 	.B(B),
@@ -257,47 +299,47 @@ end
 always
 begin
 	B[3] = 1'b0;
-	B[3] = #160000 1'b1;
-	#160000;
+	B[3] = #1280000 1'b1;
+	#1280000;
 end 
 // B[ 2 ]
 always
 begin
 	B[2] = 1'b0;
-	B[2] = #80000 1'b1;
-	#80000;
+	B[2] = #640000 1'b1;
+	#640000;
 end 
 // B[ 1 ]
 always
 begin
 	B[1] = 1'b0;
-	B[1] = #40000 1'b1;
-	#40000;
+	B[1] = #320000 1'b1;
+	#320000;
 end 
 // B[ 0 ]
 always
 begin
 	B[0] = 1'b0;
-	B[0] = #20000 1'b1;
-	#20000;
+	B[0] = #160000 1'b1;
+	#160000;
 end 
 
 // PLUSMINUS
 always
 begin
 	PLUSMINUS = 1'b0;
-	PLUSMINUS = #160000 1'b1;
-	#160000;
+	PLUSMINUS = #2560000 1'b1;
+	#2560000;
 end 
 
-SumSub_vlg_sample_tst tb_sample (
+SumSub6bit_vlg_sample_tst tb_sample (
 	.A(A),
 	.B(B),
 	.PLUSMINUS(PLUSMINUS),
 	.sampler_tx(sampler)
 );
 
-SumSub_vlg_check_tst tb_out(
+SumSub6bit_vlg_check_tst tb_out(
 	.S(S),
 	.sampler_rx(sampler)
 );
