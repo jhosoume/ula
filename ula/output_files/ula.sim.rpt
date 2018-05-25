@@ -1,5 +1,5 @@
 Simulator report for ula
-Thu May 24 23:58:48 2018
+Fri May 25 10:11:23 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -47,39 +47,39 @@ applicable agreement for further details.
 ; Simulation End Time         ; 10.24 us     ;
 ; Simulation Netlist Size     ; 153 nodes    ;
 ; Simulation Coverage         ;      99.35 % ;
-; Total Number of Transitions ; 47269        ;
+; Total Number of Transitions ; 58207        ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 +-----------------------------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                                                                                 ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+---------------+
-; Option                                                                                     ; Setting                                                               ; Default Value ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+---------------+
-; Simulation mode                                                                            ; Functional                                                            ; Timing        ;
-; Start time                                                                                 ; 0 ns                                                                  ; 0 ns          ;
-; Simulation results format                                                                  ; VWF                                                                   ;               ;
-; Vector input source                                                                        ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/WaveformULA.vwf ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On                                                                    ; On            ;
-; Check outputs                                                                              ; Off                                                                   ; Off           ;
-; Report simulation coverage                                                                 ; On                                                                    ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On                                                                    ; On            ;
-; Display missing 1-value coverage report                                                    ; On                                                                    ; On            ;
-; Display missing 0-value coverage report                                                    ; On                                                                    ; On            ;
-; Detect setup and hold time violations                                                      ; Off                                                                   ; Off           ;
-; Detect glitches                                                                            ; Off                                                                   ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off                                                                   ; Off           ;
-; Generate Signal Activity File                                                              ; Off                                                                   ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                   ; Off           ;
-; Group bus channels in simulation results                                                   ; Off                                                                   ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                    ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                            ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                   ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                   ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                  ; Auto          ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+---------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                     ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                   ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                      ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                       ;               ;
+; Vector input source                                                                        ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/WaveformULAleds.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                        ; On            ;
+; Check outputs                                                                              ; Off                                                                       ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                        ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                        ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                        ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                        ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                       ; Off           ;
+; Detect glitches                                                                            ; Off                                                                       ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                       ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                       ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                       ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                       ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                        ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                       ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                       ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                      ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------------+
 
 
 +----------------------+
@@ -110,23 +110,23 @@ The following table displays output ports that toggle between 1 and 0 during sim
 +--------------------------------------------------+--------------------------------------------------+------------------+
 ; Node Name                                        ; Output Port Name                                 ; Output Port Type ;
 +--------------------------------------------------+--------------------------------------------------+------------------+
-; |ula_full|R[7]                                   ; |ula_full|R[7]                                   ; pin_out          ;
-; |ula_full|R[6]                                   ; |ula_full|R[6]                                   ; pin_out          ;
-; |ula_full|R[5]                                   ; |ula_full|R[5]                                   ; pin_out          ;
-; |ula_full|R[4]                                   ; |ula_full|R[4]                                   ; pin_out          ;
-; |ula_full|R[3]                                   ; |ula_full|R[3]                                   ; pin_out          ;
-; |ula_full|R[2]                                   ; |ula_full|R[2]                                   ; pin_out          ;
-; |ula_full|R[1]                                   ; |ula_full|R[1]                                   ; pin_out          ;
-; |ula_full|R[0]                                   ; |ula_full|R[0]                                   ; pin_out          ;
-; |ula_full|C[0]                                   ; |ula_full|C[0]                                   ; out              ;
-; |ula_full|A[3]                                   ; |ula_full|A[3]                                   ; out              ;
-; |ula_full|A[2]                                   ; |ula_full|A[2]                                   ; out              ;
-; |ula_full|A[1]                                   ; |ula_full|A[1]                                   ; out              ;
-; |ula_full|A[0]                                   ; |ula_full|A[0]                                   ; out              ;
-; |ula_full|B[3]                                   ; |ula_full|B[3]                                   ; out              ;
-; |ula_full|B[2]                                   ; |ula_full|B[2]                                   ; out              ;
-; |ula_full|B[1]                                   ; |ula_full|B[1]                                   ; out              ;
-; |ula_full|B[0]                                   ; |ula_full|B[0]                                   ; out              ;
+; |ula_full|LEDG[7]                                ; |ula_full|LEDG[7]                                ; pin_out          ;
+; |ula_full|LEDG[6]                                ; |ula_full|LEDG[6]                                ; pin_out          ;
+; |ula_full|LEDG[5]                                ; |ula_full|LEDG[5]                                ; pin_out          ;
+; |ula_full|LEDG[4]                                ; |ula_full|LEDG[4]                                ; pin_out          ;
+; |ula_full|LEDG[3]                                ; |ula_full|LEDG[3]                                ; pin_out          ;
+; |ula_full|LEDG[2]                                ; |ula_full|LEDG[2]                                ; pin_out          ;
+; |ula_full|LEDG[1]                                ; |ula_full|LEDG[1]                                ; pin_out          ;
+; |ula_full|LEDG[0]                                ; |ula_full|LEDG[0]                                ; pin_out          ;
+; |ula_full|SW[9]                                  ; |ula_full|SW[9]                                  ; out              ;
+; |ula_full|SW[8]                                  ; |ula_full|SW[8]                                  ; out              ;
+; |ula_full|SW[7]                                  ; |ula_full|SW[7]                                  ; out              ;
+; |ula_full|SW[6]                                  ; |ula_full|SW[6]                                  ; out              ;
+; |ula_full|SW[5]                                  ; |ula_full|SW[5]                                  ; out              ;
+; |ula_full|SW[4]                                  ; |ula_full|SW[4]                                  ; out              ;
+; |ula_full|SW[3]                                  ; |ula_full|SW[3]                                  ; out              ;
+; |ula_full|SW[2]                                  ; |ula_full|SW[2]                                  ; out              ;
+; |ula_full|SW[0]                                  ; |ula_full|SW[0]                                  ; out              ;
 ; |ula_full|Mult:inst6|inst19                      ; |ula_full|Mult:inst6|inst19                      ; out0             ;
 ; |ula_full|Mult:inst6|inst17                      ; |ula_full|Mult:inst6|inst17                      ; out0             ;
 ; |ula_full|Mult:inst6|inst32                      ; |ula_full|Mult:inst6|inst32                      ; out0             ;
@@ -274,13 +274,13 @@ The following table displays output ports that do not toggle to 1 during simulat
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+------------------------------------------------------+
-; Missing 0-Value Coverage                             ;
-+----------------+------------------+------------------+
-; Node Name      ; Output Port Name ; Output Port Type ;
-+----------------+------------------+------------------+
-; |ula_full|C[1] ; |ula_full|C[1]   ; out              ;
-+----------------+------------------+------------------+
++-------------------------------------------------------+
+; Missing 0-Value Coverage                              ;
++-----------------+------------------+------------------+
+; Node Name       ; Output Port Name ; Output Port Type ;
++-----------------+------------------+------------------+
+; |ula_full|SW[1] ; |ula_full|SW[1]  ; out              ;
++-----------------+------------------+------------------+
 
 
 +---------------------+
@@ -296,19 +296,19 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 24 23:58:48 2018
+    Info: Processing started: Fri May 25 10:11:22 2018
 Info: Command: quartus_sim --simulation_results_format=VWF ula -c ula
-Info (324025): Using vector source file "/home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/WaveformULA.vwf"
+Info (324025): Using vector source file "/home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/WaveformULAleds.vwf"
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
 Info (328053): Simulation coverage is      99.35 %
-Info (328052): Number of transitions in simulation is 47269
+Info (328052): Number of transitions in simulation is 58207
 Info (324045): Vector file ula.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 645 megabytes
-    Info: Processing ended: Thu May 24 23:58:48 2018
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Fri May 25 10:11:23 2018
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

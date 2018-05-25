@@ -21,9 +21,9 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 464 576 480 744)
+	(rect 96 608 112 787)
 	(text "INPUT" (rect 0 14 9 43)(font "Arial" (font_size 6))(vertical))
-	(text "C[0]" (rect 0 142 10 163)(font "Arial" )(vertical))
+	(text "SW[5..2]" (rect 0 132 10 173)(font "Arial" )(vertical))
 	(pt 8 0)
 	(drawing
 		(line (pt 12 84)(pt 12 59))
@@ -38,9 +38,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 896 544 912 712)
+	(rect 464 576 480 753)
 	(text "INPUT" (rect 0 14 9 43)(font "Arial" (font_size 6))(vertical))
-	(text "C[1]" (rect 0 142 10 163)(font "Arial" )(vertical))
+	(text "SW[0]" (rect 0 142 10 171)(font "Arial" )(vertical))
 	(pt 8 0)
 	(drawing
 		(line (pt 12 84)(pt 12 59))
@@ -55,9 +55,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 96 608 112 776)
+	(rect 896 544 912 721)
 	(text "INPUT" (rect 0 14 9 43)(font "Arial" (font_size 6))(vertical))
-	(text "A[3..0]" (rect 0 132 10 163)(font "Arial" )(vertical))
+	(text "SW[1]" (rect 1 141 11 170)(font "Arial" )(vertical))
 	(pt 8 0)
 	(drawing
 		(line (pt 12 84)(pt 12 59))
@@ -72,9 +72,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 128 608 144 776)
+	(rect 128 608 144 787)
 	(text "INPUT" (rect 0 14 9 43)(font "Arial" (font_size 6))(vertical))
-	(text "B[3..0]" (rect 0 132 10 163)(font "Arial" )(vertical))
+	(text "SW[9..6]" (rect 0 132 10 173)(font "Arial" )(vertical))
 	(pt 8 0)
 	(drawing
 		(line (pt 12 84)(pt 12 59))
@@ -91,7 +91,7 @@ applicable agreement for further details.
 	(output)
 	(rect 1048 320 1224 336)
 	(text "OUTPUT" (rect 1 0 41 9)(font "Arial" (font_size 6)))
-	(text "R[7..0]" (rect 90 0 121 10)(font "Arial" ))
+	(text "LEDG[7..0]" (rect 90 0 143 10)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
