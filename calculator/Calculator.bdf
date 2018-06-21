@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "graphic" (version "1.4"))
 (symbol
-	(rect 592 176 768 304)
+	(rect 600 192 776 320)
 	(text "ula_full" (rect 5 0 45 14)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 112 25 124)(font "Arial" ))
 	(port
@@ -61,4 +61,83 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 160 112))
 	)
+)
+(symbol
+	(rect 456 168 584 256)
+	(text "dff3" (rect 13 66 36 80)(font "Arial" (font_size 8)))
+	(text "inst2" (rect 32 20 55 32)(font "Arial" ))
+	(port
+		(pt 0 56)
+		(input)
+		(text "D[3..0]" (rect 0 8 36 22)(font "Arial" (font_size 8)))
+		(text "D[3..0]" (rect 21 47 57 61)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 16 56)(line_width 3))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "CLK" (rect 0 8 23 22)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 31 44 45)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 16 40))
+	)
+	(port
+		(pt 128 56)
+		(output)
+		(text "Q[3..0]" (rect 0 8 37 22)(font "Arial" (font_size 8)))
+		(text "Q[3..0]" (rect 62 47 99 61)(font "Arial" (font_size 8)))
+		(line (pt 128 56)(pt 112 56)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 112 64))
+	)
+	(flipx)
+)
+(symbol
+	(rect 456 256 584 344)
+	(text "dff3" (rect 13 8 36 22)(font "Arial" (font_size 8)))
+	(text "inst3" (rect 32 56 55 68)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "D[3..0]" (rect 0 8 36 22)(font "Arial" (font_size 8)))
+		(text "D[3..0]" (rect 21 27 57 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "CLK" (rect 0 8 23 22)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 43 44 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 128 32)
+		(output)
+		(text "Q[3..0]" (rect 0 8 37 22)(font "Arial" (font_size 8)))
+		(text "Q[3..0]" (rect 62 27 99 41)(font "Arial" (font_size 8)))
+		(line (pt 128 32)(pt 112 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 24 112 72))
+	)
+)
+(connector
+	(pt 584 288)
+	(pt 584 280)
+	(bus)
+)
+(connector
+	(pt 584 280)
+	(pt 600 280)
+	(bus)
+)
+(connector
+	(pt 584 224)
+	(pt 584 256)
+	(bus)
+)
+(connector
+	(pt 584 256)
+	(pt 600 256)
+	(bus)
 )
