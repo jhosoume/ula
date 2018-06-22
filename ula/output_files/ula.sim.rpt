@@ -1,5 +1,5 @@
 Simulator report for ula
-Fri May 25 10:34:53 2018
+Thu Jun 21 18:28:02 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,10 +44,10 @@ applicable agreement for further details.
 ; Type                        ; Value        ;
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
-; Simulation End Time         ; 10.24 us     ;
-; Simulation Netlist Size     ; 153 nodes    ;
-; Simulation Coverage         ;      99.35 % ;
-; Total Number of Transitions ; 47743        ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 14 nodes     ;
+; Simulation Coverage         ;     100.00 % ;
+; Total Number of Transitions ; 104          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 +-----------------------------+--------------+
@@ -61,7 +61,7 @@ applicable agreement for further details.
 ; Simulation mode                                                                            ; Functional                                                            ; Timing        ;
 ; Start time                                                                                 ; 0 ns                                                                  ; 0 ns          ;
 ; Simulation results format                                                                  ; VWF                                                                   ;               ;
-; Vector input source                                                                        ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/WaveformULA.vwf ;               ;
+; Vector input source                                                                        ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/WaveformReg.vwf ;               ;
 ; Add pins automatically to simulation output waveforms                                      ; On                                                                    ; On            ;
 ; Check outputs                                                                              ; Off                                                                   ; Off           ;
 ; Report simulation coverage                                                                 ; On                                                                    ; On            ;
@@ -94,175 +94,37 @@ Please use Quartus II 64-Bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      99.35 % ;
-; Total nodes checked                                 ; 153          ;
-; Total output ports checked                          ; 153          ;
-; Total output ports with complete 1/0-value coverage ; 152          ;
+; Total coverage as a percentage                      ;     100.00 % ;
+; Total nodes checked                                 ; 14           ;
+; Total output ports checked                          ; 14           ;
+; Total output ports with complete 1/0-value coverage ; 14           ;
 ; Total output ports with no 1/0-value coverage       ; 0            ;
 ; Total output ports with no 1-value coverage         ; 0            ;
-; Total output ports with no 0-value coverage         ; 1            ;
+; Total output ports with no 0-value coverage         ; 0            ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+------------------------------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                                            ;
-+--------------------------------------------------+--------------------------------------------------+------------------+
-; Node Name                                        ; Output Port Name                                 ; Output Port Type ;
-+--------------------------------------------------+--------------------------------------------------+------------------+
-; |ula_full|LEDG[7]                                ; |ula_full|LEDG[7]                                ; pin_out          ;
-; |ula_full|LEDG[6]                                ; |ula_full|LEDG[6]                                ; pin_out          ;
-; |ula_full|LEDG[5]                                ; |ula_full|LEDG[5]                                ; pin_out          ;
-; |ula_full|LEDG[4]                                ; |ula_full|LEDG[4]                                ; pin_out          ;
-; |ula_full|LEDG[3]                                ; |ula_full|LEDG[3]                                ; pin_out          ;
-; |ula_full|LEDG[2]                                ; |ula_full|LEDG[2]                                ; pin_out          ;
-; |ula_full|LEDG[1]                                ; |ula_full|LEDG[1]                                ; pin_out          ;
-; |ula_full|LEDG[0]                                ; |ula_full|LEDG[0]                                ; pin_out          ;
-; |ula_full|SW[9]                                  ; |ula_full|SW[9]                                  ; out              ;
-; |ula_full|SW[8]                                  ; |ula_full|SW[8]                                  ; out              ;
-; |ula_full|SW[7]                                  ; |ula_full|SW[7]                                  ; out              ;
-; |ula_full|SW[6]                                  ; |ula_full|SW[6]                                  ; out              ;
-; |ula_full|SW[5]                                  ; |ula_full|SW[5]                                  ; out              ;
-; |ula_full|SW[4]                                  ; |ula_full|SW[4]                                  ; out              ;
-; |ula_full|SW[3]                                  ; |ula_full|SW[3]                                  ; out              ;
-; |ula_full|SW[2]                                  ; |ula_full|SW[2]                                  ; out              ;
-; |ula_full|SW[0]                                  ; |ula_full|SW[0]                                  ; out              ;
-; |ula_full|Mult:inst6|inst19                      ; |ula_full|Mult:inst6|inst19                      ; out0             ;
-; |ula_full|Mult:inst6|inst17                      ; |ula_full|Mult:inst6|inst17                      ; out0             ;
-; |ula_full|Mult:inst6|inst32                      ; |ula_full|Mult:inst6|inst32                      ; out0             ;
-; |ula_full|Mult:inst6|inst31                      ; |ula_full|Mult:inst6|inst31                      ; out0             ;
-; |ula_full|Mult:inst6|inst30                      ; |ula_full|Mult:inst6|inst30                      ; out0             ;
-; |ula_full|Mult:inst6|inst29                      ; |ula_full|Mult:inst6|inst29                      ; out0             ;
-; |ula_full|Mult:inst6|inst28                      ; |ula_full|Mult:inst6|inst28                      ; out0             ;
-; |ula_full|Mult:inst6|inst26                      ; |ula_full|Mult:inst6|inst26                      ; out0             ;
-; |ula_full|Mult:inst6|inst27                      ; |ula_full|Mult:inst6|inst27                      ; out0             ;
-; |ula_full|Mult:inst6|inst18                      ; |ula_full|Mult:inst6|inst18                      ; out0             ;
-; |ula_full|Mult:inst6|inst20                      ; |ula_full|Mult:inst6|inst20                      ; out0             ;
-; |ula_full|Mult:inst6|inst22                      ; |ula_full|Mult:inst6|inst22                      ; out0             ;
-; |ula_full|Mult:inst6|inst21                      ; |ula_full|Mult:inst6|inst21                      ; out0             ;
-; |ula_full|Mult:inst6|inst23                      ; |ula_full|Mult:inst6|inst23                      ; out0             ;
-; |ula_full|Mult:inst6|inst24                      ; |ula_full|Mult:inst6|inst24                      ; out0             ;
-; |ula_full|Mult:inst6|inst25                      ; |ula_full|Mult:inst6|inst25                      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst11|inst       ; |ula_full|Mult:inst6|FullAdder:inst11|inst       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst11|inst4      ; |ula_full|Mult:inst6|FullAdder:inst11|inst4      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst12|inst1      ; |ula_full|Mult:inst6|FullAdder:inst12|inst1      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst12|inst       ; |ula_full|Mult:inst6|FullAdder:inst12|inst       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst12|inst5      ; |ula_full|Mult:inst6|FullAdder:inst12|inst5      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst12|inst4      ; |ula_full|Mult:inst6|FullAdder:inst12|inst4      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst12|inst3      ; |ula_full|Mult:inst6|FullAdder:inst12|inst3      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst12|inst2      ; |ula_full|Mult:inst6|FullAdder:inst12|inst2      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst13|inst1      ; |ula_full|Mult:inst6|FullAdder:inst13|inst1      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst13|inst       ; |ula_full|Mult:inst6|FullAdder:inst13|inst       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst13|inst5      ; |ula_full|Mult:inst6|FullAdder:inst13|inst5      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst13|inst4      ; |ula_full|Mult:inst6|FullAdder:inst13|inst4      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst13|inst3      ; |ula_full|Mult:inst6|FullAdder:inst13|inst3      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst13|inst2      ; |ula_full|Mult:inst6|FullAdder:inst13|inst2      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst6|inst        ; |ula_full|Mult:inst6|FullAdder:inst6|inst        ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst6|inst4       ; |ula_full|Mult:inst6|FullAdder:inst6|inst4       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst7|inst1       ; |ula_full|Mult:inst6|FullAdder:inst7|inst1       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst7|inst        ; |ula_full|Mult:inst6|FullAdder:inst7|inst        ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst7|inst5       ; |ula_full|Mult:inst6|FullAdder:inst7|inst5       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst7|inst4       ; |ula_full|Mult:inst6|FullAdder:inst7|inst4       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst7|inst3       ; |ula_full|Mult:inst6|FullAdder:inst7|inst3       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst7|inst2       ; |ula_full|Mult:inst6|FullAdder:inst7|inst2       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst8|inst1       ; |ula_full|Mult:inst6|FullAdder:inst8|inst1       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst8|inst        ; |ula_full|Mult:inst6|FullAdder:inst8|inst        ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst8|inst5       ; |ula_full|Mult:inst6|FullAdder:inst8|inst5       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst8|inst4       ; |ula_full|Mult:inst6|FullAdder:inst8|inst4       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst8|inst3       ; |ula_full|Mult:inst6|FullAdder:inst8|inst3       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst8|inst2       ; |ula_full|Mult:inst6|FullAdder:inst8|inst2       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst|inst         ; |ula_full|Mult:inst6|FullAdder:inst|inst         ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst|inst4        ; |ula_full|Mult:inst6|FullAdder:inst|inst4        ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst2|inst1       ; |ula_full|Mult:inst6|FullAdder:inst2|inst1       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst2|inst        ; |ula_full|Mult:inst6|FullAdder:inst2|inst        ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst2|inst5       ; |ula_full|Mult:inst6|FullAdder:inst2|inst5       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst2|inst4       ; |ula_full|Mult:inst6|FullAdder:inst2|inst4       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst2|inst3       ; |ula_full|Mult:inst6|FullAdder:inst2|inst3       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst2|inst2       ; |ula_full|Mult:inst6|FullAdder:inst2|inst2       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst3|inst1       ; |ula_full|Mult:inst6|FullAdder:inst3|inst1       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst3|inst        ; |ula_full|Mult:inst6|FullAdder:inst3|inst        ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst3|inst5       ; |ula_full|Mult:inst6|FullAdder:inst3|inst5       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst3|inst4       ; |ula_full|Mult:inst6|FullAdder:inst3|inst4       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst3|inst3       ; |ula_full|Mult:inst6|FullAdder:inst3|inst3       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst3|inst2       ; |ula_full|Mult:inst6|FullAdder:inst3|inst2       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst4|inst1       ; |ula_full|Mult:inst6|FullAdder:inst4|inst1       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst4|inst3       ; |ula_full|Mult:inst6|FullAdder:inst4|inst3       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst9|inst1       ; |ula_full|Mult:inst6|FullAdder:inst9|inst1       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst9|inst        ; |ula_full|Mult:inst6|FullAdder:inst9|inst        ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst9|inst5       ; |ula_full|Mult:inst6|FullAdder:inst9|inst5       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst9|inst4       ; |ula_full|Mult:inst6|FullAdder:inst9|inst4       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst9|inst3       ; |ula_full|Mult:inst6|FullAdder:inst9|inst3       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst9|inst2       ; |ula_full|Mult:inst6|FullAdder:inst9|inst2       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst14|inst1      ; |ula_full|Mult:inst6|FullAdder:inst14|inst1      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst14|inst       ; |ula_full|Mult:inst6|FullAdder:inst14|inst       ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst14|inst5      ; |ula_full|Mult:inst6|FullAdder:inst14|inst5      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst14|inst4      ; |ula_full|Mult:inst6|FullAdder:inst14|inst4      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst14|inst3      ; |ula_full|Mult:inst6|FullAdder:inst14|inst3      ; out0             ;
-; |ula_full|Mult:inst6|FullAdder:inst14|inst2      ; |ula_full|Mult:inst6|FullAdder:inst14|inst2      ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst23|inst1 ; |ula_full|SumSub6bit:inst|FullAdder:inst23|inst1 ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst22|inst1 ; |ula_full|SumSub6bit:inst|FullAdder:inst22|inst1 ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst22|inst3 ; |ula_full|SumSub6bit:inst|FullAdder:inst22|inst3 ; out0             ;
-; |ula_full|SumSub6bit:inst|Selector:inst17|inst2  ; |ula_full|SumSub6bit:inst|Selector:inst17|inst2  ; out0             ;
-; |ula_full|SumSub6bit:inst|Selector:inst17|inst1  ; |ula_full|SumSub6bit:inst|Selector:inst17|inst1  ; out0             ;
-; |ula_full|SumSub6bit:inst|Selector:inst17|inst   ; |ula_full|SumSub6bit:inst|Selector:inst17|inst   ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst3|inst1  ; |ula_full|SumSub6bit:inst|FullAdder:inst3|inst1  ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst3|inst   ; |ula_full|SumSub6bit:inst|FullAdder:inst3|inst   ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst3|inst5  ; |ula_full|SumSub6bit:inst|FullAdder:inst3|inst5  ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst3|inst4  ; |ula_full|SumSub6bit:inst|FullAdder:inst3|inst4  ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst3|inst3  ; |ula_full|SumSub6bit:inst|FullAdder:inst3|inst3  ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst3|inst2  ; |ula_full|SumSub6bit:inst|FullAdder:inst3|inst2  ; out0             ;
-; |ula_full|SumSub6bit:inst|Selector:inst16|inst2  ; |ula_full|SumSub6bit:inst|Selector:inst16|inst2  ; out0             ;
-; |ula_full|SumSub6bit:inst|Selector:inst16|inst1  ; |ula_full|SumSub6bit:inst|Selector:inst16|inst1  ; out0             ;
-; |ula_full|SumSub6bit:inst|Selector:inst16|inst   ; |ula_full|SumSub6bit:inst|Selector:inst16|inst   ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst2|inst1  ; |ula_full|SumSub6bit:inst|FullAdder:inst2|inst1  ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst2|inst   ; |ula_full|SumSub6bit:inst|FullAdder:inst2|inst   ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst2|inst5  ; |ula_full|SumSub6bit:inst|FullAdder:inst2|inst5  ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst2|inst4  ; |ula_full|SumSub6bit:inst|FullAdder:inst2|inst4  ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst2|inst3  ; |ula_full|SumSub6bit:inst|FullAdder:inst2|inst3  ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst2|inst2  ; |ula_full|SumSub6bit:inst|FullAdder:inst2|inst2  ; out0             ;
-; |ula_full|SumSub6bit:inst|Selector:inst15|inst2  ; |ula_full|SumSub6bit:inst|Selector:inst15|inst2  ; out0             ;
-; |ula_full|SumSub6bit:inst|Selector:inst15|inst1  ; |ula_full|SumSub6bit:inst|Selector:inst15|inst1  ; out0             ;
-; |ula_full|SumSub6bit:inst|Selector:inst15|inst   ; |ula_full|SumSub6bit:inst|Selector:inst15|inst   ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst1|inst1  ; |ula_full|SumSub6bit:inst|FullAdder:inst1|inst1  ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst1|inst   ; |ula_full|SumSub6bit:inst|FullAdder:inst1|inst   ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst1|inst5  ; |ula_full|SumSub6bit:inst|FullAdder:inst1|inst5  ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst1|inst4  ; |ula_full|SumSub6bit:inst|FullAdder:inst1|inst4  ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst1|inst3  ; |ula_full|SumSub6bit:inst|FullAdder:inst1|inst3  ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst1|inst2  ; |ula_full|SumSub6bit:inst|FullAdder:inst1|inst2  ; out0             ;
-; |ula_full|SumSub6bit:inst|Selector:inst10|inst2  ; |ula_full|SumSub6bit:inst|Selector:inst10|inst2  ; out0             ;
-; |ula_full|SumSub6bit:inst|Selector:inst10|inst1  ; |ula_full|SumSub6bit:inst|Selector:inst10|inst1  ; out0             ;
-; |ula_full|SumSub6bit:inst|Selector:inst10|inst   ; |ula_full|SumSub6bit:inst|Selector:inst10|inst   ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst|inst1   ; |ula_full|SumSub6bit:inst|FullAdder:inst|inst1   ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst|inst    ; |ula_full|SumSub6bit:inst|FullAdder:inst|inst    ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst|inst5   ; |ula_full|SumSub6bit:inst|FullAdder:inst|inst5   ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst|inst4   ; |ula_full|SumSub6bit:inst|FullAdder:inst|inst4   ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst|inst3   ; |ula_full|SumSub6bit:inst|FullAdder:inst|inst3   ; out0             ;
-; |ula_full|SumSub6bit:inst|FullAdder:inst|inst2   ; |ula_full|SumSub6bit:inst|FullAdder:inst|inst2   ; out0             ;
-; |ula_full|mux_summult:inst9|inst3[7]             ; |ula_full|mux_summult:inst9|inst3[7]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst3[6]             ; |ula_full|mux_summult:inst9|inst3[6]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst3[5]             ; |ula_full|mux_summult:inst9|inst3[5]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst3[4]             ; |ula_full|mux_summult:inst9|inst3[4]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst3[3]             ; |ula_full|mux_summult:inst9|inst3[3]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst3[2]             ; |ula_full|mux_summult:inst9|inst3[2]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst3[1]             ; |ula_full|mux_summult:inst9|inst3[1]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst3[0]             ; |ula_full|mux_summult:inst9|inst3[0]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst1[7]             ; |ula_full|mux_summult:inst9|inst1[7]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst1[6]             ; |ula_full|mux_summult:inst9|inst1[6]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst1[5]             ; |ula_full|mux_summult:inst9|inst1[5]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst1[4]             ; |ula_full|mux_summult:inst9|inst1[4]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst1[3]             ; |ula_full|mux_summult:inst9|inst1[3]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst1[2]             ; |ula_full|mux_summult:inst9|inst1[2]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst1[1]             ; |ula_full|mux_summult:inst9|inst1[1]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst1[0]             ; |ula_full|mux_summult:inst9|inst1[0]             ; out0             ;
-; |ula_full|mux_summult:inst9|inst[7]              ; |ula_full|mux_summult:inst9|inst[7]              ; out0             ;
-; |ula_full|mux_summult:inst9|inst[6]              ; |ula_full|mux_summult:inst9|inst[6]              ; out0             ;
-; |ula_full|mux_summult:inst9|inst[5]              ; |ula_full|mux_summult:inst9|inst[5]              ; out0             ;
-; |ula_full|mux_summult:inst9|inst[4]              ; |ula_full|mux_summult:inst9|inst[4]              ; out0             ;
-; |ula_full|mux_summult:inst9|inst[3]              ; |ula_full|mux_summult:inst9|inst[3]              ; out0             ;
-; |ula_full|mux_summult:inst9|inst[2]              ; |ula_full|mux_summult:inst9|inst[2]              ; out0             ;
-; |ula_full|mux_summult:inst9|inst[1]              ; |ula_full|mux_summult:inst9|inst[1]              ; out0             ;
-; |ula_full|mux_summult:inst9|inst[0]              ; |ula_full|mux_summult:inst9|inst[0]              ; out0             ;
-+--------------------------------------------------+--------------------------------------------------+------------------+
++-----------------------------------------------------+
+; Complete 1/0-Value Coverage                         ;
++---------------+------------------+------------------+
+; Node Name     ; Output Port Name ; Output Port Type ;
++---------------+------------------+------------------+
+; |reg|r[3]     ; |reg|r[3]        ; pin_out          ;
+; |reg|r[2]     ; |reg|r[2]        ; pin_out          ;
+; |reg|r[1]     ; |reg|r[1]        ; pin_out          ;
+; |reg|r[0]     ; |reg|r[0]        ; pin_out          ;
+; |reg|inst     ; |reg|inst        ; regout           ;
+; |reg|CLEAR    ; |reg|CLEAR       ; out              ;
+; |reg|clock    ; |reg|clock       ; out              ;
+; |reg|input[3] ; |reg|input[3]    ; out              ;
+; |reg|input[2] ; |reg|input[2]    ; out              ;
+; |reg|input[1] ; |reg|input[1]    ; out              ;
+; |reg|input[0] ; |reg|input[0]    ; out              ;
+; |reg|inst5    ; |reg|inst5       ; regout           ;
+; |reg|inst3    ; |reg|inst3       ; regout           ;
+; |reg|inst4    ; |reg|inst4       ; regout           ;
++---------------+------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
@@ -274,13 +136,11 @@ The following table displays output ports that do not toggle to 1 during simulat
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+-------------------------------------------------------+
-; Missing 0-Value Coverage                              ;
-+-----------------+------------------+------------------+
-; Node Name       ; Output Port Name ; Output Port Type ;
-+-----------------+------------------+------------------+
-; |ula_full|SW[1] ; |ula_full|SW[1]  ; out              ;
-+-----------------+------------------+------------------+
++-------------------------------------------------+
+; Missing 0-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
 
 
 +---------------------+
@@ -296,18 +156,20 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri May 25 10:34:53 2018
+    Info: Processing started: Thu Jun 21 18:28:02 2018
 Info: Command: quartus_sim --simulation_results_format=VWF ula -c ula
-Info (324025): Using vector source file "/home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/WaveformULA.vwf"
+Info (324025): Using vector source file "/home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/WaveformReg.vwf"
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning (324036): Found clock-sensitive change during active clock edge at time 330.0 ns on register "|reg|inst5"
+Warning (324036): Found clock-sensitive change during active clock edge at time 330.0 ns on register "|reg|inst3"
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is      99.35 %
-Info (328052): Number of transitions in simulation is 47743
+Info (328053): Simulation coverage is     100.00 %
+Info (328052): Number of transitions in simulation is 104
 Info (324045): Vector file ula.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
-Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 645 megabytes
-    Info: Processing ended: Fri May 25 10:34:53 2018
+    Info: Processing ended: Thu Jun 21 18:28:02 2018
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
