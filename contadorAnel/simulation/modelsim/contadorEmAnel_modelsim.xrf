@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, /home/jhosoume/unb/circuitos_digitais/relatorios/contadorAnel/contadorEmAnel.bdf
+source_file = 1, /home/jhosoume/unb/circuitos_digitais/relatorios/contadorAnel/Waveform.vwf
+source_file = 1, /home/jhosoume/unb/circuitos_digitais/relatorios/contadorAnel/db/contadorEmAnel.cbx.xml
+design_name = contadorEmAnel
+instance = comp, \Clock~I , Clock, contadorEmAnel, 1
+instance = comp, \Clock~clkctrl , Clock~clkctrl, contadorEmAnel, 1
+instance = comp, \inst1~0 , inst1~0, contadorEmAnel, 1
+instance = comp, \inst2~feeder , inst2~feeder, contadorEmAnel, 1
+instance = comp, \inst3~feeder , inst3~feeder, contadorEmAnel, 1
+instance = comp, \inst~0 , inst~0, contadorEmAnel, 1
+instance = comp, \control~I , control, contadorEmAnel, 1
+instance = comp, \Q0~I , Q0, contadorEmAnel, 1
+instance = comp, \Q1~I , Q1, contadorEmAnel, 1
+instance = comp, \Q2~I , Q2, contadorEmAnel, 1
+instance = comp, \Q3~I , Q3, contadorEmAnel, 1
