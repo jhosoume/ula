@@ -3,57 +3,57 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\santosdanilo\Documents\CD\ula\keyboard\simulation\qsim
-vRingCounter
-Z1 I6;RlVS@;VA9cIW7332B=e0
-Z2 VFP6A`VTNXH5mQMaNFXd0m1
-Z3 dC:\Users\santosdanilo\Documents\CD\ula\keyboard\simulation\qsim
-Z4 w1529690600
-Z5 8keyboard.vo
-Z6 Fkeyboard.vo
+vKeyboard
+Z1 !s100 fA]b[e3bAcYZR]m?5L_3G0
+Z2 IFoIVLKOjHJ0]HnJD9A;Hh2
+Z3 VeU<WZcUVb;=@0_@Q2aJd71
+Z4 dC:\Users\santosdanilo\Documents\CD\ula\keyboard\simulation\qsim
+Z5 w1529703094
+Z6 8keyboard.vo
+Z7 Fkeyboard.vo
 L0 31
-Z7 OV;L;10.1d;51
+Z8 OV;L;10.1d;51
 r1
 31
-Z8 !s90 -work|work|keyboard.vo|
-Z9 o-work work -O0
-Z10 n@ring@counter
+Z9 !s90 -work|work|keyboard.vo|
+Z10 o-work work -O0
+Z11 n@keyboard
 !i10b 1
-Z11 !s100 V0dQajZN7d7B<QS4_YibD0
 !s85 0
-Z12 !s108 1529690601.558000
+Z12 !s108 1529703095.297000
 Z13 !s107 keyboard.vo|
 !s101 -O0
-vRingCounter_vlg_check_tst
+vKeyboard_vlg_check_tst
 !i10b 1
-Z14 !s100 0iMnk05fQZQaToG2f`GHZ0
-Z15 I2@W7]@<5?IHY9zh4z5No01
-Z16 V78hdcMF4iKA`^oW=PPRbo0
-R3
-Z17 w1529690599
+Z14 !s100 jQb4jGI5eIn5^FFKg:bzJ1
+Z15 IG2E6g=?bEfg9]C>b^Ng^T2
+Z16 VI1BLKOCiT:Gji2:cP_VE?1
+R4
+Z17 w1529703093
 Z18 8keyboard.vt
 Z19 Fkeyboard.vt
-L0 57
-R7
+L0 59
+R8
 r1
 !s85 0
 31
-Z20 !s108 1529690601.770000
+Z20 !s108 1529703095.484000
 Z21 !s107 keyboard.vt|
 Z22 !s90 -work|work|keyboard.vt|
 !s101 -O0
-R9
-Z23 n@ring@counter_vlg_check_tst
-vRingCounter_vlg_sample_tst
+R10
+Z23 n@keyboard_vlg_check_tst
+vKeyboard_vlg_sample_tst
 !i10b 1
-Z24 !s100 d_Y9A^Gl[0@4>eb]cSIoG0
-Z25 IoLn:P=92EU8eYaFe;fbGS3
-Z26 VYjXV_SV_aDcYabHR[9F6<1
-R3
+Z24 !s100 @WU:_fXC?GjWm][BY?[SJ2
+Z25 IO5^C:_]k7<9Ni8oMAMmH20
+Z26 V2m<Oz5o><6[030M9il_i]1
+R4
 R17
 R18
 R19
 L0 29
-R7
+R8
 r1
 !s85 0
 31
@@ -61,19 +61,19 @@ R20
 R21
 R22
 !s101 -O0
-R9
-Z27 n@ring@counter_vlg_sample_tst
-vRingCounter_vlg_vec_tst
+R10
+Z27 n@keyboard_vlg_sample_tst
+vKeyboard_vlg_vec_tst
 !i10b 1
-Z28 !s100 zO47G6Ud70j_BWn9X7eM;0
-Z29 IY?S1X6PhURCTX@]YQW6]Z0
-Z30 VS?d^hU[;c>DoCZ33R?05I3
-R3
+!s100 EKf>]BXWC7T[cgim7hW?O3
+I=1oeh;CeG0SIB<CQITTYz1
+Z28 Vz@6JUVYeWl`T:T8omg;;E1
+R4
 R17
 R18
 R19
-Z31 L0 233
-R7
+Z29 L0 359
+R8
 r1
 !s85 0
 31
@@ -81,5 +81,161 @@ R20
 R21
 R22
 !s101 -O0
+R10
+Z30 n@keyboard_vlg_vec_tst
+vRingCounter
+Z31 InV@om;4^jM`o<>1naaFC=3
+Z32 VFP6A`VTNXH5mQMaNFXd0m1
+R4
+Z33 w1529698044
+R6
+R7
+L0 31
+R8
+r1
+31
 R9
-Z32 n@ring@counter_vlg_vec_tst
+R10
+Z34 n@ring@counter
+Z35 !s100 >GCI;6KIQe6>YQmXM>L4[2
+Z36 !s108 1529698045.189000
+R13
+!i10b 1
+!s85 0
+!s101 -O0
+vRingCounter_vlg_check_tst
+Z37 !s100 0iMnk05fQZQaToG2f`GHZ0
+Z38 I2@W7]@<5?IHY9zh4z5No01
+Z39 V78hdcMF4iKA`^oW=PPRbo0
+R4
+Z40 w1529698043
+R18
+R19
+L0 57
+R8
+r1
+31
+Z41 !s108 1529698045.501000
+Z42 !s107 keyboard.vt|
+R22
+R10
+Z43 n@ring@counter_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vRingCounter_vlg_sample_tst
+Z44 !s100 d_Y9A^Gl[0@4>eb]cSIoG0
+Z45 IoLn:P=92EU8eYaFe;fbGS3
+Z46 VYjXV_SV_aDcYabHR[9F6<1
+R4
+R40
+R18
+R19
+L0 29
+R8
+r1
+31
+R41
+R42
+R22
+R10
+Z47 n@ring@counter_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vRingCounter_vlg_vec_tst
+Z48 !s100 zO47G6Ud70j_BWn9X7eM;0
+Z49 IY?S1X6PhURCTX@]YQW6]Z0
+Z50 VS?d^hU[;c>DoCZ33R?05I3
+R4
+R40
+R18
+R19
+Z51 L0 233
+R8
+r1
+31
+R41
+R42
+R22
+R10
+Z52 n@ring@counter_vlg_vec_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vtest
+Z53 IgN?F1HH=`zm>2FJefFJMj1
+Z54 V:QJ;7ZV]R7lM=;GR3B;aG1
+R4
+Z55 w1529695338
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z56 !s100 CJ0iY;SPR]kFNnCmS^PI22
+Z57 !s108 1529695343.745000
+R13
+!i10b 1
+!s85 0
+!s101 -O0
+vtest_vlg_check_tst
+Z58 ImE]FI1Ako3nB]M73AI2:d2
+Z59 VNaC`62?6Lh2Jg9;IbKLQh0
+R4
+Z60 w1529695337
+R18
+R19
+L0 59
+R8
+r1
+31
+Z61 !s108 1529695344.355000
+R42
+R22
+R10
+Z62 !s100 h32_Ye5=aTn1zcz0:H:i41
+!i10b 1
+!s85 0
+!s101 -O0
+vtest_vlg_sample_tst
+Z63 I:QZ1PYEXmYYW:gYT;H`Og0
+Z64 VK;3Vo?Wz[C>3KPP]=20Kg0
+R4
+R60
+R18
+R19
+L0 29
+R8
+r1
+31
+R61
+R42
+R22
+R10
+Z65 !s100 []aRSVGRKhZOZcB`78oWO0
+!i10b 1
+!s85 0
+!s101 -O0
+vtest_vlg_vec_tst
+Z66 IFP<[o<mUojjg4Hb8]^gG60
+Z67 Va5b;6:2=HDheAU5FQATGI3
+R4
+R60
+R18
+R19
+Z68 L0 403
+R8
+r1
+31
+R61
+R42
+R22
+R10
+Z69 !s100 D:oZE?]6e6C2dXSeV^fH40
+!i10b 1
+!s85 0
+!s101 -O0

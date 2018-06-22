@@ -2,9 +2,9 @@ onerror {quit -f}
 vlib work
 vlog -work work keyboard.vo
 vlog -work work keyboard.vt
-vsim -novopt -c -t 1ps -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate work.RingCounter_vlg_vec_tst
+vsim -novopt -c -t 1ps -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate work.Keyboard_vlg_vec_tst
 vcd file -direction keyboard.msim.vcd
-vcd add -internal RingCounter_vlg_vec_tst/*
-vcd add -internal RingCounter_vlg_vec_tst/i1/*
+vcd add -internal Keyboard_vlg_vec_tst/*
+vcd add -internal Keyboard_vlg_vec_tst/i1/*
 add wave /*
 run -all

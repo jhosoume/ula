@@ -32,7 +32,7 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|CLK")
+SIGNAL("Keyboard_vlg_vec_tst|CLK")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -42,7 +42,57 @@ SIGNAL("RingCounter_vlg_vec_tst|CLK")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|Q0")
+SIGNAL("Keyboard_vlg_vec_tst|KEYOUTPUT")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 4;
+	LSB_INDEX = 0;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|KEYOUTPUT[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Keyboard_vlg_vec_tst|KEYOUTPUT";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|KEYOUTPUT[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Keyboard_vlg_vec_tst|KEYOUTPUT";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|KEYOUTPUT[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Keyboard_vlg_vec_tst|KEYOUTPUT";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|KEYOUTPUT[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Keyboard_vlg_vec_tst|KEYOUTPUT";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|KEYINPUT[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -52,7 +102,7 @@ SIGNAL("RingCounter_vlg_vec_tst|Q0")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|Q1")
+SIGNAL("Keyboard_vlg_vec_tst|KEYINPUT[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -62,7 +112,7 @@ SIGNAL("RingCounter_vlg_vec_tst|Q1")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|Q2")
+SIGNAL("Keyboard_vlg_vec_tst|KEYINPUT[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -72,7 +122,7 @@ SIGNAL("RingCounter_vlg_vec_tst|Q2")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|Q3")
+SIGNAL("Keyboard_vlg_vec_tst|KEYINPUT[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -82,7 +132,7 @@ SIGNAL("RingCounter_vlg_vec_tst|Q3")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|sampler")
+SIGNAL("Keyboard_vlg_vec_tst|OUTPUT[7]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -92,7 +142,7 @@ SIGNAL("RingCounter_vlg_vec_tst|sampler")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|gnd")
+SIGNAL("Keyboard_vlg_vec_tst|OUTPUT[6]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -102,7 +152,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|gnd")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|vcc")
+SIGNAL("Keyboard_vlg_vec_tst|OUTPUT[5]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -112,7 +162,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|vcc")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|unknown")
+SIGNAL("Keyboard_vlg_vec_tst|OUTPUT[4]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -122,7 +172,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|unknown")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|devclrn")
+SIGNAL("Keyboard_vlg_vec_tst|OUTPUT[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -132,7 +182,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|devclrn")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|devpor")
+SIGNAL("Keyboard_vlg_vec_tst|OUTPUT[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -142,7 +192,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|devpor")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|devoe")
+SIGNAL("Keyboard_vlg_vec_tst|OUTPUT[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -152,7 +202,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|devoe")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|CLK~combout")
+SIGNAL("Keyboard_vlg_vec_tst|OUTPUT[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -162,7 +212,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|CLK~combout")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|CLK~clkctrl_outclk")
+SIGNAL("Keyboard_vlg_vec_tst|sampler")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -172,7 +222,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|CLK~clkctrl_outclk")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|inst1~0_combout")
+SIGNAL("Keyboard_vlg_vec_tst|i1|gnd")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -182,7 +232,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|inst1~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|inst1~regout")
+SIGNAL("Keyboard_vlg_vec_tst|i1|vcc")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -192,7 +242,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|inst1~regout")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|inst2~feeder_combout")
+SIGNAL("Keyboard_vlg_vec_tst|i1|unknown")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -202,7 +252,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|inst2~feeder_combout")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|inst2~regout")
+SIGNAL("Keyboard_vlg_vec_tst|i1|devclrn")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -212,7 +262,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|inst2~regout")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|inst3~feeder_combout")
+SIGNAL("Keyboard_vlg_vec_tst|i1|devpor")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -222,7 +272,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|inst3~feeder_combout")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|inst3~regout")
+SIGNAL("Keyboard_vlg_vec_tst|i1|devoe")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -232,7 +282,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|inst3~regout")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|inst~0_combout")
+SIGNAL("Keyboard_vlg_vec_tst|i1|CLK~combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -242,7 +292,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|inst~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|inst4~0_combout")
+SIGNAL("Keyboard_vlg_vec_tst|i1|CLK~clkctrl_outclk")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -252,7 +302,7 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|inst4~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("RingCounter_vlg_vec_tst|i1|inst~regout")
+SIGNAL("Keyboard_vlg_vec_tst|i1|inst|inst1~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -262,7 +312,127 @@ SIGNAL("RingCounter_vlg_vec_tst|i1|inst~regout")
 	PARENT = "";
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|CLK")
+SIGNAL("Keyboard_vlg_vec_tst|i1|inst|inst1~regout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|i1|inst|inst2~feeder_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|i1|inst|inst2~regout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|i1|inst|inst3~feeder_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|i1|inst|inst3~regout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|i1|inst|inst~0_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|i1|inst|selfstart~0_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|i1|inst|inst~regout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|i1|KEYOUTPUT~combout[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|i1|KEYOUTPUT~combout[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|i1|KEYOUTPUT~combout[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Keyboard_vlg_vec_tst|i1|KEYOUTPUT~combout[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|CLK")
 {
 	NODE
 	{
@@ -278,53 +448,187 @@ TRANSITION_LIST("RingCounter_vlg_vec_tst|CLK")
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|Q0")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|KEYOUTPUT[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 3.382;
-		LEVEL 1 FOR 22.702;
-		LEVEL 0 FOR 53.916;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 10.0;
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|Q1")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|KEYOUTPUT[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 3.195;
-		LEVEL 0 FOR 22.92;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|KEYOUTPUT[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|KEYOUTPUT[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|KEYINPUT[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 60.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|KEYINPUT[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 33.885;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 40.0;
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|Q2")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|KEYINPUT[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 3.161;
-		LEVEL 0 FOR 42.92;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 13.919;
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|Q3")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|KEYINPUT[0]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 3.184;
-		LEVEL 0 FOR 62.92;
-		LEVEL 1 FOR 13.896;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 20.0;
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|sampler")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|OUTPUT[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 60.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|OUTPUT[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 40.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|OUTPUT[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|OUTPUT[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 20.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|OUTPUT[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|OUTPUT[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|OUTPUT[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|OUTPUT[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|sampler")
 {
 	NODE
 	{
@@ -340,7 +644,7 @@ TRANSITION_LIST("RingCounter_vlg_vec_tst|sampler")
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|gnd")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|gnd")
 {
 	NODE
 	{
@@ -349,7 +653,7 @@ TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|gnd")
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|vcc")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|vcc")
 {
 	NODE
 	{
@@ -358,7 +662,7 @@ TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|vcc")
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|unknown")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|unknown")
 {
 	NODE
 	{
@@ -367,7 +671,7 @@ TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|unknown")
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|devclrn")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|devclrn")
 {
 	NODE
 	{
@@ -376,7 +680,7 @@ TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|devclrn")
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|devpor")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|devpor")
 {
 	NODE
 	{
@@ -385,7 +689,7 @@ TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|devpor")
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|devoe")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|devoe")
 {
 	NODE
 	{
@@ -394,141 +698,182 @@ TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|devoe")
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|CLK~combout")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|CLK~combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 10.999;
-		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 9.001;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|CLK~clkctrl_outclk")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|CLK~clkctrl_outclk")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 0.118;
-		LEVEL 1 FOR 10.999;
-		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 8.883;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|inst1~0_combout")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|inst|inst1~0_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 0.819;
-		LEVEL 1 FOR 22.702;
-		LEVEL 0 FOR 56.479;
-	}
-}
-
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|inst1~regout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 22.92;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 37.08;
+		LEVEL 0 FOR 60.0;
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|inst2~feeder_combout")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|inst|inst1~regout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 0.465;
-		LEVEL 0 FOR 22.92;
+		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 36.615;
+		LEVEL 0 FOR 40.0;
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|inst2~regout")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|inst|inst2~feeder_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 42.92;
+		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 17.08;
+		LEVEL 0 FOR 40.0;
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|inst3~feeder_combout")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|inst|inst2~regout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 0.469;
-		LEVEL 0 FOR 42.92;
+		LEVEL 0 FOR 40.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 16.611;
+		LEVEL 0 FOR 20.0;
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|inst3~regout")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|inst|inst3~feeder_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 62.92;
-		LEVEL 1 FOR 17.08;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|inst~0_combout")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|inst|inst3~regout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 0.462;
-		LEVEL 1 FOR 62.92;
-		LEVEL 0 FOR 16.618;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 20.0;
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|inst4~0_combout")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|inst|inst~0_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 0.467;
-		LEVEL 0 FOR 79.533;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 20.0;
 	}
 }
 
-TRANSITION_LIST("RingCounter_vlg_vec_tst|i1|inst~regout")
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|inst|selfstart~0_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 0.218;
-		LEVEL 0 FOR 22.702;
-		LEVEL 1 FOR 57.08;
+		LEVEL 0 FOR 80.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|inst|inst~regout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 60.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|KEYOUTPUT~combout[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|KEYOUTPUT~combout[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|KEYOUTPUT~combout[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 10.0;
+	}
+}
+
+TRANSITION_LIST("Keyboard_vlg_vec_tst|i1|KEYOUTPUT~combout[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 10.0;
 	}
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|CLK";
+	CHANNEL = "Keyboard_vlg_vec_tst|CLK";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -537,52 +882,57 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|Q0";
+	CHANNEL = "Keyboard_vlg_vec_tst|KEYOUTPUT";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
 	TREE_LEVEL = 0;
+	CHILDREN = 2, 3, 4, 5;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|Q1";
+	CHANNEL = "Keyboard_vlg_vec_tst|KEYOUTPUT[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
-	TREE_LEVEL = 0;
+	TREE_LEVEL = 1;
+	PARENT = 1;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|Q2";
+	CHANNEL = "Keyboard_vlg_vec_tst|KEYOUTPUT[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
-	TREE_LEVEL = 0;
+	TREE_LEVEL = 1;
+	PARENT = 1;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|Q3";
+	CHANNEL = "Keyboard_vlg_vec_tst|KEYOUTPUT[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
-	TREE_LEVEL = 0;
+	TREE_LEVEL = 1;
+	PARENT = 1;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|sampler";
+	CHANNEL = "Keyboard_vlg_vec_tst|KEYOUTPUT[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
-	TREE_LEVEL = 0;
+	TREE_LEVEL = 1;
+	PARENT = 1;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|gnd";
+	CHANNEL = "Keyboard_vlg_vec_tst|KEYINPUT[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
@@ -591,7 +941,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|vcc";
+	CHANNEL = "Keyboard_vlg_vec_tst|KEYINPUT[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 7;
@@ -600,7 +950,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|unknown";
+	CHANNEL = "Keyboard_vlg_vec_tst|KEYINPUT[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 8;
@@ -609,7 +959,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|devclrn";
+	CHANNEL = "Keyboard_vlg_vec_tst|KEYINPUT[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 9;
@@ -618,7 +968,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|devpor";
+	CHANNEL = "Keyboard_vlg_vec_tst|OUTPUT[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 10;
@@ -627,7 +977,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|devoe";
+	CHANNEL = "Keyboard_vlg_vec_tst|OUTPUT[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 11;
@@ -636,7 +986,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|CLK~combout";
+	CHANNEL = "Keyboard_vlg_vec_tst|OUTPUT[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 12;
@@ -645,7 +995,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|CLK~clkctrl_outclk";
+	CHANNEL = "Keyboard_vlg_vec_tst|OUTPUT[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 13;
@@ -654,7 +1004,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|inst1~0_combout";
+	CHANNEL = "Keyboard_vlg_vec_tst|OUTPUT[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 14;
@@ -663,7 +1013,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|inst1~regout";
+	CHANNEL = "Keyboard_vlg_vec_tst|OUTPUT[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 15;
@@ -672,7 +1022,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|inst2~feeder_combout";
+	CHANNEL = "Keyboard_vlg_vec_tst|OUTPUT[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 16;
@@ -681,7 +1031,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|inst2~regout";
+	CHANNEL = "Keyboard_vlg_vec_tst|OUTPUT[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 17;
@@ -690,7 +1040,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|inst3~feeder_combout";
+	CHANNEL = "Keyboard_vlg_vec_tst|sampler";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 18;
@@ -699,7 +1049,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|inst3~regout";
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|gnd";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 19;
@@ -708,7 +1058,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|inst~0_combout";
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|vcc";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 20;
@@ -717,7 +1067,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|inst4~0_combout";
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|unknown";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 21;
@@ -726,10 +1076,163 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RingCounter_vlg_vec_tst|i1|inst~regout";
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|devclrn";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 22;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|devpor";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 23;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|devoe";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 24;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|CLK~combout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 25;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|CLK~clkctrl_outclk";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 26;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|inst|inst1~0_combout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 27;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|inst|inst1~regout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 28;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|inst|inst2~feeder_combout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 29;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|inst|inst2~regout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 30;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|inst|inst3~feeder_combout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 31;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|inst|inst3~regout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 32;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|inst|inst~0_combout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 33;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|inst|selfstart~0_combout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 34;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|inst|inst~regout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 35;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|KEYOUTPUT~combout[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 36;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|KEYOUTPUT~combout[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 37;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|KEYOUTPUT~combout[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 38;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Keyboard_vlg_vec_tst|i1|KEYOUTPUT~combout[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 39;
 	TREE_LEVEL = 0;
 }
 ;
