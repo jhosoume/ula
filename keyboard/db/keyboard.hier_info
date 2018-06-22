@@ -1,18 +1,11 @@
-|decoderKey
-InKey[0] => Equal0.IN9
-InKey[1] => Equal0.IN8
-InKey[2] => Equal0.IN7
-InKey[3] => Equal0.IN6
-InKey[4] => Equal0.IN5
-InCnt[0] => ~NO_FANOUT~
-InCnt[1] => ~NO_FANOUT~
-InCnt[2] => ~NO_FANOUT~
-InCnt[3] => ~NO_FANOUT~
-InCnt[4] => ~NO_FANOUT~
-Out[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-Out[1] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-Out[2] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-Out[3] <= <VCC>
-Out[4] <= <VCC>
+|RingCounter
+Q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+CLK => inst3.CLK
+CLK => inst2.CLK
+CLK => inst1.CLK
+Q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 
 

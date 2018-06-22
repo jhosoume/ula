@@ -92,12 +92,7 @@ TRANSITION_LIST("CLK")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 25;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
 

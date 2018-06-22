@@ -20,6 +20,11 @@
 # Loading cycloneii_ver.cycloneii_mux21
 # Loading cycloneii_ver.cycloneii_dffe
 # Loading cycloneii_ver.cycloneii_asynch_io
+# Loading cycloneii_ver.cycloneii_clkctrl
+# Loading cycloneii_ver.cycloneii_mux41
+# Loading cycloneii_ver.cycloneii_ena_reg
+# Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_lcell_ff
 # Loading work.RingCounter_vlg_sample_tst
 # Loading work.RingCounter_vlg_check_tst
 # SDF 10.1d Compiler 2012.11 Nov  2 2012
@@ -31,4 +36,4 @@
 #    Time: 0 ps  Iteration: 0  Instance: /RingCounter_vlg_vec_tst File: keyboard.vt
 # Simulation passed !
 # ** Note: $finish    : keyboard.vt(229)
-#    Time: 1 us  Iteration: 0  Instance: /RingCounter_vlg_vec_tst/tb_out
+#    Time: 80 ns  Iteration: 0  Instance: /RingCounter_vlg_vec_tst/tb_out
