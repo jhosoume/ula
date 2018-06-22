@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for keyboard
-Fri Jun 22 13:12:14 2018
+Fri Jun 22 14:11:15 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -126,10 +126,21 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; Ko0        ; KEY[0]      ; 8.879 ;    ;    ; 8.879 ;
-; Ko1        ; KEY[1]      ; 8.511 ;    ;    ; 8.511 ;
-; Ko2        ; KEY[2]      ; 8.867 ;    ;    ; 8.867 ;
-; Ko3        ; KEY[3]      ; 4.791 ;    ;    ; 4.791 ;
+; InKey[0]   ; Out[0]      ; 9.500 ;    ;    ; 9.500 ;
+; InKey[0]   ; Out[1]      ; 9.500 ;    ;    ; 9.500 ;
+; InKey[0]   ; Out[2]      ; 9.637 ;    ;    ; 9.637 ;
+; InKey[1]   ; Out[0]      ; 9.591 ;    ;    ; 9.591 ;
+; InKey[1]   ; Out[1]      ; 9.591 ;    ;    ; 9.591 ;
+; InKey[1]   ; Out[2]      ; 9.728 ;    ;    ; 9.728 ;
+; InKey[2]   ; Out[0]      ; 9.701 ;    ;    ; 9.701 ;
+; InKey[2]   ; Out[1]      ; 9.701 ;    ;    ; 9.701 ;
+; InKey[2]   ; Out[2]      ; 9.838 ;    ;    ; 9.838 ;
+; InKey[3]   ; Out[0]      ; 9.728 ;    ;    ; 9.728 ;
+; InKey[3]   ; Out[1]      ; 9.728 ;    ;    ; 9.728 ;
+; InKey[3]   ; Out[2]      ; 9.865 ;    ;    ; 9.865 ;
+; InKey[4]   ; Out[0]      ; 8.781 ;    ;    ; 8.781 ;
+; InKey[4]   ; Out[1]      ; 8.781 ;    ;    ; 8.781 ;
+; InKey[4]   ; Out[2]      ; 8.918 ;    ;    ; 8.918 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -138,10 +149,21 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; Ko0        ; KEY[0]      ; 8.879 ;    ;    ; 8.879 ;
-; Ko1        ; KEY[1]      ; 8.511 ;    ;    ; 8.511 ;
-; Ko2        ; KEY[2]      ; 8.867 ;    ;    ; 8.867 ;
-; Ko3        ; KEY[3]      ; 4.791 ;    ;    ; 4.791 ;
+; InKey[0]   ; Out[0]      ; 9.500 ;    ;    ; 9.500 ;
+; InKey[0]   ; Out[1]      ; 9.500 ;    ;    ; 9.500 ;
+; InKey[0]   ; Out[2]      ; 9.637 ;    ;    ; 9.637 ;
+; InKey[1]   ; Out[0]      ; 9.591 ;    ;    ; 9.591 ;
+; InKey[1]   ; Out[1]      ; 9.591 ;    ;    ; 9.591 ;
+; InKey[1]   ; Out[2]      ; 9.728 ;    ;    ; 9.728 ;
+; InKey[2]   ; Out[0]      ; 9.701 ;    ;    ; 9.701 ;
+; InKey[2]   ; Out[1]      ; 9.701 ;    ;    ; 9.701 ;
+; InKey[2]   ; Out[2]      ; 9.838 ;    ;    ; 9.838 ;
+; InKey[3]   ; Out[0]      ; 9.728 ;    ;    ; 9.728 ;
+; InKey[3]   ; Out[1]      ; 9.728 ;    ;    ; 9.728 ;
+; InKey[3]   ; Out[2]      ; 9.865 ;    ;    ; 9.865 ;
+; InKey[4]   ; Out[0]      ; 8.781 ;    ;    ; 8.781 ;
+; InKey[4]   ; Out[1]      ; 8.781 ;    ;    ; 8.781 ;
+; InKey[4]   ; Out[2]      ; 8.918 ;    ;    ; 8.918 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -180,10 +202,21 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; Ko0        ; KEY[0]      ; 5.068 ;    ;    ; 5.068 ;
-; Ko1        ; KEY[1]      ; 4.843 ;    ;    ; 4.843 ;
-; Ko2        ; KEY[2]      ; 5.042 ;    ;    ; 5.042 ;
-; Ko3        ; KEY[3]      ; 2.560 ;    ;    ; 2.560 ;
+; InKey[0]   ; Out[0]      ; 5.281 ;    ;    ; 5.281 ;
+; InKey[0]   ; Out[1]      ; 5.281 ;    ;    ; 5.281 ;
+; InKey[0]   ; Out[2]      ; 5.381 ;    ;    ; 5.381 ;
+; InKey[1]   ; Out[0]      ; 5.297 ;    ;    ; 5.297 ;
+; InKey[1]   ; Out[1]      ; 5.297 ;    ;    ; 5.297 ;
+; InKey[1]   ; Out[2]      ; 5.397 ;    ;    ; 5.397 ;
+; InKey[2]   ; Out[0]      ; 5.378 ;    ;    ; 5.378 ;
+; InKey[2]   ; Out[1]      ; 5.378 ;    ;    ; 5.378 ;
+; InKey[2]   ; Out[2]      ; 5.478 ;    ;    ; 5.478 ;
+; InKey[3]   ; Out[0]      ; 5.381 ;    ;    ; 5.381 ;
+; InKey[3]   ; Out[1]      ; 5.381 ;    ;    ; 5.381 ;
+; InKey[3]   ; Out[2]      ; 5.481 ;    ;    ; 5.481 ;
+; InKey[4]   ; Out[0]      ; 4.981 ;    ;    ; 4.981 ;
+; InKey[4]   ; Out[1]      ; 4.981 ;    ;    ; 4.981 ;
+; InKey[4]   ; Out[2]      ; 5.081 ;    ;    ; 5.081 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -192,10 +225,21 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; Ko0        ; KEY[0]      ; 5.068 ;    ;    ; 5.068 ;
-; Ko1        ; KEY[1]      ; 4.843 ;    ;    ; 4.843 ;
-; Ko2        ; KEY[2]      ; 5.042 ;    ;    ; 5.042 ;
-; Ko3        ; KEY[3]      ; 2.560 ;    ;    ; 2.560 ;
+; InKey[0]   ; Out[0]      ; 5.281 ;    ;    ; 5.281 ;
+; InKey[0]   ; Out[1]      ; 5.281 ;    ;    ; 5.281 ;
+; InKey[0]   ; Out[2]      ; 5.381 ;    ;    ; 5.381 ;
+; InKey[1]   ; Out[0]      ; 5.297 ;    ;    ; 5.297 ;
+; InKey[1]   ; Out[1]      ; 5.297 ;    ;    ; 5.297 ;
+; InKey[1]   ; Out[2]      ; 5.397 ;    ;    ; 5.397 ;
+; InKey[2]   ; Out[0]      ; 5.378 ;    ;    ; 5.378 ;
+; InKey[2]   ; Out[1]      ; 5.378 ;    ;    ; 5.378 ;
+; InKey[2]   ; Out[2]      ; 5.478 ;    ;    ; 5.478 ;
+; InKey[3]   ; Out[0]      ; 5.381 ;    ;    ; 5.381 ;
+; InKey[3]   ; Out[1]      ; 5.381 ;    ;    ; 5.381 ;
+; InKey[3]   ; Out[2]      ; 5.481 ;    ;    ; 5.481 ;
+; InKey[4]   ; Out[0]      ; 4.981 ;    ;    ; 4.981 ;
+; InKey[4]   ; Out[1]      ; 4.981 ;    ;    ; 4.981 ;
+; InKey[4]   ; Out[2]      ; 5.081 ;    ;    ; 5.081 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -214,10 +258,21 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; Ko0        ; KEY[0]      ; 8.879 ;    ;    ; 8.879 ;
-; Ko1        ; KEY[1]      ; 8.511 ;    ;    ; 8.511 ;
-; Ko2        ; KEY[2]      ; 8.867 ;    ;    ; 8.867 ;
-; Ko3        ; KEY[3]      ; 4.791 ;    ;    ; 4.791 ;
+; InKey[0]   ; Out[0]      ; 9.500 ;    ;    ; 9.500 ;
+; InKey[0]   ; Out[1]      ; 9.500 ;    ;    ; 9.500 ;
+; InKey[0]   ; Out[2]      ; 9.637 ;    ;    ; 9.637 ;
+; InKey[1]   ; Out[0]      ; 9.591 ;    ;    ; 9.591 ;
+; InKey[1]   ; Out[1]      ; 9.591 ;    ;    ; 9.591 ;
+; InKey[1]   ; Out[2]      ; 9.728 ;    ;    ; 9.728 ;
+; InKey[2]   ; Out[0]      ; 9.701 ;    ;    ; 9.701 ;
+; InKey[2]   ; Out[1]      ; 9.701 ;    ;    ; 9.701 ;
+; InKey[2]   ; Out[2]      ; 9.838 ;    ;    ; 9.838 ;
+; InKey[3]   ; Out[0]      ; 9.728 ;    ;    ; 9.728 ;
+; InKey[3]   ; Out[1]      ; 9.728 ;    ;    ; 9.728 ;
+; InKey[3]   ; Out[2]      ; 9.865 ;    ;    ; 9.865 ;
+; InKey[4]   ; Out[0]      ; 8.781 ;    ;    ; 8.781 ;
+; InKey[4]   ; Out[1]      ; 8.781 ;    ;    ; 8.781 ;
+; InKey[4]   ; Out[2]      ; 8.918 ;    ;    ; 8.918 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -226,10 +281,21 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; Ko0        ; KEY[0]      ; 5.068 ;    ;    ; 5.068 ;
-; Ko1        ; KEY[1]      ; 4.843 ;    ;    ; 4.843 ;
-; Ko2        ; KEY[2]      ; 5.042 ;    ;    ; 5.042 ;
-; Ko3        ; KEY[3]      ; 2.560 ;    ;    ; 2.560 ;
+; InKey[0]   ; Out[0]      ; 5.281 ;    ;    ; 5.281 ;
+; InKey[0]   ; Out[1]      ; 5.281 ;    ;    ; 5.281 ;
+; InKey[0]   ; Out[2]      ; 5.381 ;    ;    ; 5.381 ;
+; InKey[1]   ; Out[0]      ; 5.297 ;    ;    ; 5.297 ;
+; InKey[1]   ; Out[1]      ; 5.297 ;    ;    ; 5.297 ;
+; InKey[1]   ; Out[2]      ; 5.397 ;    ;    ; 5.397 ;
+; InKey[2]   ; Out[0]      ; 5.378 ;    ;    ; 5.378 ;
+; InKey[2]   ; Out[1]      ; 5.378 ;    ;    ; 5.378 ;
+; InKey[2]   ; Out[2]      ; 5.478 ;    ;    ; 5.478 ;
+; InKey[3]   ; Out[0]      ; 5.381 ;    ;    ; 5.381 ;
+; InKey[3]   ; Out[1]      ; 5.381 ;    ;    ; 5.381 ;
+; InKey[3]   ; Out[2]      ; 5.481 ;    ;    ; 5.481 ;
+; InKey[4]   ; Out[0]      ; 4.981 ;    ;    ; 4.981 ;
+; InKey[4]   ; Out[1]      ; 4.981 ;    ;    ; 4.981 ;
+; InKey[4]   ; Out[2]      ; 5.081 ;    ;    ; 5.081 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -258,10 +324,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 4     ; 4    ;
-; Unconstrained Input Port Paths  ; 4     ; 4    ;
-; Unconstrained Output Ports      ; 4     ; 4    ;
-; Unconstrained Output Port Paths ; 4     ; 4    ;
+; Unconstrained Input Ports       ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 15    ; 15   ;
+; Unconstrained Output Ports      ; 3     ; 3    ;
+; Unconstrained Output Port Paths ; 15    ; 15   ;
 +---------------------------------+-------+------+
 
 
@@ -271,7 +337,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jun 22 13:12:13 2018
+    Info: Processing started: Fri Jun 22 14:11:14 2018
 Info: Command: quartus_sta keyboard -c keyboard
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -305,7 +371,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 463 megabytes
-    Info: Processing ended: Fri Jun 22 13:12:14 2018
+    Info: Processing ended: Fri Jun 22 14:11:15 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

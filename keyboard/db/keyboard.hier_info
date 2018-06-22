@@ -1,33 +1,18 @@
-|Keyboard
-I3 <= <GND>
-Q[0] <= <GND>
-Q[1] <= <GND>
-Q[2] <= <GND>
-Q[3] <= <GND>
-Q[4] <= <GND>
-I2 <= <GND>
-I1 <= <GND>
-I0 <= <GND>
-KEY[0] <= Ko0.DB_MAX_OUTPUT_PORT_TYPE
-KEY[1] <= Ko1.DB_MAX_OUTPUT_PORT_TYPE
-KEY[2] <= Ko2.DB_MAX_OUTPUT_PORT_TYPE
-KEY[3] <= Ko3.DB_MAX_OUTPUT_PORT_TYPE
-KEY[4] <= <GND>
-Ko0 => KEY[0].DATAIN
-Ko1 => KEY[1].DATAIN
-Ko2 => KEY[2].DATAIN
-Ko3 => KEY[3].DATAIN
-CLK => RingCounter:inst.CLK
-
-
-|Keyboard|RingCounter:inst
-Q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
-CLK => inst.CLK
-CLK => inst3.CLK
-CLK => inst2.CLK
-CLK => inst1.CLK
-Q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-Q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Q3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+|decoderKey
+InKey[0] => Equal0.IN9
+InKey[1] => Equal0.IN8
+InKey[2] => Equal0.IN7
+InKey[3] => Equal0.IN6
+InKey[4] => Equal0.IN5
+InCnt[0] => ~NO_FANOUT~
+InCnt[1] => ~NO_FANOUT~
+InCnt[2] => ~NO_FANOUT~
+InCnt[3] => ~NO_FANOUT~
+InCnt[4] => ~NO_FANOUT~
+Out[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= <VCC>
+Out[4] <= <VCC>
 
 

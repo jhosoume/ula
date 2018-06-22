@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\santosdanilo\Documents\CD\ula\keyboard\simulation\qsim
+vRingCounter
+Z1 IDEmKXli`BZz=Qz6nb8;``1
+Z2 VFP6A`VTNXH5mQMaNFXd0m1
+Z3 dC:\Users\santosdanilo\Documents\CD\ula\keyboard\simulation\qsim
+Z4 w1529685734
+Z5 8keyboard.vo
+Z6 Fkeyboard.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|keyboard.vo|
+Z9 o-work work -O0
+Z10 n@ring@counter
+!i10b 1
+Z11 !s100 >N5W_S_kgVU1C`@P3R`E:0
+!s85 0
+Z12 !s108 1529685735.484000
+Z13 !s107 keyboard.vo|
+!s101 -O0
+vRingCounter_vlg_check_tst
+!i10b 1
+Z14 !s100 :0JKPm2fE?P5k<OU=mO;<1
+Z15 ILX]L32jFgYEoKMPQU>]nM3
+Z16 V78hdcMF4iKA`^oW=PPRbo0
+R3
+Z17 w1529685733
+Z18 8keyboard.vt
+Z19 Fkeyboard.vt
+L0 57
+R7
+r1
+!s85 0
+31
+Z20 !s108 1529685735.641000
+Z21 !s107 keyboard.vt|
+Z22 !s90 -work|work|keyboard.vt|
+!s101 -O0
+R9
+Z23 n@ring@counter_vlg_check_tst
+vRingCounter_vlg_sample_tst
+!i10b 1
+Z24 !s100 d_Y9A^Gl[0@4>eb]cSIoG0
+Z25 IoLn:P=92EU8eYaFe;fbGS3
+Z26 VYjXV_SV_aDcYabHR[9F6<1
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 n@ring@counter_vlg_sample_tst
+vRingCounter_vlg_vec_tst
+!i10b 1
+Z28 !s100 S]9W<LL;;G4<;7R@FjUj51
+Z29 IbWUAa0oE^i:_Em7zPgVlJ1
+Z30 VS?d^hU[;c>DoCZ33R?05I3
+R3
+R17
+R18
+R19
+Z31 L0 233
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z32 n@ring@counter_vlg_vec_tst
