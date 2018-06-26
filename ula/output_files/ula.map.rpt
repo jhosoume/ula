@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ula
-Mon Jun 25 22:34:43 2018
+Tue Jun 26 20:41:59 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,16 +41,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jun 25 22:34:43 2018           ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 26 20:41:59 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ula                                             ;
-; Top-level Entity Name              ; decoderoutputA                                  ;
+; Top-level Entity Name              ; checkOpNum                                      ;
 ; Family                             ; Cyclone II                                      ;
 ; Total logic elements               ; 2                                               ;
 ;     Total combinational functions  ; 2                                               ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 15                                              ;
+; Total pins                         ; 6                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; decoderoutputA     ; ula                ;
+; Top-level entity name                                                      ; checkOpNum         ; ula                ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -154,43 +154,43 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                           ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
-; decoderoutputA.v                 ; yes             ; User Verilog HDL File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/decoderoutputA.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
+; checkOpNum.v                     ; yes             ; User Verilog HDL File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/checkOpNum.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimated Total logic elements              ; 2        ;
-;                                             ;          ;
-; Total combinational functions               ; 2        ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 2        ;
-;     -- 3 input functions                    ; 0        ;
-;     -- <=2 input functions                  ; 0        ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 2        ;
-;     -- arithmetic mode                      ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 0        ;
-;     -- Dedicated logic registers            ; 0        ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 15       ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-; Maximum fan-out node                        ; Equal0~1 ;
-; Maximum fan-out                             ; 4        ;
-; Total fan-out                               ; 12       ;
-; Average fan-out                             ; 0.71     ;
-+---------------------------------------------+----------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 2     ;
+;                                             ;       ;
+; Total combinational functions               ; 2     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 2     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 2     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 6     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; In[0] ;
+; Maximum fan-out                             ; 2     ;
+; Total fan-out                               ; 10    ;
+; Average fan-out                             ; 1.25  ;
++---------------------------------------------+-------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -198,7 +198,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |decoderoutputA            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |decoderoutputA     ; work         ;
+; |checkOpNum                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |checkOpNum         ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -233,7 +233,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Jun 25 22:34:40 2018
+    Info: Processing started: Tue Jun 26 20:41:57 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ula -c ula
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file FullAdder.bdf
@@ -270,30 +270,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file decFrom
     Info (12023): Found entity 1: decFromKey
 Info (12021): Found 1 design units, including 1 entities, in source file test_decfromkey.bdf
     Info (12023): Found entity 1: test_decfromkey
-Info (12127): Elaborating entity "decoderoutputA" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at decoderoutputA.v(12): truncated value with size 7 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at decoderoutputA.v(16): truncated value with size 7 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at decoderoutputA.v(17): truncated value with size 7 to match size of target (4)
-Warning (10240): Verilog HDL Always Construct warning at decoderoutputA.v(10): inferring latch(es) for variable "OutB", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "OutB[0]" at decoderoutputA.v(10)
-Info (10041): Inferred latch for "OutB[1]" at decoderoutputA.v(10)
-Info (10041): Inferred latch for "OutB[2]" at decoderoutputA.v(10)
-Info (10041): Inferred latch for "OutB[3]" at decoderoutputA.v(10)
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "OutB[0]" is stuck at VCC
-    Warning (13410): Pin "OutB[1]" is stuck at VCC
-    Warning (13410): Pin "OutB[2]" is stuck at VCC
-    Warning (13410): Pin "OutB[3]" is stuck at VCC
+Info (12021): Found 1 design units, including 1 entities, in source file test_decfromula.bdf
+    Info (12023): Found entity 1: test_decfromula
+Info (12021): Found 1 design units, including 1 entities, in source file checkOpNum.v
+    Info (12023): Found entity 1: checkOpNum
+Info (12127): Elaborating entity "checkOpNum" for the top level hierarchy
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 8 output pins
+Info (21057): Implemented 8 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 2 output pins
     Info (21061): Implemented 2 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 604 megabytes
-    Info: Processing ended: Mon Jun 25 22:34:43 2018
-    Info: Elapsed time: 00:00:03
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 602 megabytes
+    Info: Processing ended: Tue Jun 26 20:41:59 2018
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 
