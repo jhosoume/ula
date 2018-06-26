@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for keyboard
-Fri Jun 22 13:12:14 2018
+Fri Jun 22 18:43:30 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,23 +16,42 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Slow Model Recovery Summary
   9. Slow Model Removal Summary
  10. Slow Model Minimum Pulse Width Summary
- 11. Propagation Delay
- 12. Minimum Propagation Delay
- 13. Fast Model Setup Summary
- 14. Fast Model Hold Summary
- 15. Fast Model Recovery Summary
- 16. Fast Model Removal Summary
- 17. Fast Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'SW[17]'
+ 12. Slow Model Hold: 'SW[17]'
+ 13. Slow Model Recovery: 'SW[17]'
+ 14. Slow Model Removal: 'SW[17]'
+ 15. Slow Model Minimum Pulse Width: 'SW[17]'
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
  18. Propagation Delay
  19. Minimum Propagation Delay
- 20. Multicorner Timing Analysis Summary
- 21. Progagation Delay
- 22. Minimum Progagation Delay
- 23. Clock Transfers
- 24. Report TCCS
- 25. Report RSKM
- 26. Unconstrained Paths
- 27. TimeQuest Timing Analyzer Messages
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'SW[17]'
+ 26. Fast Model Hold: 'SW[17]'
+ 27. Fast Model Recovery: 'SW[17]'
+ 28. Fast Model Removal: 'SW[17]'
+ 29. Fast Model Minimum Pulse Width: 'SW[17]'
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Clock to Output Times
+ 36. Minimum Clock to Output Times
+ 37. Progagation Delay
+ 38. Minimum Progagation Delay
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
 
 
 
@@ -79,100 +98,383 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-----------
-; Clocks ;
-----------
-No clocks to report.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; SW[17]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SW[17] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
 
 
----------------------------
-; Slow Model Fmax Summary ;
----------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 1308.9 MHz ; 450.05 MHz      ; SW[17]     ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-----------------------------
-; Slow Model Setup Summary ;
-----------------------------
-No paths to report.
++--------------------------------+
+; Slow Model Setup Summary       ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; SW[17] ; 0.236 ; 0.000         ;
++--------+-------+---------------+
 
 
----------------------------
-; Slow Model Hold Summary ;
----------------------------
-No paths to report.
++--------------------------------+
+; Slow Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; SW[17] ; 0.530 ; 0.000         ;
++--------+-------+---------------+
 
 
--------------------------------
-; Slow Model Recovery Summary ;
--------------------------------
-No paths to report.
++---------------------------------+
+; Slow Model Recovery Summary     ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; SW[17] ; -1.110 ; -1.110        ;
++--------+--------+---------------+
 
 
-------------------------------
-; Slow Model Removal Summary ;
-------------------------------
-No paths to report.
++--------------------------------+
+; Slow Model Removal Summary     ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; SW[17] ; 1.430 ; 0.000         ;
++--------+-------+---------------+
 
 
-------------------------------------------
++----------------------------------------+
 ; Slow Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; SW[17] ; -1.222 ; -5.222               ;
++--------+--------+----------------------+
 
 
-+----------------------------------------------------+
-; Propagation Delay                                  ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; Ko0        ; KEY[0]      ; 8.879 ;    ;    ; 8.879 ;
-; Ko1        ; KEY[1]      ; 8.511 ;    ;    ; 8.511 ;
-; Ko2        ; KEY[2]      ; 8.867 ;    ;    ; 8.867 ;
-; Ko3        ; KEY[3]      ; 4.791 ;    ;    ; 4.791 ;
-+------------+-------------+-------+----+----+-------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'SW[17]'                                                                                                                                ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.236 ; Keyboard:inst|RingCounter:inst|inst3 ; Keyboard:inst|RingCounter:inst|inst  ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 0.800      ;
+; 0.238 ; Keyboard:inst|RingCounter:inst|inst1 ; Keyboard:inst|RingCounter:inst|inst2 ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 0.798      ;
+; 0.239 ; Keyboard:inst|RingCounter:inst|inst2 ; Keyboard:inst|RingCounter:inst|inst3 ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 0.797      ;
+; 0.240 ; Keyboard:inst|RingCounter:inst|inst  ; Keyboard:inst|RingCounter:inst|inst1 ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 0.796      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+----------------------------------------------------+
-; Minimum Propagation Delay                          ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; Ko0        ; KEY[0]      ; 8.879 ;    ;    ; 8.879 ;
-; Ko1        ; KEY[1]      ; 8.511 ;    ;    ; 8.511 ;
-; Ko2        ; KEY[2]      ; 8.867 ;    ;    ; 8.867 ;
-; Ko3        ; KEY[3]      ; 4.791 ;    ;    ; 4.791 ;
-+------------+-------------+-------+----+----+-------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'SW[17]'                                                                                                                                 ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.530 ; Keyboard:inst|RingCounter:inst|inst  ; Keyboard:inst|RingCounter:inst|inst1 ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.796      ;
+; 0.531 ; Keyboard:inst|RingCounter:inst|inst2 ; Keyboard:inst|RingCounter:inst|inst3 ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.797      ;
+; 0.532 ; Keyboard:inst|RingCounter:inst|inst1 ; Keyboard:inst|RingCounter:inst|inst2 ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.798      ;
+; 0.534 ; Keyboard:inst|RingCounter:inst|inst3 ; Keyboard:inst|RingCounter:inst|inst  ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.800      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-----------------------------
-; Fast Model Setup Summary ;
-----------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'SW[17]'                                                                                                                             ;
++--------+--------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.110 ; Keyboard:inst|RingCounter:inst|inst1 ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 2.146      ;
+; -0.971 ; Keyboard:inst|RingCounter:inst|inst  ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 2.007      ;
+; -0.902 ; Keyboard:inst|RingCounter:inst|inst2 ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 1.938      ;
+; -0.660 ; Keyboard:inst|RingCounter:inst|inst3 ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 1.696      ;
++--------+--------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
----------------------------
-; Fast Model Hold Summary ;
----------------------------
-No paths to report.
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'SW[17]'                                                                                                                             ;
++-------+--------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.430 ; Keyboard:inst|RingCounter:inst|inst3 ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.696      ;
+; 1.672 ; Keyboard:inst|RingCounter:inst|inst2 ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.938      ;
+; 1.741 ; Keyboard:inst|RingCounter:inst|inst  ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 2.007      ;
+; 1.880 ; Keyboard:inst|RingCounter:inst|inst1 ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 2.146      ;
++-------+--------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
--------------------------------
-; Fast Model Recovery Summary ;
--------------------------------
-No paths to report.
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'SW[17]'                                                                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; SW[17] ; Rise       ; SW[17]                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst2 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst2 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst3 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst3 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; SW[17]|combout                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; SW[17]|combout                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; inst|inst|inst1|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; inst|inst|inst1|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; inst|inst|inst2|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; inst|inst|inst2|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; inst|inst|inst3|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; inst|inst|inst3|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; inst|inst|inst|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; inst|inst|inst|clk                   ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
 
 
-------------------------------
-; Fast Model Removal Summary ;
-------------------------------
-No paths to report.
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; GPIO_0[*]  ; SW[17]     ; 10.588 ; 10.588 ; Rise       ; SW[17]          ;
+;  GPIO_0[0] ; SW[17]     ; 9.575  ; 9.575  ; Rise       ; SW[17]          ;
+;  GPIO_0[1] ; SW[17]     ; 10.588 ; 10.588 ; Rise       ; SW[17]          ;
+;  GPIO_0[2] ; SW[17]     ; 9.774  ; 9.774  ; Rise       ; SW[17]          ;
+;  GPIO_0[3] ; SW[17]     ; 9.195  ; 9.195  ; Rise       ; SW[17]          ;
+; LEDR[*]    ; SW[17]     ; 11.696 ; 11.696 ; Rise       ; SW[17]          ;
+;  LEDR[0]   ; SW[17]     ; 11.510 ; 11.510 ; Rise       ; SW[17]          ;
+;  LEDR[1]   ; SW[17]     ; 10.997 ; 10.997 ; Rise       ; SW[17]          ;
+;  LEDR[2]   ; SW[17]     ; 11.354 ; 11.354 ; Rise       ; SW[17]          ;
+;  LEDR[3]   ; SW[17]     ; 9.423  ; 9.423  ; Rise       ; SW[17]          ;
+;  LEDR[8]   ; SW[17]     ; 11.696 ; 11.696 ; Rise       ; SW[17]          ;
+;  LEDR[9]   ; SW[17]     ; 11.419 ; 11.419 ; Rise       ; SW[17]          ;
+;  LEDR[10]  ; SW[17]     ; 8.059  ; 8.059  ; Rise       ; SW[17]          ;
+;  LEDR[11]  ; SW[17]     ; 8.929  ; 8.929  ; Rise       ; SW[17]          ;
++------------+------------+--------+--------+------------+-----------------+
 
 
-------------------------------------------
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; GPIO_0[*]  ; SW[17]     ; 9.195  ; 9.195  ; Rise       ; SW[17]          ;
+;  GPIO_0[0] ; SW[17]     ; 9.575  ; 9.575  ; Rise       ; SW[17]          ;
+;  GPIO_0[1] ; SW[17]     ; 10.588 ; 10.588 ; Rise       ; SW[17]          ;
+;  GPIO_0[2] ; SW[17]     ; 9.774  ; 9.774  ; Rise       ; SW[17]          ;
+;  GPIO_0[3] ; SW[17]     ; 9.195  ; 9.195  ; Rise       ; SW[17]          ;
+; LEDR[*]    ; SW[17]     ; 8.059  ; 8.059  ; Rise       ; SW[17]          ;
+;  LEDR[0]   ; SW[17]     ; 11.510 ; 11.510 ; Rise       ; SW[17]          ;
+;  LEDR[1]   ; SW[17]     ; 10.997 ; 10.997 ; Rise       ; SW[17]          ;
+;  LEDR[2]   ; SW[17]     ; 11.354 ; 11.354 ; Rise       ; SW[17]          ;
+;  LEDR[3]   ; SW[17]     ; 9.423  ; 9.423  ; Rise       ; SW[17]          ;
+;  LEDR[8]   ; SW[17]     ; 11.696 ; 11.696 ; Rise       ; SW[17]          ;
+;  LEDR[9]   ; SW[17]     ; 11.419 ; 11.419 ; Rise       ; SW[17]          ;
+;  LEDR[10]  ; SW[17]     ; 8.059  ; 8.059  ; Rise       ; SW[17]          ;
+;  LEDR[11]  ; SW[17]     ; 8.929  ; 8.929  ; Rise       ; SW[17]          ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; GPIO_1[0]  ; LEDG[3]     ; 9.662  ;    ;    ; 9.662  ;
+; GPIO_1[0]  ; LEDR[7]     ; 9.910  ;    ;    ; 9.910  ;
+; GPIO_1[1]  ; LEDG[2]     ; 9.750  ;    ;    ; 9.750  ;
+; GPIO_1[1]  ; LEDR[6]     ; 9.554  ;    ;    ; 9.554  ;
+; GPIO_1[2]  ; LEDG[1]     ; 10.002 ;    ;    ; 10.002 ;
+; GPIO_1[2]  ; LEDR[5]     ; 9.984  ;    ;    ; 9.984  ;
+; GPIO_1[3]  ; LEDG[0]     ; 9.812  ;    ;    ; 9.812  ;
+; GPIO_1[3]  ; LEDR[4]     ; 9.545  ;    ;    ; 9.545  ;
++------------+-------------+--------+----+----+--------+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; GPIO_1[0]  ; LEDG[3]     ; 9.662  ;    ;    ; 9.662  ;
+; GPIO_1[0]  ; LEDR[7]     ; 9.910  ;    ;    ; 9.910  ;
+; GPIO_1[1]  ; LEDG[2]     ; 9.750  ;    ;    ; 9.750  ;
+; GPIO_1[1]  ; LEDR[6]     ; 9.554  ;    ;    ; 9.554  ;
+; GPIO_1[2]  ; LEDG[1]     ; 10.002 ;    ;    ; 10.002 ;
+; GPIO_1[2]  ; LEDR[5]     ; 9.984  ;    ;    ; 9.984  ;
+; GPIO_1[3]  ; LEDG[0]     ; 9.812  ;    ;    ; 9.812  ;
+; GPIO_1[3]  ; LEDR[4]     ; 9.545  ;    ;    ; 9.545  ;
++------------+-------------+--------+----+----+--------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; SW[17] ; 0.614 ; 0.000         ;
++--------+-------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; SW[17] ; 0.244 ; 0.000         ;
++--------+-------+---------------+
+
+
++---------------------------------+
+; Fast Model Recovery Summary     ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; SW[17] ; -0.081 ; -0.081        ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Removal Summary     ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; SW[17] ; 0.749 ; 0.000         ;
++--------+-------+---------------+
+
+
++----------------------------------------+
 ; Fast Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; SW[17] ; -1.222 ; -5.222               ;
++--------+--------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'SW[17]'                                                                                                                                ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.614 ; Keyboard:inst|RingCounter:inst|inst3 ; Keyboard:inst|RingCounter:inst|inst  ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 0.418      ;
+; 0.617 ; Keyboard:inst|RingCounter:inst|inst  ; Keyboard:inst|RingCounter:inst|inst1 ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 0.415      ;
+; 0.635 ; Keyboard:inst|RingCounter:inst|inst2 ; Keyboard:inst|RingCounter:inst|inst3 ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 0.397      ;
+; 0.636 ; Keyboard:inst|RingCounter:inst|inst1 ; Keyboard:inst|RingCounter:inst|inst2 ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 0.396      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'SW[17]'                                                                                                                                 ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.244 ; Keyboard:inst|RingCounter:inst|inst1 ; Keyboard:inst|RingCounter:inst|inst2 ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.396      ;
+; 0.245 ; Keyboard:inst|RingCounter:inst|inst2 ; Keyboard:inst|RingCounter:inst|inst3 ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.397      ;
+; 0.263 ; Keyboard:inst|RingCounter:inst|inst  ; Keyboard:inst|RingCounter:inst|inst1 ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.415      ;
+; 0.266 ; Keyboard:inst|RingCounter:inst|inst3 ; Keyboard:inst|RingCounter:inst|inst  ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.418      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'SW[17]'                                                                                                                             ;
++--------+--------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.081 ; Keyboard:inst|RingCounter:inst|inst1 ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 1.113      ;
+; 0.003  ; Keyboard:inst|RingCounter:inst|inst  ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 1.029      ;
+; 0.007  ; Keyboard:inst|RingCounter:inst|inst2 ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 1.025      ;
+; 0.131  ; Keyboard:inst|RingCounter:inst|inst3 ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 0.901      ;
++--------+--------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'SW[17]'                                                                                                                             ;
++-------+--------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.749 ; Keyboard:inst|RingCounter:inst|inst3 ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.901      ;
+; 0.873 ; Keyboard:inst|RingCounter:inst|inst2 ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.025      ;
+; 0.877 ; Keyboard:inst|RingCounter:inst|inst  ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.029      ;
+; 0.961 ; Keyboard:inst|RingCounter:inst|inst1 ; Keyboard:inst|RingCounter:inst|inst ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.113      ;
++-------+--------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'SW[17]'                                                                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; SW[17] ; Rise       ; SW[17]                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst2 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst2 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst3 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; Keyboard:inst|RingCounter:inst|inst3 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; SW[17]|combout                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; SW[17]|combout                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; inst|inst|inst1|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; inst|inst|inst1|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; inst|inst|inst2|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; inst|inst|inst2|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; inst|inst|inst3|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; inst|inst|inst3|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; inst|inst|inst|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; inst|inst|inst|clk                   ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; GPIO_0[*]  ; SW[17]     ; 5.435 ; 5.435 ; Rise       ; SW[17]          ;
+;  GPIO_0[0] ; SW[17]     ; 4.956 ; 4.956 ; Rise       ; SW[17]          ;
+;  GPIO_0[1] ; SW[17]     ; 5.435 ; 5.435 ; Rise       ; SW[17]          ;
+;  GPIO_0[2] ; SW[17]     ; 5.038 ; 5.038 ; Rise       ; SW[17]          ;
+;  GPIO_0[3] ; SW[17]     ; 4.885 ; 4.885 ; Rise       ; SW[17]          ;
+; LEDR[*]    ; SW[17]     ; 6.101 ; 6.101 ; Rise       ; SW[17]          ;
+;  LEDR[0]   ; SW[17]     ; 6.007 ; 6.007 ; Rise       ; SW[17]          ;
+;  LEDR[1]   ; SW[17]     ; 5.778 ; 5.778 ; Rise       ; SW[17]          ;
+;  LEDR[2]   ; SW[17]     ; 5.896 ; 5.896 ; Rise       ; SW[17]          ;
+;  LEDR[3]   ; SW[17]     ; 4.999 ; 4.999 ; Rise       ; SW[17]          ;
+;  LEDR[8]   ; SW[17]     ; 6.101 ; 6.101 ; Rise       ; SW[17]          ;
+;  LEDR[9]   ; SW[17]     ; 5.979 ; 5.979 ; Rise       ; SW[17]          ;
+;  LEDR[10]  ; SW[17]     ; 4.239 ; 4.239 ; Rise       ; SW[17]          ;
+;  LEDR[11]  ; SW[17]     ; 4.727 ; 4.727 ; Rise       ; SW[17]          ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; GPIO_0[*]  ; SW[17]     ; 4.885 ; 4.885 ; Rise       ; SW[17]          ;
+;  GPIO_0[0] ; SW[17]     ; 4.956 ; 4.956 ; Rise       ; SW[17]          ;
+;  GPIO_0[1] ; SW[17]     ; 5.435 ; 5.435 ; Rise       ; SW[17]          ;
+;  GPIO_0[2] ; SW[17]     ; 5.038 ; 5.038 ; Rise       ; SW[17]          ;
+;  GPIO_0[3] ; SW[17]     ; 4.885 ; 4.885 ; Rise       ; SW[17]          ;
+; LEDR[*]    ; SW[17]     ; 4.239 ; 4.239 ; Rise       ; SW[17]          ;
+;  LEDR[0]   ; SW[17]     ; 6.007 ; 6.007 ; Rise       ; SW[17]          ;
+;  LEDR[1]   ; SW[17]     ; 5.778 ; 5.778 ; Rise       ; SW[17]          ;
+;  LEDR[2]   ; SW[17]     ; 5.896 ; 5.896 ; Rise       ; SW[17]          ;
+;  LEDR[3]   ; SW[17]     ; 4.999 ; 4.999 ; Rise       ; SW[17]          ;
+;  LEDR[8]   ; SW[17]     ; 6.101 ; 6.101 ; Rise       ; SW[17]          ;
+;  LEDR[9]   ; SW[17]     ; 5.979 ; 5.979 ; Rise       ; SW[17]          ;
+;  LEDR[10]  ; SW[17]     ; 4.239 ; 4.239 ; Rise       ; SW[17]          ;
+;  LEDR[11]  ; SW[17]     ; 4.727 ; 4.727 ; Rise       ; SW[17]          ;
++------------+------------+-------+-------+------------+-----------------+
 
 
 +----------------------------------------------------+
@@ -180,10 +482,14 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; Ko0        ; KEY[0]      ; 5.068 ;    ;    ; 5.068 ;
-; Ko1        ; KEY[1]      ; 4.843 ;    ;    ; 4.843 ;
-; Ko2        ; KEY[2]      ; 5.042 ;    ;    ; 5.042 ;
-; Ko3        ; KEY[3]      ; 2.560 ;    ;    ; 2.560 ;
+; GPIO_1[0]  ; LEDG[3]     ; 5.511 ;    ;    ; 5.511 ;
+; GPIO_1[0]  ; LEDR[7]     ; 5.631 ;    ;    ; 5.631 ;
+; GPIO_1[1]  ; LEDG[2]     ; 5.563 ;    ;    ; 5.563 ;
+; GPIO_1[1]  ; LEDR[6]     ; 5.486 ;    ;    ; 5.486 ;
+; GPIO_1[2]  ; LEDG[1]     ; 5.717 ;    ;    ; 5.717 ;
+; GPIO_1[2]  ; LEDR[5]     ; 5.706 ;    ;    ; 5.706 ;
+; GPIO_1[3]  ; LEDG[0]     ; 5.599 ;    ;    ; 5.599 ;
+; GPIO_1[3]  ; LEDR[4]     ; 5.473 ;    ;    ; 5.473 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -192,33 +498,87 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; Ko0        ; KEY[0]      ; 5.068 ;    ;    ; 5.068 ;
-; Ko1        ; KEY[1]      ; 4.843 ;    ;    ; 4.843 ;
-; Ko2        ; KEY[2]      ; 5.042 ;    ;    ; 5.042 ;
-; Ko3        ; KEY[3]      ; 2.560 ;    ;    ; 2.560 ;
+; GPIO_1[0]  ; LEDG[3]     ; 5.511 ;    ;    ; 5.511 ;
+; GPIO_1[0]  ; LEDR[7]     ; 5.631 ;    ;    ; 5.631 ;
+; GPIO_1[1]  ; LEDG[2]     ; 5.563 ;    ;    ; 5.563 ;
+; GPIO_1[1]  ; LEDR[6]     ; 5.486 ;    ;    ; 5.486 ;
+; GPIO_1[2]  ; LEDG[1]     ; 5.717 ;    ;    ; 5.717 ;
+; GPIO_1[2]  ; LEDR[5]     ; 5.706 ;    ;    ; 5.706 ;
+; GPIO_1[3]  ; LEDG[0]     ; 5.599 ;    ;    ; 5.599 ;
+; GPIO_1[3]  ; LEDR[4]     ; 5.473 ;    ;    ; 5.473 ;
 +------------+-------------+-------+----+----+-------+
 
 
-+----------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                        ;
-+------------------+-------+------+----------+---------+---------------------+
-; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
-+------------------+-------+------+----------+---------+---------------------+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 0.236 ; 0.244 ; -1.110   ; 0.749   ; -1.222              ;
+;  SW[17]          ; 0.236 ; 0.244 ; -1.110   ; 0.749   ; -1.222              ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; -1.11    ; 0.0     ; -5.222              ;
+;  SW[17]          ; 0.000 ; 0.000 ; -1.110   ; 0.000   ; -5.222              ;
++------------------+-------+-------+----------+---------+---------------------+
 
 
-+----------------------------------------------------+
-; Progagation Delay                                  ;
-+------------+-------------+-------+----+----+-------+
-; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
-+------------+-------------+-------+----+----+-------+
-; Ko0        ; KEY[0]      ; 8.879 ;    ;    ; 8.879 ;
-; Ko1        ; KEY[1]      ; 8.511 ;    ;    ; 8.511 ;
-; Ko2        ; KEY[2]      ; 8.867 ;    ;    ; 8.867 ;
-; Ko3        ; KEY[3]      ; 4.791 ;    ;    ; 4.791 ;
-+------------+-------------+-------+----+----+-------+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; GPIO_0[*]  ; SW[17]     ; 10.588 ; 10.588 ; Rise       ; SW[17]          ;
+;  GPIO_0[0] ; SW[17]     ; 9.575  ; 9.575  ; Rise       ; SW[17]          ;
+;  GPIO_0[1] ; SW[17]     ; 10.588 ; 10.588 ; Rise       ; SW[17]          ;
+;  GPIO_0[2] ; SW[17]     ; 9.774  ; 9.774  ; Rise       ; SW[17]          ;
+;  GPIO_0[3] ; SW[17]     ; 9.195  ; 9.195  ; Rise       ; SW[17]          ;
+; LEDR[*]    ; SW[17]     ; 11.696 ; 11.696 ; Rise       ; SW[17]          ;
+;  LEDR[0]   ; SW[17]     ; 11.510 ; 11.510 ; Rise       ; SW[17]          ;
+;  LEDR[1]   ; SW[17]     ; 10.997 ; 10.997 ; Rise       ; SW[17]          ;
+;  LEDR[2]   ; SW[17]     ; 11.354 ; 11.354 ; Rise       ; SW[17]          ;
+;  LEDR[3]   ; SW[17]     ; 9.423  ; 9.423  ; Rise       ; SW[17]          ;
+;  LEDR[8]   ; SW[17]     ; 11.696 ; 11.696 ; Rise       ; SW[17]          ;
+;  LEDR[9]   ; SW[17]     ; 11.419 ; 11.419 ; Rise       ; SW[17]          ;
+;  LEDR[10]  ; SW[17]     ; 8.059  ; 8.059  ; Rise       ; SW[17]          ;
+;  LEDR[11]  ; SW[17]     ; 8.929  ; 8.929  ; Rise       ; SW[17]          ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; GPIO_0[*]  ; SW[17]     ; 4.885 ; 4.885 ; Rise       ; SW[17]          ;
+;  GPIO_0[0] ; SW[17]     ; 4.956 ; 4.956 ; Rise       ; SW[17]          ;
+;  GPIO_0[1] ; SW[17]     ; 5.435 ; 5.435 ; Rise       ; SW[17]          ;
+;  GPIO_0[2] ; SW[17]     ; 5.038 ; 5.038 ; Rise       ; SW[17]          ;
+;  GPIO_0[3] ; SW[17]     ; 4.885 ; 4.885 ; Rise       ; SW[17]          ;
+; LEDR[*]    ; SW[17]     ; 4.239 ; 4.239 ; Rise       ; SW[17]          ;
+;  LEDR[0]   ; SW[17]     ; 6.007 ; 6.007 ; Rise       ; SW[17]          ;
+;  LEDR[1]   ; SW[17]     ; 5.778 ; 5.778 ; Rise       ; SW[17]          ;
+;  LEDR[2]   ; SW[17]     ; 5.896 ; 5.896 ; Rise       ; SW[17]          ;
+;  LEDR[3]   ; SW[17]     ; 4.999 ; 4.999 ; Rise       ; SW[17]          ;
+;  LEDR[8]   ; SW[17]     ; 6.101 ; 6.101 ; Rise       ; SW[17]          ;
+;  LEDR[9]   ; SW[17]     ; 5.979 ; 5.979 ; Rise       ; SW[17]          ;
+;  LEDR[10]  ; SW[17]     ; 4.239 ; 4.239 ; Rise       ; SW[17]          ;
+;  LEDR[11]  ; SW[17]     ; 4.727 ; 4.727 ; Rise       ; SW[17]          ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------+
+; Progagation Delay                                    ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; GPIO_1[0]  ; LEDG[3]     ; 9.662  ;    ;    ; 9.662  ;
+; GPIO_1[0]  ; LEDR[7]     ; 9.910  ;    ;    ; 9.910  ;
+; GPIO_1[1]  ; LEDG[2]     ; 9.750  ;    ;    ; 9.750  ;
+; GPIO_1[1]  ; LEDR[6]     ; 9.554  ;    ;    ; 9.554  ;
+; GPIO_1[2]  ; LEDG[1]     ; 10.002 ;    ;    ; 10.002 ;
+; GPIO_1[2]  ; LEDR[5]     ; 9.984  ;    ;    ; 9.984  ;
+; GPIO_1[3]  ; LEDG[0]     ; 9.812  ;    ;    ; 9.812  ;
+; GPIO_1[3]  ; LEDR[4]     ; 9.545  ;    ;    ; 9.545  ;
++------------+-------------+--------+----+----+--------+
 
 
 +----------------------------------------------------+
@@ -226,17 +586,55 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; Ko0        ; KEY[0]      ; 5.068 ;    ;    ; 5.068 ;
-; Ko1        ; KEY[1]      ; 4.843 ;    ;    ; 4.843 ;
-; Ko2        ; KEY[2]      ; 5.042 ;    ;    ; 5.042 ;
-; Ko3        ; KEY[3]      ; 2.560 ;    ;    ; 2.560 ;
+; GPIO_1[0]  ; LEDG[3]     ; 5.511 ;    ;    ; 5.511 ;
+; GPIO_1[0]  ; LEDR[7]     ; 5.631 ;    ;    ; 5.631 ;
+; GPIO_1[1]  ; LEDG[2]     ; 5.563 ;    ;    ; 5.563 ;
+; GPIO_1[1]  ; LEDR[6]     ; 5.486 ;    ;    ; 5.486 ;
+; GPIO_1[2]  ; LEDG[1]     ; 5.717 ;    ;    ; 5.717 ;
+; GPIO_1[2]  ; LEDR[5]     ; 5.706 ;    ;    ; 5.706 ;
+; GPIO_1[3]  ; LEDG[0]     ; 5.599 ;    ;    ; 5.599 ;
+; GPIO_1[3]  ; LEDR[4]     ; 5.473 ;    ;    ; 5.473 ;
 +------------+-------------+-------+----+----+-------+
 
 
--------------------
-; Clock Transfers ;
--------------------
-Nothing to report.
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; SW[17]     ; SW[17]   ; 4        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; SW[17]     ; SW[17]   ; 4        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; SW[17]     ; SW[17]   ; 4        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; SW[17]     ; SW[17]   ; 4        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 ---------------
@@ -259,9 +657,9 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 4     ; 4    ;
-; Unconstrained Input Port Paths  ; 4     ; 4    ;
-; Unconstrained Output Ports      ; 4     ; 4    ;
-; Unconstrained Output Port Paths ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 8     ; 8    ;
+; Unconstrained Output Ports      ; 20    ; 20   ;
+; Unconstrained Output Port Paths ; 20    ; 20   ;
 +---------------------------------+-------+------+
 
 
@@ -271,7 +669,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jun 22 13:12:13 2018
+    Info: Processing started: Fri Jun 22 18:43:29 2018
 Info: Command: quartus_sta keyboard -c keyboard
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -279,33 +677,60 @@ Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'keyboard.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name SW[17] SW[17]
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332159): No clocks to report
 Info: Analyzing Slow Model
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case setup slack is 0.236
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.236         0.000 SW[17] 
+Info (332146): Worst-case hold slack is 0.530
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.530         0.000 SW[17] 
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case recovery slack is -1.110
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.110        -1.110 SW[17] 
+Info (332146): Worst-case removal slack is 1.430
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.430         0.000 SW[17] 
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -5.222 SW[17] 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case setup slack is 0.614
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.614         0.000 SW[17] 
+Info (332146): Worst-case hold slack is 0.244
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.244         0.000 SW[17] 
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case recovery slack is -0.081
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.081        -0.081 SW[17] 
+Info (332146): Worst-case removal slack is 0.749
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.749         0.000 SW[17] 
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -5.222 SW[17] 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 463 megabytes
-    Info: Processing ended: Fri Jun 22 13:12:14 2018
+    Info: Peak virtual memory: 466 megabytes
+    Info: Processing ended: Fri Jun 22 18:43:30 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

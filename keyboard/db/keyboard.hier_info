@@ -1,33 +1,63 @@
-|Keyboard
-I3 <= <GND>
-Q[0] <= <GND>
-Q[1] <= <GND>
-Q[2] <= <GND>
-Q[3] <= <GND>
-Q[4] <= <GND>
-I2 <= <GND>
-I1 <= <GND>
-I0 <= <GND>
-KEY[0] <= Ko0.DB_MAX_OUTPUT_PORT_TYPE
-KEY[1] <= Ko1.DB_MAX_OUTPUT_PORT_TYPE
-KEY[2] <= Ko2.DB_MAX_OUTPUT_PORT_TYPE
-KEY[3] <= Ko3.DB_MAX_OUTPUT_PORT_TYPE
-KEY[4] <= <GND>
-Ko0 => KEY[0].DATAIN
-Ko1 => KEY[1].DATAIN
-Ko2 => KEY[2].DATAIN
-Ko3 => KEY[3].DATAIN
+|test
+GPIO_0[0] <= Keyboard:inst.KEYINPUT[0]
+GPIO_0[1] <= Keyboard:inst.KEYINPUT[1]
+GPIO_0[2] <= Keyboard:inst.KEYINPUT[2]
+GPIO_0[3] <= Keyboard:inst.KEYINPUT[3]
+SW[17] => Keyboard:inst.CLK
+GPIO_1[0] => Keyboard:inst.KEYOUTPUT[3]
+GPIO_1[0] => LEDG[3].DATAIN
+GPIO_1[1] => Keyboard:inst.KEYOUTPUT[2]
+GPIO_1[1] => LEDG[2].DATAIN
+GPIO_1[2] => Keyboard:inst.KEYOUTPUT[1]
+GPIO_1[2] => LEDG[1].DATAIN
+GPIO_1[3] => Keyboard:inst.KEYOUTPUT[0]
+GPIO_1[3] => LEDG[0].DATAIN
+LEDG[0] <= GPIO_1[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= GPIO_1[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] <= GPIO_1[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[3] <= GPIO_1[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[0] <= Keyboard:inst.KEYINPUT[0]
+LEDR[1] <= Keyboard:inst.KEYINPUT[1]
+LEDR[2] <= Keyboard:inst.KEYINPUT[2]
+LEDR[3] <= Keyboard:inst.KEYINPUT[3]
+LEDR[4] <= Keyboard:inst.OUTPUT[0]
+LEDR[5] <= Keyboard:inst.OUTPUT[1]
+LEDR[6] <= Keyboard:inst.OUTPUT[2]
+LEDR[7] <= Keyboard:inst.OUTPUT[3]
+LEDR[8] <= Keyboard:inst.OUTPUT[4]
+LEDR[9] <= Keyboard:inst.OUTPUT[5]
+LEDR[10] <= Keyboard:inst.OUTPUT[6]
+LEDR[11] <= Keyboard:inst.OUTPUT[7]
+
+
+|test|Keyboard:inst
+KEYINPUT[0] <= RingCounter:inst.Q0
+KEYINPUT[1] <= RingCounter:inst.Q1
+KEYINPUT[2] <= RingCounter:inst.Q2
+KEYINPUT[3] <= RingCounter:inst.Q3
+OUTPUT[0] <= KEYOUTPUT[0].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= KEYOUTPUT[1].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= KEYOUTPUT[2].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= KEYOUTPUT[3].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[4] <= RingCounter:inst.Q0
+OUTPUT[5] <= RingCounter:inst.Q1
+OUTPUT[6] <= RingCounter:inst.Q2
+OUTPUT[7] <= RingCounter:inst.Q3
+KEYOUTPUT[0] => OUTPUT[0].DATAIN
+KEYOUTPUT[1] => OUTPUT[1].DATAIN
+KEYOUTPUT[2] => OUTPUT[2].DATAIN
+KEYOUTPUT[3] => OUTPUT[3].DATAIN
 CLK => RingCounter:inst.CLK
 
 
-|Keyboard|RingCounter:inst
-Q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+|test|Keyboard:inst|RingCounter:inst
+Q3 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst.CLK
 CLK => inst3.CLK
 CLK => inst2.CLK
 CLK => inst1.CLK
-Q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-Q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Q3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Q2 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Q1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Q0 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
 
 

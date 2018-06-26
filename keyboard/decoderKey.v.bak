@@ -1,0 +1,15 @@
+/* Decodificador  binario para teclado */
+
+module decoderKey (InKey, InCnt, Out);
+	input [4:0] InKey;
+	input [4:0] InCnt;
+	output reg[4:0] Out;
+
+	always @(*)	
+		case (InKey)
+			4'b0000 : Out = ~7'b0111;
+	
+			default : Out = ~7'b0000;
+		endcase
+		
+endmodule

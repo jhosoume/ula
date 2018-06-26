@@ -1,0 +1,189 @@
+$comment
+	File created using the following command:
+		vcd file keyboard.msim.vcd -direction
+$end
+$date
+	Fri Jun 22 18:31:36 2018
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Keyboard_vlg_vec_tst $end
+$var reg 1 ! CLK $end
+$var reg 4 " KEYOUTPUT [3:0] $end
+$var wire 1 # KEYINPUT [3] $end
+$var wire 1 $ KEYINPUT [2] $end
+$var wire 1 % KEYINPUT [1] $end
+$var wire 1 & KEYINPUT [0] $end
+$var wire 1 ' OUTPUT [7] $end
+$var wire 1 ( OUTPUT [6] $end
+$var wire 1 ) OUTPUT [5] $end
+$var wire 1 * OUTPUT [4] $end
+$var wire 1 + OUTPUT [3] $end
+$var wire 1 , OUTPUT [2] $end
+$var wire 1 - OUTPUT [1] $end
+$var wire 1 . OUTPUT [0] $end
+$var wire 1 / sampler $end
+$scope module i1 $end
+$var wire 1 0 gnd $end
+$var wire 1 1 vcc $end
+$var wire 1 2 unknown $end
+$var tri1 1 3 devclrn $end
+$var tri1 1 4 devpor $end
+$var tri1 1 5 devoe $end
+$var wire 1 6 CLK~combout $end
+$var wire 1 7 CLK~clkctrl_outclk $end
+$var wire 1 8 inst|inst1~0_combout $end
+$var wire 1 9 inst|inst1~regout $end
+$var wire 1 : inst|inst2~feeder_combout $end
+$var wire 1 ; inst|inst2~regout $end
+$var wire 1 < inst|inst3~feeder_combout $end
+$var wire 1 = inst|inst3~regout $end
+$var wire 1 > inst|inst~0_combout $end
+$var wire 1 ? inst|selfstart~0_combout $end
+$var wire 1 @ inst|inst~regout $end
+$var wire 1 A KEYOUTPUT~combout [3] $end
+$var wire 1 B KEYOUTPUT~combout [2] $end
+$var wire 1 C KEYOUTPUT~combout [1] $end
+$var wire 1 D KEYOUTPUT~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+b0 "
+1&
+1%
+1$
+0#
+0.
+0-
+0,
+0+
+1*
+1)
+1(
+0'
+x/
+00
+11
+x2
+13
+14
+15
+16
+17
+18
+09
+0:
+0;
+0<
+0=
+1>
+0?
+0@
+0D
+0C
+0B
+0A
+$end
+#10000
+0!
+b10 "
+b11 "
+06
+1D
+1C
+07
+0/
+1.
+1-
+#20000
+1!
+b1 "
+b0 "
+16
+0D
+0C
+17
+1/
+0.
+0-
+1@
+19
+08
+1:
+1'
+1#
+0$
+0(
+#30000
+0!
+06
+07
+0/
+#40000
+b1000 "
+b1100 "
+b1110 "
+b1111 "
+1!
+1D
+1C
+1B
+1A
+16
+17
+1/
+1.
+1-
+1,
+1+
+1;
+09
+1<
+0:
+0%
+0)
+1$
+1(
+#50000
+0!
+06
+07
+0/
+#60000
+1!
+16
+17
+1/
+1=
+0;
+0>
+0<
+0&
+0*
+1%
+1)
+#70000
+b111 "
+b11 "
+b1 "
+b0 "
+0!
+0D
+0C
+0B
+0A
+06
+07
+0/
+0.
+0-
+0,
+0+
+#80000
