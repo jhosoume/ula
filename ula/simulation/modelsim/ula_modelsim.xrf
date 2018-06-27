@@ -44,6 +44,7 @@ source_file = 1, /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/decodOp.v
 source_file = 1, /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/calcTest.bdf
 source_file = 1, /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/WaveformTestCalc.vwf
 source_file = 1, /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/normReg.v
+source_file = 1, /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/WaveformTestMult.vwf
 source_file = 1, /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/db/ula.cbx.xml
 design_name = calcTest
 instance = comp, \inst6|WideOr1~0 , inst6|WideOr1~0, calcTest, 1
