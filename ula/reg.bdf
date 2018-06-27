@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 384 88 400 256)
 	(text "INPUT" (rect 7 125 16 154)(font "Arial" (font_size 6))(vertical))
-	(text "CLEAR" (rect 7 5 17 42)(font "Arial" )(vertical))
+	(text "CLEAR" (rect 7 5 17 41)(font "Arial" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -40,7 +40,7 @@ applicable agreement for further details.
 	(input)
 	(rect 24 520 192 536)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
-	(text "input[3..0]" (rect 5 0 53 10)(font "Arial" ))
+	(text "input[3..0]" (rect 5 0 52 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -312,46 +312,6 @@ applicable agreement for further details.
 	(rotate270)
 )
 (connector
-	(pt 464 416)
-	(pt 464 432)
-)
-(connector
-	(pt 464 432)
-	(pt 392 432)
-)
-(connector
-	(pt 392 544)
-	(pt 464 544)
-)
-(connector
-	(pt 464 544)
-	(pt 464 528)
-)
-(connector
-	(pt 392 656)
-	(pt 464 656)
-)
-(connector
-	(pt 464 656)
-	(pt 464 640)
-)
-(connector
-	(pt 464 752)
-	(pt 464 768)
-)
-(connector
-	(pt 464 768)
-	(pt 392 768)
-)
-(connector
-	(pt 392 544)
-	(pt 392 656)
-)
-(connector
-	(pt 392 656)
-	(pt 392 768)
-)
-(connector
 	(pt 320 376)
 	(pt 320 488)
 )
@@ -480,15 +440,53 @@ applicable agreement for further details.
 	(pt 392 272)
 )
 (connector
-	(pt 392 320)
-	(pt 392 432)
+	(pt 392 328)
+	(pt 464 328)
 )
 (connector
-	(pt 392 432)
-	(pt 392 544)
+	(pt 464 328)
+	(pt 464 336)
 )
-(junction (pt 392 544))
-(junction (pt 392 656))
+(connector
+	(pt 392 320)
+	(pt 392 328)
+)
+(connector
+	(pt 392 440)
+	(pt 464 440)
+)
+(connector
+	(pt 464 440)
+	(pt 464 448)
+)
+(connector
+	(pt 392 328)
+	(pt 392 440)
+)
+(connector
+	(pt 392 552)
+	(pt 464 552)
+)
+(connector
+	(pt 464 552)
+	(pt 464 560)
+)
+(connector
+	(pt 392 440)
+	(pt 392 552)
+)
+(connector
+	(pt 392 664)
+	(pt 464 664)
+)
+(connector
+	(pt 464 664)
+	(pt 464 672)
+)
+(connector
+	(pt 392 552)
+	(pt 392 664)
+)
 (junction (pt 320 488))
 (junction (pt 320 600))
 (junction (pt 320 712))
@@ -498,4 +496,6 @@ applicable agreement for further details.
 (junction (pt 600 472))
 (junction (pt 600 584))
 (junction (pt 600 536))
-(junction (pt 392 432))
+(junction (pt 392 328))
+(junction (pt 392 440))
+(junction (pt 392 552))

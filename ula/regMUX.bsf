@@ -1,0 +1,71 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 256 256)
+	(text "regMUX" (rect 5 0 45 10)(font "Arial" ))
+	(text "inst" (rect 168 184 185 194)(font "Arial" ))
+	(port
+		(pt 72 0)
+		(input)
+		(text "state[1..0]" (rect 0 0 47 10)(font "Arial" ))
+		(text "state[1..0]" (rect 64 25 74 72)(font "Arial" )(vertical))
+		(line (pt 72 0)(pt 72 17)(line_width 3))
+	)
+	(port
+		(pt 0 104)
+		(input)
+		(text "regV1[3..0]" (rect 0 0 51 10)(font "Arial" ))
+		(text "regV1[3..0]" (rect 21 99 72 109)(font "Arial" ))
+		(line (pt 0 104)(pt 16 104)(line_width 3))
+	)
+	(port
+		(pt 0 136)
+		(input)
+		(text "regV2[3..0]" (rect 0 0 51 10)(font "Arial" ))
+		(text "regV2[3..0]" (rect 21 131 72 141)(font "Arial" ))
+		(line (pt 0 136)(pt 16 136)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "regOP[3..0]" (rect 0 0 54 10)(font "Arial" ))
+		(text "regOP[3..0]" (rect 21 59 75 69)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 168)
+		(input)
+		(text "keyboard[3..0]" (rect 0 0 67 10)(font "Arial" ))
+		(text "keyboard[3..0]" (rect 21 163 88 173)(font "Arial" ))
+		(line (pt 0 168)(pt 16 168)(line_width 3))
+	)
+	(port
+		(pt 120 0)
+		(output)
+		(text "Out[3..0]" (rect 0 0 41 10)(font "Arial" ))
+		(text "Out[3..0]" (rect 112 23 122 64)(font "Arial" )(vertical))
+		(line (pt 120 0)(pt 120 16)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 176 184))
+	)
+)

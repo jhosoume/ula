@@ -1,9 +1,643 @@
-|checkOpNum
+|calcTest
+inBinario[0] <= decFromKey:inst6.Out[0]
+inBinario[1] <= decFromKey:inst6.Out[1]
+inBinario[2] <= decFromKey:inst6.Out[2]
+inBinario[3] <= decFromKey:inst6.Out[3]
+num[0] => decFromKey:inst6.In[0]
+num[1] => decFromKey:inst6.In[1]
+num[2] => decFromKey:inst6.In[2]
+num[3] => decFromKey:inst6.In[3]
+num[4] => decFromKey:inst6.In[4]
+num[5] => decFromKey:inst6.In[5]
+num[6] => decFromKey:inst6.In[6]
+num[7] => decFromKey:inst6.In[7]
+operation[0] <= decodOp:inst10.sumsub
+operation[1] <= decodOp:inst10.op
+start => inst5.IN0
+state[0] <= statesmach:inst7.state[0]
+state[1] <= statesmach:inst7.state[1]
+clock => statesmach:inst7.clock
+clock => inst14.IN1
+clock => inst16.IN1
+clock => inst15.IN1
+regNumA[0] <= reg:inst2.r[0]
+regNumA[1] <= reg:inst2.r[1]
+regNumA[2] <= reg:inst2.r[2]
+regNumA[3] <= reg:inst2.r[3]
+regNumB[0] <= reg:inst3.r[0]
+regNumB[1] <= reg:inst3.r[1]
+regNumB[2] <= reg:inst3.r[2]
+regNumB[3] <= reg:inst3.r[3]
+result[0] <= ula_full:inst.RESULT[0]
+result[1] <= ula_full:inst.RESULT[1]
+result[2] <= ula_full:inst.RESULT[2]
+result[3] <= ula_full:inst.RESULT[3]
+result[4] <= ula_full:inst.RESULT[4]
+result[5] <= ula_full:inst.RESULT[5]
+result[6] <= ula_full:inst.RESULT[6]
+result[7] <= ula_full:inst.RESULT[7]
+
+
+|calcTest|decFromKey:inst6
+In[0] => Decoder0.IN7
+In[1] => Decoder0.IN6
+In[2] => Decoder0.IN5
+In[3] => Decoder0.IN4
+In[4] => Decoder0.IN3
+In[5] => Decoder0.IN2
+In[6] => Decoder0.IN1
+In[7] => Decoder0.IN0
+Out[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|decodOp:inst10
+opKey[0] => Decoder0.IN3
+opKey[1] => Decoder0.IN2
+opKey[2] => Decoder0.IN1
+opKey[3] => Decoder0.IN0
+sumsub <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+op <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|reg:inst4
+r[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+r[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst.CLK
+clock => inst5.CLK
+clock => inst3.CLK
+clock => inst4.CLK
+input[0] => inst5.DATAIN
+input[1] => inst4.DATAIN
+input[2] => inst3.DATAIN
+input[3] => inst.DATAIN
+CLEAR => inst8.IN0
+
+
+|calcTest|checkOpNum:inst8
 In[0] => Decoder0.IN3
 In[1] => Decoder0.IN2
 In[2] => Decoder0.IN1
 In[3] => Decoder0.IN0
 Out[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 Out[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|regMUX:inst22
+state[0] => Mux0.IN1
+state[0] => Mux1.IN1
+state[0] => Mux2.IN1
+state[0] => Mux3.IN1
+state[1] => Mux0.IN0
+state[1] => Mux1.IN0
+state[1] => Mux2.IN0
+state[1] => Mux3.IN0
+regV1[0] => Mux3.IN2
+regV1[1] => Mux2.IN2
+regV1[2] => Mux1.IN2
+regV1[3] => Mux0.IN2
+regV2[0] => Mux3.IN3
+regV2[1] => Mux2.IN3
+regV2[2] => Mux1.IN3
+regV2[3] => Mux0.IN3
+regOP[0] => Mux3.IN4
+regOP[1] => Mux2.IN4
+regOP[2] => Mux1.IN4
+regOP[3] => Mux0.IN4
+keyboard[0] => Mux3.IN5
+keyboard[1] => Mux2.IN5
+keyboard[2] => Mux1.IN5
+keyboard[3] => Mux0.IN5
+Out[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|reg:inst2
+r[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+r[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst.CLK
+clock => inst5.CLK
+clock => inst3.CLK
+clock => inst4.CLK
+input[0] => inst5.DATAIN
+input[1] => inst4.DATAIN
+input[2] => inst3.DATAIN
+input[3] => inst.DATAIN
+CLEAR => inst8.IN0
+
+
+|calcTest|statesmach:inst7
+state[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst3.CLK
+clock => inst2.CLK
+input[0] => statesrom:inst.In[0]
+input[1] => statesrom:inst.In[1]
+
+
+|calcTest|statesmach:inst7|statesrom:inst
+In[0] => Decoder0.IN3
+In[1] => Decoder0.IN2
+In[2] => Decoder0.IN1
+In[3] => Decoder0.IN0
+Out[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|reg:inst3
+r[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+r[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst.CLK
+clock => inst5.CLK
+clock => inst3.CLK
+clock => inst4.CLK
+input[0] => inst5.DATAIN
+input[1] => inst4.DATAIN
+input[2] => inst3.DATAIN
+input[3] => inst.DATAIN
+CLEAR => inst8.IN0
+
+
+|calcTest|ula_full:inst
+RESULT[0] <= mux_summult:inst9.S[0]
+RESULT[1] <= mux_summult:inst9.S[1]
+RESULT[2] <= mux_summult:inst9.S[2]
+RESULT[3] <= mux_summult:inst9.S[3]
+RESULT[4] <= mux_summult:inst9.S[4]
+RESULT[5] <= mux_summult:inst9.S[5]
+RESULT[6] <= mux_summult:inst9.S[6]
+RESULT[7] <= mux_summult:inst9.S[7]
+OP => mux_summult:inst9.C
+SUMSUB => SumSub6bit:inst.PLUSMINUS
+A[0] => SumSub6bit:inst.A[0]
+A[0] => Mult:inst6.A[0]
+A[1] => SumSub6bit:inst.A[1]
+A[1] => Mult:inst6.A[1]
+A[2] => SumSub6bit:inst.A[2]
+A[2] => Mult:inst6.A[2]
+A[3] => SumSub6bit:inst.A[3]
+A[3] => Mult:inst6.A[3]
+B[0] => SumSub6bit:inst.B[0]
+B[0] => Mult:inst6.B[0]
+B[1] => SumSub6bit:inst.B[1]
+B[1] => Mult:inst6.B[1]
+B[2] => SumSub6bit:inst.B[2]
+B[2] => Mult:inst6.B[2]
+B[3] => SumSub6bit:inst.B[3]
+B[3] => Mult:inst6.B[3]
+
+
+|calcTest|ula_full:inst|mux_summult:inst9
+S[0] <= inst3[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= inst3[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= inst3[2].DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= inst3[3].DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= inst3[4].DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= inst3[5].DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= inst3[6].DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= inst3[7].DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst1[0].IN0
+B[1] => inst1[1].IN0
+B[2] => inst1[2].IN0
+B[3] => inst1[3].IN0
+B[4] => inst1[4].IN0
+B[5] => inst1[5].IN0
+B[6] => inst1[6].IN0
+B[7] => inst1[7].IN0
+C => inst1[7].IN1
+C => inst1[6].IN1
+C => inst1[5].IN1
+C => inst1[4].IN1
+C => inst1[3].IN1
+C => inst1[2].IN1
+C => inst1[1].IN1
+C => inst1[0].IN1
+C => inst2.IN0
+A[0] => inst[0].IN0
+A[1] => inst[1].IN0
+A[2] => inst[2].IN0
+A[3] => inst[3].IN0
+A[4] => inst[4].IN0
+A[5] => inst[5].IN0
+A[6] => inst[6].IN0
+A[7] => inst[7].IN0
+
+
+|calcTest|ula_full:inst|6to8bit:inst8
+S[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= A[4].DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+A[0] => S[0].DATAIN
+A[1] => S[1].DATAIN
+A[2] => S[2].DATAIN
+A[3] => S[3].DATAIN
+A[4] => S[4].DATAIN
+A[5] => S[7].DATAIN
+A[5] => S[6].DATAIN
+A[5] => S[5].DATAIN
+
+
+|calcTest|ula_full:inst|SumSub6bit:inst
+S[0] <= FullAdder:inst3.S
+S[1] <= FullAdder:inst2.S
+S[2] <= FullAdder:inst1.S
+S[3] <= FullAdder:inst.S
+S[4] <= FullAdder:inst22.S
+S[5] <= FullAdder:inst23.S
+B[0] => Selector:inst17.N
+B[0] => inst14.IN0
+B[1] => Selector:inst16.N
+B[1] => inst13.IN0
+B[2] => Selector:inst15.N
+B[2] => inst12.IN0
+B[3] => Selector:inst10.N
+B[3] => inst11.IN0
+PLUSMINUS => Selector:inst10.SEL
+PLUSMINUS => Selector:inst15.SEL
+PLUSMINUS => Selector:inst16.SEL
+PLUSMINUS => Selector:inst17.SEL
+PLUSMINUS => FullAdder:inst3.Cin
+PLUSMINUS => Selector:inst18.SEL
+PLUSMINUS => Selector:inst19.SEL
+A[0] => FullAdder:inst3.A
+A[1] => FullAdder:inst2.A
+A[2] => FullAdder:inst1.A
+A[3] => FullAdder:inst.A
+
+
+|calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst10
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+SEL => inst1.IN1
+SEL => inst3.IN0
+N => inst.IN0
+
+
+|calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst15
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+SEL => inst1.IN1
+SEL => inst3.IN0
+N => inst.IN0
+
+
+|calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst16
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+SEL => inst1.IN1
+SEL => inst3.IN0
+N => inst.IN0
+
+
+|calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst17
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+SEL => inst1.IN1
+SEL => inst3.IN0
+N => inst.IN0
+
+
+|calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst22
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst18
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+SEL => inst1.IN1
+SEL => inst3.IN0
+N => inst.IN0
+
+
+|calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst23
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst19
+OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C => inst1.IN0
+SEL => inst1.IN1
+SEL => inst3.IN0
+N => inst.IN0
+
+
+|calcTest|ula_full:inst|Mult:inst6
+M[0] <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+M[1] <= FullAdder:inst.S
+M[2] <= FullAdder:inst6.S
+M[3] <= FullAdder:inst11.S
+M[4] <= FullAdder:inst12.S
+M[5] <= FullAdder:inst13.S
+M[6] <= FullAdder:inst14.S
+M[7] <= FullAdder:inst14.Cout
+B[0] => inst31.IN0
+B[0] => inst29.IN0
+B[0] => inst26.IN0
+B[0] => inst25.IN0
+B[1] => inst32.IN0
+B[1] => inst30.IN0
+B[1] => inst28.IN0
+B[1] => inst27.IN0
+B[2] => inst17.IN0
+B[2] => inst18.IN0
+B[2] => inst20.IN0
+B[2] => inst22.IN0
+B[3] => inst19.IN0
+B[3] => inst21.IN0
+B[3] => inst23.IN0
+B[3] => inst24.IN0
+A[0] => inst27.IN1
+A[0] => inst22.IN1
+A[0] => inst24.IN1
+A[0] => inst25.IN1
+A[1] => inst28.IN1
+A[1] => inst26.IN1
+A[1] => inst20.IN1
+A[1] => inst23.IN1
+A[2] => inst30.IN1
+A[2] => inst29.IN1
+A[2] => inst18.IN1
+A[2] => inst21.IN1
+A[3] => inst19.IN1
+A[3] => inst17.IN1
+A[3] => inst32.IN1
+A[3] => inst31.IN1
+
+
+|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst4
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst6
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst11
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst4.IN0
+A => inst2.IN1
+B => inst.IN1
+B => inst4.IN1
+B => inst2.IN0
+Cin => inst1.IN1
+Cin => inst3.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|normReg:inst12
+In[0] => Decoder3.IN3
+In[1] => Decoder0.IN2
+In[1] => Decoder2.IN1
+In[1] => Decoder3.IN2
+In[2] => Decoder0.IN1
+In[2] => Decoder1.IN1
+In[2] => Decoder3.IN1
+In[3] => Decoder0.IN0
+In[3] => Decoder1.IN0
+In[3] => Decoder2.IN0
+In[3] => Decoder3.IN0
+Out[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcTest|normReg:inst21
+In[0] => Decoder3.IN3
+In[1] => Decoder0.IN2
+In[1] => Decoder2.IN1
+In[1] => Decoder3.IN2
+In[2] => Decoder0.IN1
+In[2] => Decoder1.IN1
+In[2] => Decoder3.IN1
+In[3] => Decoder0.IN0
+In[3] => Decoder1.IN0
+In[3] => Decoder2.IN0
+In[3] => Decoder3.IN0
+Out[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -22,8 +22,8 @@ applicable agreement for further details.
 (pin
 	(input)
 	(rect 264 360 280 528)
-	(text "INPUT" (rect 0 15 10 43)(font "Arial" (font_size 6))(vertical))
-	(text "SW[17]" (rect 2 107 14 143)(font "Arial" )(vertical))
+	(text "INPUT" (rect 0 15 9 44)(font "Arial" (font_size 6))(vertical))
+	(text "SW[17]" (rect 2 107 12 142)(font "Arial" )(vertical))
 	(pt 8 0)
 	(drawing
 		(line (pt 12 84)(pt 12 59))
@@ -34,14 +34,14 @@ applicable agreement for further details.
 		(line (pt 12 59)(pt 8 55))
 	)
 	(rotate90)
-	(text "VCC" (rect 7 20 17 40)(font "Arial" (font_size 6))(vertical))
+	(text "VCC" (rect 7 20 16 41)(font "Arial" (font_size 6))(vertical))
 	(annotation_block (location)(rect 208 528 264 544))
 )
 (pin
 	(input)
 	(rect 0 192 168 208)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "GPIO_1[0]" (rect 5 0 56 12)(font "Arial" ))
+	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
+	(text "GPIO_1[0]" (rect 5 0 55 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -51,14 +51,14 @@ applicable agreement for further details.
 		(line (pt 109 4)(pt 113 8))
 		(line (pt 109 12)(pt 113 8))
 	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 128 7 149 16)(font "Arial" (font_size 6)))
 	(annotation_block (location)(rect 56 176 112 192))
 )
 (pin
 	(input)
 	(rect 0 208 168 224)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "GPIO_1[1]" (rect 5 0 56 12)(font "Arial" ))
+	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
+	(text "GPIO_1[1]" (rect 5 0 55 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -68,14 +68,14 @@ applicable agreement for further details.
 		(line (pt 109 4)(pt 113 8))
 		(line (pt 109 12)(pt 113 8))
 	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 128 7 149 16)(font "Arial" (font_size 6)))
 	(annotation_block (location)(rect 56 216 112 232))
 )
 (pin
 	(input)
 	(rect 0 224 168 240)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "GPIO_1[2]" (rect 5 0 56 12)(font "Arial" ))
+	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
+	(text "GPIO_1[2]" (rect 5 0 55 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -85,14 +85,14 @@ applicable agreement for further details.
 		(line (pt 109 4)(pt 113 8))
 		(line (pt 109 12)(pt 113 8))
 	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 128 7 149 16)(font "Arial" (font_size 6)))
 	(annotation_block (location)(rect 56 248 112 264))
 )
 (pin
 	(input)
 	(rect 0 240 168 256)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "GPIO_1[3]" (rect 5 0 56 12)(font "Arial" ))
+	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
+	(text "GPIO_1[3]" (rect 5 0 55 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -102,14 +102,14 @@ applicable agreement for further details.
 		(line (pt 109 4)(pt 113 8))
 		(line (pt 109 12)(pt 113 8))
 	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 128 7 149 16)(font "Arial" (font_size 6)))
 	(annotation_block (location)(rect 56 288 112 304))
 )
 (pin
 	(output)
 	(rect 352 -152 368 24)
-	(text "OUTPUT" (rect 0 137 10 175)(font "Arial" (font_size 6))(vertical))
-	(text "GPIO_0[3]" (rect 0 35 12 86)(font "Arial" )(vertical))
+	(text "OUTPUT" (rect 0 137 9 177)(font "Arial" (font_size 6))(vertical))
+	(text "GPIO_0[3]" (rect 0 35 10 85)(font "Arial" )(vertical))
 	(pt 8 176)
 	(drawing
 		(line (pt 8 176)(pt 8 124))
@@ -126,8 +126,8 @@ applicable agreement for further details.
 (pin
 	(output)
 	(rect 368 -152 384 24)
-	(text "OUTPUT" (rect 0 137 10 175)(font "Arial" (font_size 6))(vertical))
-	(text "GPIO_0[2]" (rect 0 35 12 86)(font "Arial" )(vertical))
+	(text "OUTPUT" (rect 0 137 9 177)(font "Arial" (font_size 6))(vertical))
+	(text "GPIO_0[2]" (rect 0 35 10 85)(font "Arial" )(vertical))
 	(pt 8 176)
 	(drawing
 		(line (pt 8 176)(pt 8 124))
@@ -144,8 +144,8 @@ applicable agreement for further details.
 (pin
 	(output)
 	(rect 384 -152 400 24)
-	(text "OUTPUT" (rect 0 137 10 175)(font "Arial" (font_size 6))(vertical))
-	(text "GPIO_0[1]" (rect 0 35 12 86)(font "Arial" )(vertical))
+	(text "OUTPUT" (rect 0 137 9 177)(font "Arial" (font_size 6))(vertical))
+	(text "GPIO_0[1]" (rect 0 35 10 85)(font "Arial" )(vertical))
 	(pt 8 176)
 	(drawing
 		(line (pt 8 176)(pt 8 124))
@@ -162,8 +162,8 @@ applicable agreement for further details.
 (pin
 	(output)
 	(rect 400 -152 416 24)
-	(text "OUTPUT" (rect 0 137 10 175)(font "Arial" (font_size 6))(vertical))
-	(text "GPIO_0[0]" (rect 0 35 12 86)(font "Arial" )(vertical))
+	(text "OUTPUT" (rect 0 137 9 177)(font "Arial" (font_size 6))(vertical))
+	(text "GPIO_0[0]" (rect 0 35 10 85)(font "Arial" )(vertical))
 	(pt 8 176)
 	(drawing
 		(line (pt 8 176)(pt 8 124))
@@ -180,8 +180,8 @@ applicable agreement for further details.
 (pin
 	(output)
 	(rect 168 272 184 448)
-	(text "OUTPUT" (rect 6 1 16 39)(font "Arial" (font_size 6))(vertical))
-	(text "LEDG[3]" (rect 4 90 16 132)(font "Arial" )(vertical))
+	(text "OUTPUT" (rect 6 1 15 41)(font "Arial" (font_size 6))(vertical))
+	(text "LEDG[3]" (rect 4 90 14 131)(font "Arial" )(vertical))
 	(pt 8 0)
 	(drawing
 		(line (pt 8 0)(pt 8 52))
@@ -198,8 +198,8 @@ applicable agreement for further details.
 (pin
 	(output)
 	(rect 184 272 200 448)
-	(text "OUTPUT" (rect 6 1 16 39)(font "Arial" (font_size 6))(vertical))
-	(text "LEDG[2]" (rect 4 90 16 132)(font "Arial" )(vertical))
+	(text "OUTPUT" (rect 6 1 15 41)(font "Arial" (font_size 6))(vertical))
+	(text "LEDG[2]" (rect 4 90 14 131)(font "Arial" )(vertical))
 	(pt 8 0)
 	(drawing
 		(line (pt 8 0)(pt 8 52))
@@ -216,8 +216,8 @@ applicable agreement for further details.
 (pin
 	(output)
 	(rect 200 272 216 448)
-	(text "OUTPUT" (rect 6 1 16 39)(font "Arial" (font_size 6))(vertical))
-	(text "LEDG[1]" (rect 4 90 16 132)(font "Arial" )(vertical))
+	(text "OUTPUT" (rect 6 1 15 41)(font "Arial" (font_size 6))(vertical))
+	(text "LEDG[1]" (rect 4 90 14 131)(font "Arial" )(vertical))
 	(pt 8 0)
 	(drawing
 		(line (pt 8 0)(pt 8 52))
@@ -234,8 +234,8 @@ applicable agreement for further details.
 (pin
 	(output)
 	(rect 216 272 232 448)
-	(text "OUTPUT" (rect 6 1 16 39)(font "Arial" (font_size 6))(vertical))
-	(text "LEDG[0]" (rect 4 90 16 132)(font "Arial" )(vertical))
+	(text "OUTPUT" (rect 6 1 15 41)(font "Arial" (font_size 6))(vertical))
+	(text "LEDG[0]" (rect 4 90 14 131)(font "Arial" )(vertical))
 	(pt 8 0)
 	(drawing
 		(line (pt 8 0)(pt 8 52))
@@ -252,8 +252,8 @@ applicable agreement for further details.
 (pin
 	(output)
 	(rect 112 24 288 40)
-	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
-	(text "LEDR[3]" (rect 5 0 48 12)(font "Arial" ))
+	(text "OUTPUT" (rect 137 0 177 9)(font "Arial" (font_size 6)))
+	(text "LEDR[3]" (rect 5 0 45 10)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -270,8 +270,8 @@ applicable agreement for further details.
 (pin
 	(output)
 	(rect 112 40 288 56)
-	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
-	(text "LEDR[2]" (rect 5 0 48 12)(font "Arial" ))
+	(text "OUTPUT" (rect 137 0 177 9)(font "Arial" (font_size 6)))
+	(text "LEDR[2]" (rect 5 0 45 10)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -288,8 +288,8 @@ applicable agreement for further details.
 (pin
 	(output)
 	(rect 112 56 288 72)
-	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
-	(text "LEDR[1]" (rect 5 0 48 12)(font "Arial" ))
+	(text "OUTPUT" (rect 137 0 177 9)(font "Arial" (font_size 6)))
+	(text "LEDR[1]" (rect 5 0 45 10)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -306,8 +306,8 @@ applicable agreement for further details.
 (pin
 	(output)
 	(rect 112 72 288 88)
-	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
-	(text "LEDR[0]" (rect 5 0 48 12)(font "Arial" ))
+	(text "OUTPUT" (rect 137 0 177 9)(font "Arial" (font_size 6)))
+	(text "LEDR[0]" (rect 5 0 45 10)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -323,102 +323,80 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 280 96 496 344)
-	(text "Keyboard" (rect 5 0 60 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 176 168 193 180)(font "Arial" ))
+	(text "Keyboard" (rect 5 0 62 12)(font "Arial" (font_size 8)))
+	(text "inst" (rect 176 168 193 178)(font "Arial" ))
 	(port
 		(pt 0 168)
 		(input)
-		(text "CLK" (rect 0 0 23 14)(font "Arial" (font_size 8)))
-		(text "CLK" (rect 21 163 44 177)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 0 0 28 12)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 163 49 175)(font "Arial" (font_size 8)))
 		(line (pt 0 168)(pt 16 168))
 	)
 	(port
 		(pt 0 104)
 		(input)
-		(text "KEYOUTPUT[3]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
-		(text "KEYOUTPUT[3]" (rect 21 99 107 113)(font "Arial" (font_size 8)))
+		(text "KEYOUTPUT[3]" (rect 0 0 95 12)(font "Arial" (font_size 8)))
+		(text "KEYOUTPUT[3]" (rect 21 99 116 111)(font "Arial" (font_size 8)))
 		(line (pt 0 104)(pt 16 104))
 	)
 	(port
 		(pt 0 120)
 		(input)
-		(text "KEYOUTPUT[2]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
-		(text "KEYOUTPUT[2]" (rect 21 115 107 129)(font "Arial" (font_size 8)))
+		(text "KEYOUTPUT[2]" (rect 0 0 95 12)(font "Arial" (font_size 8)))
+		(text "KEYOUTPUT[2]" (rect 21 115 116 127)(font "Arial" (font_size 8)))
 		(line (pt 0 120)(pt 16 120))
 	)
 	(port
 		(pt 0 136)
 		(input)
-		(text "KEYOUTPUT[1]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
-		(text "KEYOUTPUT[1]" (rect 21 131 107 145)(font "Arial" (font_size 8)))
+		(text "KEYOUTPUT[1]" (rect 0 0 95 12)(font "Arial" (font_size 8)))
+		(text "KEYOUTPUT[1]" (rect 21 131 116 143)(font "Arial" (font_size 8)))
 		(line (pt 0 136)(pt 16 136))
 	)
 	(port
 		(pt 0 152)
 		(input)
-		(text "KEYOUTPUT[0]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
-		(text "KEYOUTPUT[0]" (rect 21 147 107 161)(font "Arial" (font_size 8)))
+		(text "KEYOUTPUT[0]" (rect 0 0 95 12)(font "Arial" (font_size 8)))
+		(text "KEYOUTPUT[0]" (rect 21 147 116 159)(font "Arial" (font_size 8)))
 		(line (pt 0 152)(pt 16 152))
 	)
 	(port
 		(pt 80 0)
 		(output)
-		(text "KEYINPUT[3]" (rect 0 0 71 14)(font "Arial" (font_size 8)))
-		(text "KEYINPUT[3]" (rect 72 23 86 94)(font "Arial" (font_size 8))(vertical))
+		(text "KEYINPUT[3]" (rect 0 0 81 12)(font "Arial" (font_size 8)))
+		(text "KEYINPUT[3]" (rect 72 23 84 104)(font "Arial" (font_size 8))(vertical))
 		(line (pt 80 0)(pt 80 16))
 	)
 	(port
 		(pt 96 0)
 		(output)
-		(text "KEYINPUT[2]" (rect 0 0 71 14)(font "Arial" (font_size 8)))
-		(text "KEYINPUT[2]" (rect 88 23 102 94)(font "Arial" (font_size 8))(vertical))
+		(text "KEYINPUT[2]" (rect 0 0 81 12)(font "Arial" (font_size 8)))
+		(text "KEYINPUT[2]" (rect 88 23 100 104)(font "Arial" (font_size 8))(vertical))
 		(line (pt 96 0)(pt 96 15))
 	)
 	(port
 		(pt 112 0)
 		(output)
-		(text "KEYINPUT[1]" (rect 0 0 71 14)(font "Arial" (font_size 8)))
-		(text "KEYINPUT[1]" (rect 104 23 118 94)(font "Arial" (font_size 8))(vertical))
+		(text "KEYINPUT[1]" (rect 0 0 81 12)(font "Arial" (font_size 8)))
+		(text "KEYINPUT[1]" (rect 104 23 116 104)(font "Arial" (font_size 8))(vertical))
 		(line (pt 112 0)(pt 112 15))
 	)
 	(port
 		(pt 128 0)
 		(output)
-		(text "KEYINPUT[0]" (rect 0 0 71 14)(font "Arial" (font_size 8)))
-		(text "KEYINPUT[0]" (rect 120 23 134 94)(font "Arial" (font_size 8))(vertical))
+		(text "KEYINPUT[0]" (rect 0 0 81 12)(font "Arial" (font_size 8)))
+		(text "KEYINPUT[0]" (rect 120 23 132 104)(font "Arial" (font_size 8))(vertical))
 		(line (pt 128 0)(pt 128 15))
 	)
 	(port
 		(pt 216 128)
 		(output)
-		(text "OUTPUT[7..0]" (rect 0 0 75 14)(font "Arial" (font_size 8)))
-		(text "OUTPUT[7..0]" (rect 120 123 195 137)(font "Arial" (font_size 8)))
+		(text "OUTPUT[7..0]" (rect 0 0 83 12)(font "Arial" (font_size 8)))
+		(text "OUTPUT[7..0]" (rect 120 123 203 135)(font "Arial" (font_size 8)))
 		(line (pt 216 128)(pt 200 128)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 200 192))
-	)
-)
-(symbol
-	(rect 720 192 880 272)
-	(text "decoder7" (rect 5 0 49 12)(font "Arial" ))
-	(text "inst5" (rect 8 64 31 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "In[3..0]" (rect 0 0 35 12)(font "Arial" ))
-		(text "In[3..0]" (rect 21 27 56 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 160 32)
-		(output)
-		(text "Out[6..0]" (rect 0 0 43 12)(font "Arial" ))
-		(text "Out[6..0]" (rect 103 27 146 39)(font "Arial" ))
-		(line (pt 160 32)(pt 144 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 144 64))
 	)
 )
 (connector

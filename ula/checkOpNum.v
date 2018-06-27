@@ -18,7 +18,7 @@ module checkOpNum (In, Out);
 			4'b0110 : Out = 2'b01; 
 			4'b0111 : Out = 2'b01; 
  
-			4'b1000 : Out = 2'b01; 
+			4'b1000 : Out = 2'b01;      
 			4'b1001 : Out = 2'b01;
 			4'b1010 : Out = 2'b11; 
 			4'b1011 : Out = 2'b00; 

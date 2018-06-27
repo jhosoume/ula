@@ -1,5 +1,5 @@
 Simulator report for ula
-Tue Jun 26 10:43:04 2018
+Wed Jun 27 16:55:51 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,42 +44,42 @@ applicable agreement for further details.
 ; Type                        ; Value        ;
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
-; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 31 nodes     ;
-; Simulation Coverage         ;      54.84 % ;
-; Total Number of Transitions ; 136          ;
+; Simulation End Time         ; 1.7 us       ;
+; Simulation Netlist Size     ; 334 nodes    ;
+; Simulation Coverage         ;      73.65 % ;
+; Total Number of Transitions ; 2657         ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 +-----------------------------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                                                                                             ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------------+
-; Option                                                                                     ; Setting                                                                           ; Default Value ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------------+
-; Simulation mode                                                                            ; Functional                                                                        ; Timing        ;
-; Start time                                                                                 ; 0 ns                                                                              ; 0 ns          ;
-; Simulation results format                                                                  ; VWF                                                                               ;               ;
-; Vector input source                                                                        ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/Waveform_testdecFromUla.vwf ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On                                                                                ; On            ;
-; Check outputs                                                                              ; Off                                                                               ; Off           ;
-; Report simulation coverage                                                                 ; On                                                                                ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On                                                                                ; On            ;
-; Display missing 1-value coverage report                                                    ; On                                                                                ; On            ;
-; Display missing 0-value coverage report                                                    ; On                                                                                ; On            ;
-; Detect setup and hold time violations                                                      ; Off                                                                               ; Off           ;
-; Detect glitches                                                                            ; Off                                                                               ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off                                                                               ; Off           ;
-; Generate Signal Activity File                                                              ; Off                                                                               ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                               ; Off           ;
-; Group bus channels in simulation results                                                   ; Off                                                                               ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                                ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                        ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                               ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                               ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                              ; Auto          ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                      ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                    ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                 ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                       ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                        ;               ;
+; Vector input source                                                                        ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/WaveformTestCalc.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                         ; On            ;
+; Check outputs                                                                              ; Off                                                                        ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                         ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                         ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                         ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                        ; Off           ;
+; Detect glitches                                                                            ; Off                                                                        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                        ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                 ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                       ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+---------------+
 
 
 +----------------------+
@@ -94,74 +94,457 @@ Please use Quartus II 64-Bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      54.84 % ;
-; Total nodes checked                                 ; 31           ;
-; Total output ports checked                          ; 31           ;
-; Total output ports with complete 1/0-value coverage ; 17           ;
-; Total output ports with no 1/0-value coverage       ; 2            ;
-; Total output ports with no 1-value coverage         ; 5            ;
-; Total output ports with no 0-value coverage         ; 11           ;
+; Total coverage as a percentage                      ;      73.65 % ;
+; Total nodes checked                                 ; 334          ;
+; Total output ports checked                          ; 334          ;
+; Total output ports with complete 1/0-value coverage ; 246          ;
+; Total output ports with no 1/0-value coverage       ; 82           ;
+; Total output ports with no 1-value coverage         ; 83           ;
+; Total output ports with no 0-value coverage         ; 87           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+----------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                ;
-+----------------------------+----------------------------+------------------+
-; Node Name                  ; Output Port Name           ; Output Port Type ;
-+----------------------------+----------------------------+------------------+
-; |decoderoutputA|OutA~0     ; |decoderoutputA|OutA~0     ; out0             ;
-; |decoderoutputA|OutA~1     ; |decoderoutputA|OutA~1     ; out0             ;
-; |decoderoutputA|WideOr0    ; |decoderoutputA|WideOr0    ; out0             ;
-; |decoderoutputA|WideOr1    ; |decoderoutputA|WideOr1    ; out0             ;
-; |decoderoutputA|In[0]      ; |decoderoutputA|In[0]      ; out              ;
-; |decoderoutputA|In[1]      ; |decoderoutputA|In[1]      ; out              ;
-; |decoderoutputA|In[2]      ; |decoderoutputA|In[2]      ; out              ;
-; |decoderoutputA|In[3]      ; |decoderoutputA|In[3]      ; out              ;
-; |decoderoutputA|In[4]      ; |decoderoutputA|In[4]      ; out              ;
-; |decoderoutputA|OutA[0]    ; |decoderoutputA|OutA[0]    ; pin_out          ;
-; |decoderoutputA|OutA[2]    ; |decoderoutputA|OutA[2]    ; pin_out          ;
-; |decoderoutputA|OutA[3]    ; |decoderoutputA|OutA[3]    ; pin_out          ;
-; |decoderoutputA|OutA[4]    ; |decoderoutputA|OutA[4]    ; pin_out          ;
-; |decoderoutputA|OutA[6]    ; |decoderoutputA|OutA[6]    ; pin_out          ;
-; |decoderoutputA|Decoder0~1 ; |decoderoutputA|Decoder0~1 ; out0             ;
-; |decoderoutputA|Decoder0~2 ; |decoderoutputA|Decoder0~2 ; out0             ;
-; |decoderoutputA|Decoder0~3 ; |decoderoutputA|Decoder0~3 ; out0             ;
-+----------------------------+----------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                    ;
++------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+
+; Node Name                                                                    ; Output Port Name                                                             ; Output Port Type ;
++------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+
+; |calcTest|inBinario[3]                                                       ; |calcTest|inBinario[3]                                                       ; pin_out          ;
+; |calcTest|inBinario[2]                                                       ; |calcTest|inBinario[2]                                                       ; pin_out          ;
+; |calcTest|inBinario[1]                                                       ; |calcTest|inBinario[1]                                                       ; pin_out          ;
+; |calcTest|inBinario[0]                                                       ; |calcTest|inBinario[0]                                                       ; pin_out          ;
+; |calcTest|num[7]                                                             ; |calcTest|num[7]                                                             ; out              ;
+; |calcTest|num[6]                                                             ; |calcTest|num[6]                                                             ; out              ;
+; |calcTest|num[5]                                                             ; |calcTest|num[5]                                                             ; out              ;
+; |calcTest|num[4]                                                             ; |calcTest|num[4]                                                             ; out              ;
+; |calcTest|num[3]                                                             ; |calcTest|num[3]                                                             ; out              ;
+; |calcTest|num[2]                                                             ; |calcTest|num[2]                                                             ; out              ;
+; |calcTest|num[1]                                                             ; |calcTest|num[1]                                                             ; out              ;
+; |calcTest|num[0]                                                             ; |calcTest|num[0]                                                             ; out              ;
+; |calcTest|operation[0]                                                       ; |calcTest|operation[0]                                                       ; pin_out          ;
+; |calcTest|inst5                                                              ; |calcTest|inst5                                                              ; out0             ;
+; |calcTest|inst11                                                             ; |calcTest|inst11                                                             ; out0             ;
+; |calcTest|inst14                                                             ; |calcTest|inst14                                                             ; out0             ;
+; |calcTest|inst13                                                             ; |calcTest|inst13                                                             ; out0             ;
+; |calcTest|state[1]                                                           ; |calcTest|state[1]                                                           ; pin_out          ;
+; |calcTest|state[0]                                                           ; |calcTest|state[0]                                                           ; pin_out          ;
+; |calcTest|clock                                                              ; |calcTest|clock                                                              ; out              ;
+; |calcTest|inst16                                                             ; |calcTest|inst16                                                             ; out0             ;
+; |calcTest|inst20                                                             ; |calcTest|inst20                                                             ; out0             ;
+; |calcTest|inst15                                                             ; |calcTest|inst15                                                             ; out0             ;
+; |calcTest|inst19                                                             ; |calcTest|inst19                                                             ; out0             ;
+; |calcTest|regNumA[3]                                                         ; |calcTest|regNumA[3]                                                         ; pin_out          ;
+; |calcTest|regNumA[2]                                                         ; |calcTest|regNumA[2]                                                         ; pin_out          ;
+; |calcTest|regNumA[1]                                                         ; |calcTest|regNumA[1]                                                         ; pin_out          ;
+; |calcTest|regNumA[0]                                                         ; |calcTest|regNumA[0]                                                         ; pin_out          ;
+; |calcTest|regNumB[3]                                                         ; |calcTest|regNumB[3]                                                         ; pin_out          ;
+; |calcTest|regNumB[2]                                                         ; |calcTest|regNumB[2]                                                         ; pin_out          ;
+; |calcTest|regNumB[1]                                                         ; |calcTest|regNumB[1]                                                         ; pin_out          ;
+; |calcTest|regNumB[0]                                                         ; |calcTest|regNumB[0]                                                         ; pin_out          ;
+; |calcTest|result[7]                                                          ; |calcTest|result[7]                                                          ; pin_out          ;
+; |calcTest|result[6]                                                          ; |calcTest|result[6]                                                          ; pin_out          ;
+; |calcTest|result[5]                                                          ; |calcTest|result[5]                                                          ; pin_out          ;
+; |calcTest|result[4]                                                          ; |calcTest|result[4]                                                          ; pin_out          ;
+; |calcTest|result[2]                                                          ; |calcTest|result[2]                                                          ; pin_out          ;
+; |calcTest|result[1]                                                          ; |calcTest|result[1]                                                          ; pin_out          ;
+; |calcTest|result[0]                                                          ; |calcTest|result[0]                                                          ; pin_out          ;
+; |calcTest|normReg:inst21|WideOr0                                             ; |calcTest|normReg:inst21|WideOr0                                             ; out0             ;
+; |calcTest|normReg:inst12|WideOr0                                             ; |calcTest|normReg:inst12|WideOr0                                             ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst29                                    ; |calcTest|ula_full:inst|Mult:inst6|inst29                                    ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst26                                    ; |calcTest|ula_full:inst|Mult:inst6|inst26                                    ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst27                                    ; |calcTest|ula_full:inst|Mult:inst6|inst27                                    ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst18                                    ; |calcTest|ula_full:inst|Mult:inst6|inst18                                    ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst20                                    ; |calcTest|ula_full:inst|Mult:inst6|inst20                                    ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst11|inst                     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst11|inst                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst1                    ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst1                    ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst                     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst2                    ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst2                    ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst6|inst                      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst6|inst                      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst1                     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst1                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst                      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst                      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst2                     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst2                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst1                     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst1                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst                      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst                      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst2                     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst2                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst|inst                       ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst|inst                       ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst1                     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst1                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst                      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst                      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst2                     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst2                     ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst23|inst1               ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst23|inst1               ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst22|inst1               ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst22|inst1               ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst22|inst3               ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst22|inst3               ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst17|inst2                ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst17|inst2                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst17|inst1                ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst17|inst1                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3|inst1                ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3|inst1                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3|inst                 ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3|inst                 ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3|inst5                ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3|inst5                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3|inst3                ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3|inst3                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3|inst2                ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3|inst2                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst16|inst2                ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst16|inst2                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst16|inst1                ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst16|inst1                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst16|inst                 ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst16|inst                 ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2|inst1                ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2|inst1                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2|inst                 ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2|inst                 ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2|inst5                ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2|inst5                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2|inst4                ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2|inst4                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2|inst3                ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2|inst3                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2|inst2                ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2|inst2                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst15|inst2                ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst15|inst2                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst15|inst1                ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst15|inst1                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1|inst1                ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1|inst1                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1|inst                 ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1|inst                 ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1|inst5                ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1|inst5                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1|inst4                ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1|inst4                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1|inst3                ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1|inst3                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1|inst2                ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1|inst2                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst10|inst2                ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst10|inst2                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst10|inst1                ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst10|inst1                ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst|inst                  ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst|inst                  ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst|inst5                 ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst|inst5                 ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst|inst3                 ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst|inst3                 ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst|inst2                 ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst|inst2                 ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst3[7]                           ; |calcTest|ula_full:inst|mux_summult:inst9|inst3[7]                           ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst3[6]                           ; |calcTest|ula_full:inst|mux_summult:inst9|inst3[6]                           ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst3[5]                           ; |calcTest|ula_full:inst|mux_summult:inst9|inst3[5]                           ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst3[4]                           ; |calcTest|ula_full:inst|mux_summult:inst9|inst3[4]                           ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst3[2]                           ; |calcTest|ula_full:inst|mux_summult:inst9|inst3[2]                           ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst3[1]                           ; |calcTest|ula_full:inst|mux_summult:inst9|inst3[1]                           ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst3[0]                           ; |calcTest|ula_full:inst|mux_summult:inst9|inst3[0]                           ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst[7]                            ; |calcTest|ula_full:inst|mux_summult:inst9|inst[7]                            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst[6]                            ; |calcTest|ula_full:inst|mux_summult:inst9|inst[6]                            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst[5]                            ; |calcTest|ula_full:inst|mux_summult:inst9|inst[5]                            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst[4]                            ; |calcTest|ula_full:inst|mux_summult:inst9|inst[4]                            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst[2]                            ; |calcTest|ula_full:inst|mux_summult:inst9|inst[2]                            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst[1]                            ; |calcTest|ula_full:inst|mux_summult:inst9|inst[1]                            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst[0]                            ; |calcTest|ula_full:inst|mux_summult:inst9|inst[0]                            ; out0             ;
+; |calcTest|reg:inst3|inst                                                     ; |calcTest|reg:inst3|inst                                                     ; regout           ;
+; |calcTest|reg:inst3|inst5                                                    ; |calcTest|reg:inst3|inst5                                                    ; regout           ;
+; |calcTest|reg:inst3|inst3                                                    ; |calcTest|reg:inst3|inst3                                                    ; regout           ;
+; |calcTest|reg:inst3|inst4                                                    ; |calcTest|reg:inst3|inst4                                                    ; regout           ;
+; |calcTest|statesmach:inst7|inst3                                             ; |calcTest|statesmach:inst7|inst3                                             ; regout           ;
+; |calcTest|statesmach:inst7|inst2                                             ; |calcTest|statesmach:inst7|inst2                                             ; regout           ;
+; |calcTest|statesmach:inst7|statesrom:inst|WideOr0                            ; |calcTest|statesmach:inst7|statesrom:inst|WideOr0                            ; out0             ;
+; |calcTest|statesmach:inst7|statesrom:inst|WideOr1                            ; |calcTest|statesmach:inst7|statesrom:inst|WideOr1                            ; out0             ;
+; |calcTest|reg:inst2|inst                                                     ; |calcTest|reg:inst2|inst                                                     ; regout           ;
+; |calcTest|reg:inst2|inst5                                                    ; |calcTest|reg:inst2|inst5                                                    ; regout           ;
+; |calcTest|reg:inst2|inst3                                                    ; |calcTest|reg:inst2|inst3                                                    ; regout           ;
+; |calcTest|reg:inst2|inst4                                                    ; |calcTest|reg:inst2|inst4                                                    ; regout           ;
+; |calcTest|checkOpNum:inst8|WideOr0                                           ; |calcTest|checkOpNum:inst8|WideOr0                                           ; out0             ;
+; |calcTest|checkOpNum:inst8|WideOr1                                           ; |calcTest|checkOpNum:inst8|WideOr1                                           ; out0             ;
+; |calcTest|reg:inst4|inst                                                     ; |calcTest|reg:inst4|inst                                                     ; regout           ;
+; |calcTest|reg:inst4|inst5                                                    ; |calcTest|reg:inst4|inst5                                                    ; regout           ;
+; |calcTest|reg:inst4|inst3                                                    ; |calcTest|reg:inst4|inst3                                                    ; regout           ;
+; |calcTest|reg:inst4|inst4                                                    ; |calcTest|reg:inst4|inst4                                                    ; regout           ;
+; |calcTest|decFromKey:inst6|WideOr0                                           ; |calcTest|decFromKey:inst6|WideOr0                                           ; out0             ;
+; |calcTest|decFromKey:inst6|WideOr1                                           ; |calcTest|decFromKey:inst6|WideOr1                                           ; out0             ;
+; |calcTest|decFromKey:inst6|WideOr2                                           ; |calcTest|decFromKey:inst6|WideOr2                                           ; out0             ;
+; |calcTest|decFromKey:inst6|WideOr3                                           ; |calcTest|decFromKey:inst6|WideOr3                                           ; out0             ;
+; |calcTest|normReg:inst21|Decoder1~0                                          ; |calcTest|normReg:inst21|Decoder1~0                                          ; out0             ;
+; |calcTest|normReg:inst21|Decoder2~0                                          ; |calcTest|normReg:inst21|Decoder2~0                                          ; out0             ;
+; |calcTest|normReg:inst21|Decoder3~2                                          ; |calcTest|normReg:inst21|Decoder3~2                                          ; out0             ;
+; |calcTest|normReg:inst12|Decoder1~0                                          ; |calcTest|normReg:inst12|Decoder1~0                                          ; out0             ;
+; |calcTest|normReg:inst12|Decoder2~0                                          ; |calcTest|normReg:inst12|Decoder2~0                                          ; out0             ;
+; |calcTest|normReg:inst12|Decoder3~0                                          ; |calcTest|normReg:inst12|Decoder3~0                                          ; out0             ;
+; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~0                         ; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~0                         ; out              ;
+; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~1                         ; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~1                         ; out              ;
+; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~2                         ; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~2                         ; out              ;
+; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~3                         ; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~3                         ; out              ;
+; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~4                         ; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~4                         ; out              ;
+; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~5                         ; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~5                         ; out              ;
+; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~6                         ; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~6                         ; out              ;
+; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~7                         ; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~7                         ; out              ;
+; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~8                         ; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~8                         ; out              ;
+; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~9                         ; |calcTest|statesmach:inst7|statesrom:inst|Decoder0~9                         ; out              ;
+; |calcTest|checkOpNum:inst8|Decoder0~0                                        ; |calcTest|checkOpNum:inst8|Decoder0~0                                        ; out0             ;
+; |calcTest|checkOpNum:inst8|Decoder0~2                                        ; |calcTest|checkOpNum:inst8|Decoder0~2                                        ; out0             ;
+; |calcTest|checkOpNum:inst8|Decoder0~3                                        ; |calcTest|checkOpNum:inst8|Decoder0~3                                        ; out0             ;
+; |calcTest|checkOpNum:inst8|Decoder0~4                                        ; |calcTest|checkOpNum:inst8|Decoder0~4                                        ; out0             ;
+; |calcTest|checkOpNum:inst8|Decoder0~5                                        ; |calcTest|checkOpNum:inst8|Decoder0~5                                        ; out0             ;
+; |calcTest|decodOp:inst10|Decoder0~0                                          ; |calcTest|decodOp:inst10|Decoder0~0                                          ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~0                                        ; |calcTest|decFromKey:inst6|Decoder0~0                                        ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~2                                        ; |calcTest|decFromKey:inst6|Decoder0~2                                        ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~3                                        ; |calcTest|decFromKey:inst6|Decoder0~3                                        ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~5                                        ; |calcTest|decFromKey:inst6|Decoder0~5                                        ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~6                                        ; |calcTest|decFromKey:inst6|Decoder0~6                                        ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~7                                        ; |calcTest|decFromKey:inst6|Decoder0~7                                        ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~9                                        ; |calcTest|decFromKey:inst6|Decoder0~9                                        ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~11                                       ; |calcTest|decFromKey:inst6|Decoder0~11                                       ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~12                                       ; |calcTest|decFromKey:inst6|Decoder0~12                                       ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~14                                       ; |calcTest|decFromKey:inst6|Decoder0~14                                       ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~0              ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~0              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~1              ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~1              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~2              ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~2              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~3              ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~3              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~4              ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~4              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~5              ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~5              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~6              ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~6              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~7              ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~7              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~8              ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~8              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|result_node[0]~0 ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|result_node[0]~0 ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~9              ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~9              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~10             ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~10             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~11             ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~11             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~12             ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~12             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~13             ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~13             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~14             ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~14             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~15             ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~15             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~16             ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~16             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~17             ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|_~17             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|result_node[0]~1 ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|result_node[0]~1 ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|result_node[0]   ; |calcTest|regMUX:inst22|lpm_mux:Mux3|mux_umc:auto_generated|result_node[0]   ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~0              ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~0              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~1              ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~1              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~2              ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~2              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~3              ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~3              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~4              ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~4              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~5              ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~5              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~6              ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~6              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~7              ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~7              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~8              ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~8              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|result_node[0]~0 ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|result_node[0]~0 ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~9              ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~9              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~10             ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~10             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~11             ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~11             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~12             ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~12             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~13             ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~13             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~14             ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~14             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~15             ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~15             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~16             ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~16             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~17             ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|_~17             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|result_node[0]~1 ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|result_node[0]~1 ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|result_node[0]   ; |calcTest|regMUX:inst22|lpm_mux:Mux2|mux_umc:auto_generated|result_node[0]   ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~0              ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~0              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~1              ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~1              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~2              ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~2              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~3              ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~3              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~4              ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~4              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~5              ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~5              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~6              ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~6              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~7              ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~7              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~8              ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~8              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|result_node[0]~0 ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|result_node[0]~0 ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~9              ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~9              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~10             ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~10             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~11             ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~11             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~12             ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~12             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~13             ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~13             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~14             ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~14             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~15             ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~15             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~16             ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~16             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~17             ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|_~17             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|result_node[0]~1 ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|result_node[0]~1 ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|result_node[0]   ; |calcTest|regMUX:inst22|lpm_mux:Mux1|mux_umc:auto_generated|result_node[0]   ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~0              ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~0              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~1              ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~1              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~2              ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~2              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~3              ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~3              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~4              ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~4              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~5              ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~5              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~6              ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~6              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~7              ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~7              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~8              ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~8              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|result_node[0]~0 ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|result_node[0]~0 ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~9              ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~9              ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~10             ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~10             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~11             ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~11             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~12             ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~12             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~13             ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~13             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~14             ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~14             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~15             ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~15             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~16             ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~16             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~17             ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|_~17             ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|result_node[0]~1 ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|result_node[0]~1 ; out0             ;
+; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|result_node[0]   ; |calcTest|regMUX:inst22|lpm_mux:Mux0|mux_umc:auto_generated|result_node[0]   ; out0             ;
++------------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+----------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                   ;
-+----------------------------+----------------------------+------------------+
-; Node Name                  ; Output Port Name           ; Output Port Type ;
-+----------------------------+----------------------------+------------------+
-; |decoderoutputA|WideOr2    ; |decoderoutputA|WideOr2    ; out0             ;
-; |decoderoutputA|WideOr3    ; |decoderoutputA|WideOr3    ; out0             ;
-; |decoderoutputA|In[6]      ; |decoderoutputA|In[6]      ; out              ;
-; |decoderoutputA|OutB[6]    ; |decoderoutputA|OutB[6]    ; pin_out          ;
-; |decoderoutputA|Decoder0~0 ; |decoderoutputA|Decoder0~0 ; out0             ;
-+----------------------------+----------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                         ;
++---------------------------------------------------------------+---------------------------------------------------------------+------------------+
+; Node Name                                                     ; Output Port Name                                              ; Output Port Type ;
++---------------------------------------------------------------+---------------------------------------------------------------+------------------+
+; |calcTest|start                                               ; |calcTest|start                                               ; out              ;
+; |calcTest|result[3]                                           ; |calcTest|result[3]                                           ; pin_out          ;
+; |calcTest|ula_full:inst|Mult:inst6|inst19                     ; |calcTest|ula_full:inst|Mult:inst6|inst19                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst17                     ; |calcTest|ula_full:inst|Mult:inst6|inst17                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst32                     ; |calcTest|ula_full:inst|Mult:inst6|inst32                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst31                     ; |calcTest|ula_full:inst|Mult:inst6|inst31                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst30                     ; |calcTest|ula_full:inst|Mult:inst6|inst30                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst28                     ; |calcTest|ula_full:inst|Mult:inst6|inst28                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst22                     ; |calcTest|ula_full:inst|Mult:inst6|inst22                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst21                     ; |calcTest|ula_full:inst|Mult:inst6|inst21                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst23                     ; |calcTest|ula_full:inst|Mult:inst6|inst23                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst24                     ; |calcTest|ula_full:inst|Mult:inst6|inst24                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst25                     ; |calcTest|ula_full:inst|Mult:inst6|inst25                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst11|inst4     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst11|inst4     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst5     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst5     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst4     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst4     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst3     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst3     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst1     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst1     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst5     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst5     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst4     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst4     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst3     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst3     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst2     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst2     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst6|inst4      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst6|inst4      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst5      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst5      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst4      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst4      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst3      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst3      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst5      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst5      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst4      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst4      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst3      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst3      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst|inst4       ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst|inst4       ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst5      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst5      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst4      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst4      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst3      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst3      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst1      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst1      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst       ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst       ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst5      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst5      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst4      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst4      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst3      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst3      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst2      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst2      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst4|inst1      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst4|inst1      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst4|inst3      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst4|inst3      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst1      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst1      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst       ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst       ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst5      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst5      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst4      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst4      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst3      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst3      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst2      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst2      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst1     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst1     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst5     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst5     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst4     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst4     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst3     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst3     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst2     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst2     ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst17|inst  ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst17|inst  ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3|inst4 ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3|inst4 ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst15|inst  ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst15|inst  ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst|inst4  ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst|inst4  ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst3[3]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst3[3]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[7]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[7]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[6]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[6]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[5]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[5]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[4]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[4]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[3]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[3]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[2]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[2]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[1]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[1]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[0]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[0]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst[3]             ; |calcTest|ula_full:inst|mux_summult:inst9|inst[3]             ; out0             ;
+; |calcTest|normReg:inst21|Decoder3~0                           ; |calcTest|normReg:inst21|Decoder3~0                           ; out0             ;
+; |calcTest|normReg:inst21|Decoder3~1                           ; |calcTest|normReg:inst21|Decoder3~1                           ; out0             ;
+; |calcTest|normReg:inst21|Decoder3~3                           ; |calcTest|normReg:inst21|Decoder3~3                           ; out0             ;
+; |calcTest|normReg:inst21|Decoder3~4                           ; |calcTest|normReg:inst21|Decoder3~4                           ; out0             ;
+; |calcTest|normReg:inst12|Decoder0~0                           ; |calcTest|normReg:inst12|Decoder0~0                           ; out0             ;
+; |calcTest|normReg:inst12|Decoder3~1                           ; |calcTest|normReg:inst12|Decoder3~1                           ; out0             ;
+; |calcTest|normReg:inst12|Decoder3~2                           ; |calcTest|normReg:inst12|Decoder3~2                           ; out0             ;
+; |calcTest|normReg:inst12|Decoder3~3                           ; |calcTest|normReg:inst12|Decoder3~3                           ; out0             ;
+; |calcTest|normReg:inst12|Decoder3~4                           ; |calcTest|normReg:inst12|Decoder3~4                           ; out0             ;
+; |calcTest|checkOpNum:inst8|Decoder0~1                         ; |calcTest|checkOpNum:inst8|Decoder0~1                         ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~1                         ; |calcTest|decFromKey:inst6|Decoder0~1                         ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~4                         ; |calcTest|decFromKey:inst6|Decoder0~4                         ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~8                         ; |calcTest|decFromKey:inst6|Decoder0~8                         ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~10                        ; |calcTest|decFromKey:inst6|Decoder0~10                        ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~13                        ; |calcTest|decFromKey:inst6|Decoder0~13                        ; out0             ;
++---------------------------------------------------------------+---------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+----------------------------------------------------------------------+
-; Missing 0-Value Coverage                                             ;
-+-------------------------+-------------------------+------------------+
-; Node Name               ; Output Port Name        ; Output Port Type ;
-+-------------------------+-------------------------+------------------+
-; |decoderoutputA|In[5]   ; |decoderoutputA|In[5]   ; out              ;
-; |decoderoutputA|In[6]   ; |decoderoutputA|In[6]   ; out              ;
-; |decoderoutputA|OutA[1] ; |decoderoutputA|OutA[1] ; pin_out          ;
-; |decoderoutputA|OutA[5] ; |decoderoutputA|OutA[5] ; pin_out          ;
-; |decoderoutputA|OutB[0] ; |decoderoutputA|OutB[0] ; pin_out          ;
-; |decoderoutputA|OutB[1] ; |decoderoutputA|OutB[1] ; pin_out          ;
-; |decoderoutputA|OutB[2] ; |decoderoutputA|OutB[2] ; pin_out          ;
-; |decoderoutputA|OutB[3] ; |decoderoutputA|OutB[3] ; pin_out          ;
-; |decoderoutputA|OutB[4] ; |decoderoutputA|OutB[4] ; pin_out          ;
-; |decoderoutputA|OutB[5] ; |decoderoutputA|OutB[5] ; pin_out          ;
-; |decoderoutputA|OutB[6] ; |decoderoutputA|OutB[6] ; pin_out          ;
-+-------------------------+-------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                         ;
++---------------------------------------------------------------+---------------------------------------------------------------+------------------+
+; Node Name                                                     ; Output Port Name                                              ; Output Port Type ;
++---------------------------------------------------------------+---------------------------------------------------------------+------------------+
+; |calcTest|operation[1]                                        ; |calcTest|operation[1]                                        ; pin_out          ;
+; |calcTest|result[3]                                           ; |calcTest|result[3]                                           ; pin_out          ;
+; |calcTest|ula_full:inst|Mult:inst6|inst19                     ; |calcTest|ula_full:inst|Mult:inst6|inst19                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst17                     ; |calcTest|ula_full:inst|Mult:inst6|inst17                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst32                     ; |calcTest|ula_full:inst|Mult:inst6|inst32                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst31                     ; |calcTest|ula_full:inst|Mult:inst6|inst31                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst30                     ; |calcTest|ula_full:inst|Mult:inst6|inst30                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst28                     ; |calcTest|ula_full:inst|Mult:inst6|inst28                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst22                     ; |calcTest|ula_full:inst|Mult:inst6|inst22                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst21                     ; |calcTest|ula_full:inst|Mult:inst6|inst21                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst23                     ; |calcTest|ula_full:inst|Mult:inst6|inst23                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst24                     ; |calcTest|ula_full:inst|Mult:inst6|inst24                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|inst25                     ; |calcTest|ula_full:inst|Mult:inst6|inst25                     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst11|inst4     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst11|inst4     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst5     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst5     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst4     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst4     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst3     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12|inst3     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst1     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst1     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst5     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst5     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst4     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst4     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst3     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst3     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst2     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13|inst2     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst6|inst4      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst6|inst4      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst5      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst5      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst4      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst4      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst3      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7|inst3      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst5      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst5      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst4      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst4      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst3      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8|inst3      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst|inst4       ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst|inst4       ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst5      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst5      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst4      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst4      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst3      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2|inst3      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst1      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst1      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst       ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst       ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst5      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst5      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst4      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst4      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst3      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst3      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst2      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3|inst2      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst4|inst1      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst4|inst1      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst4|inst3      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst4|inst3      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst1      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst1      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst       ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst       ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst5      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst5      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst4      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst4      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst3      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst3      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst2      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9|inst2      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst1     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst1     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst      ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst      ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst5     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst5     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst4     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst4     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst3     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst3     ; out0             ;
+; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst2     ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14|inst2     ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst17|inst  ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst17|inst  ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3|inst4 ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3|inst4 ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst15|inst  ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst15|inst  ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst10|inst  ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst10|inst  ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst|inst1  ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst|inst1  ; out0             ;
+; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst|inst4  ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst|inst4  ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst3[3]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst3[3]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[7]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[7]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[6]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[6]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[5]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[5]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[4]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[4]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[3]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[3]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[2]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[2]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[1]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[1]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst1[0]            ; |calcTest|ula_full:inst|mux_summult:inst9|inst1[0]            ; out0             ;
+; |calcTest|ula_full:inst|mux_summult:inst9|inst[3]             ; |calcTest|ula_full:inst|mux_summult:inst9|inst[3]             ; out0             ;
+; |calcTest|normReg:inst21|Decoder0~0                           ; |calcTest|normReg:inst21|Decoder0~0                           ; out0             ;
+; |calcTest|normReg:inst21|Decoder3~0                           ; |calcTest|normReg:inst21|Decoder3~0                           ; out0             ;
+; |calcTest|normReg:inst21|Decoder3~1                           ; |calcTest|normReg:inst21|Decoder3~1                           ; out0             ;
+; |calcTest|normReg:inst21|Decoder3~3                           ; |calcTest|normReg:inst21|Decoder3~3                           ; out0             ;
+; |calcTest|normReg:inst21|Decoder3~4                           ; |calcTest|normReg:inst21|Decoder3~4                           ; out0             ;
+; |calcTest|normReg:inst12|Decoder0~0                           ; |calcTest|normReg:inst12|Decoder0~0                           ; out0             ;
+; |calcTest|normReg:inst12|Decoder3~1                           ; |calcTest|normReg:inst12|Decoder3~1                           ; out0             ;
+; |calcTest|normReg:inst12|Decoder3~2                           ; |calcTest|normReg:inst12|Decoder3~2                           ; out0             ;
+; |calcTest|normReg:inst12|Decoder3~3                           ; |calcTest|normReg:inst12|Decoder3~3                           ; out0             ;
+; |calcTest|normReg:inst12|Decoder3~4                           ; |calcTest|normReg:inst12|Decoder3~4                           ; out0             ;
+; |calcTest|checkOpNum:inst8|Decoder0~1                         ; |calcTest|checkOpNum:inst8|Decoder0~1                         ; out0             ;
+; |calcTest|decodOp:inst10|Decoder0~1                           ; |calcTest|decodOp:inst10|Decoder0~1                           ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~1                         ; |calcTest|decFromKey:inst6|Decoder0~1                         ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~4                         ; |calcTest|decFromKey:inst6|Decoder0~4                         ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~8                         ; |calcTest|decFromKey:inst6|Decoder0~8                         ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~10                        ; |calcTest|decFromKey:inst6|Decoder0~10                        ; out0             ;
+; |calcTest|decFromKey:inst6|Decoder0~13                        ; |calcTest|decFromKey:inst6|Decoder0~13                        ; out0             ;
++---------------------------------------------------------------+---------------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -177,18 +560,34 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jun 26 10:43:04 2018
+    Info: Processing started: Wed Jun 27 16:55:51 2018
 Info: Command: quartus_sim --simulation_results_format=VWF ula -c ula
-Info (324025): Using vector source file "/home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/Waveform_testdecFromUla.vwf"
+Info (324025): Using vector source file "/home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/WaveformTestCalc.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "operarion[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "operarion[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "operarion[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "operarion[0]" in design.
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning (324036): Found clock-sensitive change during active clock edge at time 430.0 ns on register "|calcTest|reg:inst3|inst5"
+Warning (324036): Found clock-sensitive change during active clock edge at time 430.0 ns on register "|calcTest|reg:inst3|inst4"
+Warning (324036): Found clock-sensitive change during active clock edge at time 770.0 ns on register "|calcTest|reg:inst2|inst"
+Warning (324036): Found clock-sensitive change during active clock edge at time 770.0 ns on register "|calcTest|reg:inst2|inst5"
+Warning (324036): Found clock-sensitive change during active clock edge at time 870.0 ns on register "|calcTest|reg:inst4|inst4"
+Warning (324036): Found clock-sensitive change during active clock edge at time 1.01 us on register "|calcTest|statesmach:inst7|inst3"
+Warning (324036): Found clock-sensitive change during active clock edge at time 1.01 us on register "|calcTest|statesmach:inst7|inst2"
+Warning (324036): Found clock-sensitive change during active clock edge at time 1.01 us on register "|calcTest|reg:inst2|inst3"
+Warning (324036): Found clock-sensitive change during active clock edge at time 1.09 us on register "|calcTest|reg:inst2|inst4"
+Warning (324036): Found clock-sensitive change during active clock edge at time 1.09 us on register "|calcTest|reg:inst4|inst"
+Warning (324036): Found clock-sensitive change during active clock edge at time 1.09 us on register "|calcTest|reg:inst4|inst5"
+Warning (324036): Found clock-sensitive change during active clock edge at time 1.15 us on register "|calcTest|reg:inst3|inst3"
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is      54.84 %
-Info (328052): Number of transitions in simulation is 136
+Info (328053): Simulation coverage is      73.65 %
+Info (328052): Number of transitions in simulation is 2657
 Info (324045): Vector file ula.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
-Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 16 warnings
     Info: Peak virtual memory: 645 megabytes
-    Info: Processing ended: Tue Jun 26 10:43:04 2018
+    Info: Processing ended: Wed Jun 27 16:55:51 2018
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
