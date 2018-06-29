@@ -2,44 +2,92 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'clock'
-Slack : -4.184
-TNS   : -8.368
+Type  : Slow Model Setup 'KEY[0]'
+Slack : -4.109
+TNS   : -17.702
 
-Type  : Slow Model Hold 'clock'
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -2.834
+TNS   : -61.456
+
+Type  : Slow Model Setup 'SW[15]'
+Slack : 0.046
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLOCK_50'
 Slack : 0.391
 TNS   : 0.000
 
-Type  : Slow Model Recovery 'clock'
-Slack : -2.576
-TNS   : -29.728
-
-Type  : Slow Model Removal 'clock'
-Slack : 0.740
+Type  : Slow Model Hold 'KEY[0]'
+Slack : 0.391
 TNS   : 0.000
 
-Type  : Slow Model Minimum Pulse Width 'clock'
+Type  : Slow Model Hold 'SW[15]'
+Slack : 0.592
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'SW[15]'
+Slack : -1.131
+TNS   : -1.131
+
+Type  : Slow Model Removal 'SW[15]'
+Slack : 1.484
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -34.380
+
+Type  : Slow Model Minimum Pulse Width 'KEY[0]'
 Slack : -1.222
 TNS   : -15.222
 
-Type  : Fast Model Setup 'clock'
-Slack : -1.575
-TNS   : -3.149
+Type  : Slow Model Minimum Pulse Width 'SW[15]'
+Slack : -1.222
+TNS   : -5.222
 
-Type  : Fast Model Hold 'clock'
+Type  : Fast Model Setup 'KEY[0]'
+Slack : -1.392
+TNS   : -2.782
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -0.852
+TNS   : -12.662
+
+Type  : Fast Model Setup 'SW[15]'
+Slack : 0.515
+TNS   : 0.000
+
+Type  : Fast Model Hold 'KEY[0]'
+Slack : 0.125
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK_50'
 Slack : 0.215
 TNS   : 0.000
 
-Type  : Fast Model Recovery 'clock'
-Slack : -0.693
-TNS   : -7.784
-
-Type  : Fast Model Removal 'clock'
-Slack : 0.160
+Type  : Fast Model Hold 'SW[15]'
+Slack : 0.301
 TNS   : 0.000
 
-Type  : Fast Model Minimum Pulse Width 'clock'
+Type  : Fast Model Recovery 'SW[15]'
+Slack : -0.090
+TNS   : -0.090
+
+Type  : Fast Model Removal 'SW[15]'
+Slack : 0.780
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -34.380
+
+Type  : Fast Model Minimum Pulse Width 'KEY[0]'
 Slack : -1.222
 TNS   : -15.222
+
+Type  : Fast Model Minimum Pulse Width 'SW[15]'
+Slack : -1.222
+TNS   : -5.222
 
 ------------------------------------------------------------

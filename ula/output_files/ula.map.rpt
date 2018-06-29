@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ula
-Thu Jun 28 11:41:04 2018
+Thu Jun 28 16:20:59 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,16 +44,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 28 11:41:04 2018           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 28 16:20:55 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ula                                             ;
-; Top-level Entity Name              ; calcTest                                        ;
+; Top-level Entity Name              ; calcFPGA                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 104                                             ;
-;     Total combinational functions  ; 96                                              ;
-;     Dedicated logic registers      ; 14                                              ;
-; Total registers                    ; 14                                              ;
-; Total pins                         ; 34                                              ;
+; Total logic elements               ; 294                                             ;
+;     Total combinational functions  ; 284                                             ;
+;     Dedicated logic registers      ; 51                                              ;
+; Total registers                    ; 51                                              ;
+; Total pins                         ; 50                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -67,7 +67,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; calcTest           ; ula                ;
+; Top-level entity name                                                      ; calcFPGA           ; ula                ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,58 +157,63 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                          ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
-; FullAdder.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/FullAdder.bdf   ;         ;
-; Mult.bdf                         ; yes             ; User Block Diagram/Schematic File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/Mult.bdf        ;         ;
-; Selector.bdf                     ; yes             ; User Block Diagram/Schematic File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/Selector.bdf    ;         ;
-; SumSub6bit.bdf                   ; yes             ; User Block Diagram/Schematic File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/SumSub6bit.bdf  ;         ;
-; ula_full.bdf                     ; yes             ; User Block Diagram/Schematic File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/ula_full.bdf    ;         ;
-; 6to8bit.bdf                      ; yes             ; User Block Diagram/Schematic File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/6to8bit.bdf     ;         ;
-; mux_summult.bdf                  ; yes             ; User Block Diagram/Schematic File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/mux_summult.bdf ;         ;
-; reg.bdf                          ; yes             ; User Block Diagram/Schematic File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/reg.bdf         ;         ;
-; statesrom.v                      ; yes             ; User Verilog HDL File              ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/statesrom.v     ;         ;
-; decFromKey.v                     ; yes             ; User Verilog HDL File              ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/decFromKey.v    ;         ;
-; checkOpNum.v                     ; yes             ; User Verilog HDL File              ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/checkOpNum.v    ;         ;
-; statesmach.bdf                   ; yes             ; User Block Diagram/Schematic File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/statesmach.bdf  ;         ;
-; regMUX.v                         ; yes             ; User Verilog HDL File              ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/regMUX.v        ;         ;
-; decodOp.v                        ; yes             ; User Verilog HDL File              ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/decodOp.v       ;         ;
-; calcTest.bdf                     ; yes             ; User Block Diagram/Schematic File  ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/calcTest.bdf    ;         ;
-; normReg.v                        ; yes             ; User Verilog HDL File              ; /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/normReg.v       ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path            ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------+---------+
+; FullAdder.bdf                    ; yes             ; User Block Diagram/Schematic File  ; E:/pre-projeto/ula/FullAdder.bdf        ;         ;
+; Mult.bdf                         ; yes             ; User Block Diagram/Schematic File  ; E:/pre-projeto/ula/Mult.bdf             ;         ;
+; Selector.bdf                     ; yes             ; User Block Diagram/Schematic File  ; E:/pre-projeto/ula/Selector.bdf         ;         ;
+; SumSub6bit.bdf                   ; yes             ; User Block Diagram/Schematic File  ; E:/pre-projeto/ula/SumSub6bit.bdf       ;         ;
+; ula_full.bdf                     ; yes             ; User Block Diagram/Schematic File  ; E:/pre-projeto/ula/ula_full.bdf         ;         ;
+; 6to8bit.bdf                      ; yes             ; User Block Diagram/Schematic File  ; E:/pre-projeto/ula/6to8bit.bdf          ;         ;
+; mux_summult.bdf                  ; yes             ; User Block Diagram/Schematic File  ; E:/pre-projeto/ula/mux_summult.bdf      ;         ;
+; reg.bdf                          ; yes             ; User Block Diagram/Schematic File  ; E:/pre-projeto/ula/reg.bdf              ;         ;
+; decoder7.v                       ; yes             ; User Verilog HDL File              ; E:/pre-projeto/ula/decoder7.v           ;         ;
+; decoderoutputA.v                 ; yes             ; User Verilog HDL File              ; E:/pre-projeto/ula/decoderoutputA.v     ;         ;
+; statesrom.v                      ; yes             ; User Verilog HDL File              ; E:/pre-projeto/ula/statesrom.v          ;         ;
+; decFromKey.v                     ; yes             ; User Verilog HDL File              ; E:/pre-projeto/ula/decFromKey.v         ;         ;
+; checkOpNum.v                     ; yes             ; User Verilog HDL File              ; E:/pre-projeto/ula/checkOpNum.v         ;         ;
+; ../keyboard/Keyboard.bdf         ; yes             ; User Block Diagram/Schematic File  ; E:/pre-projeto/keyboard/Keyboard.bdf    ;         ;
+; ../keyboard/RingCounter.bdf      ; yes             ; User Block Diagram/Schematic File  ; E:/pre-projeto/keyboard/RingCounter.bdf ;         ;
+; statesmach.bdf                   ; yes             ; User Block Diagram/Schematic File  ; E:/pre-projeto/ula/statesmach.bdf       ;         ;
+; regMUX.v                         ; yes             ; User Verilog HDL File              ; E:/pre-projeto/ula/regMUX.v             ;         ;
+; decodOp.v                        ; yes             ; User Verilog HDL File              ; E:/pre-projeto/ula/decodOp.v            ;         ;
+; normReg.v                        ; yes             ; User Verilog HDL File              ; E:/pre-projeto/ula/normReg.v            ;         ;
+; calcFPGA.bdf                     ; yes             ; User Block Diagram/Schematic File  ; E:/pre-projeto/ula/calcFPGA.bdf         ;         ;
+; freqdiv.v                        ; yes             ; User Verilog HDL File              ; E:/pre-projeto/ula/freqdiv.v            ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 104            ;
-;                                             ;                ;
-; Total combinational functions               ; 96             ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 73             ;
-;     -- 3 input functions                    ; 18             ;
-;     -- <=2 input functions                  ; 5              ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 96             ;
-;     -- arithmetic mode                      ; 0              ;
-;                                             ;                ;
-; Total registers                             ; 14             ;
-;     -- Dedicated logic registers            ; 14             ;
-;     -- I/O registers                        ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 34             ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
-; Maximum fan-out node                        ; reg:inst2|inst ;
-; Maximum fan-out                             ; 15             ;
-; Total fan-out                               ; 420            ;
-; Average fan-out                             ; 2.92           ;
-+---------------------------------------------+----------------+
++------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                              ;
++---------------------------------------------+--------------------------------------------+
+; Resource                                    ; Usage                                      ;
++---------------------------------------------+--------------------------------------------+
+; Estimated Total logic elements              ; 294                                        ;
+;                                             ;                                            ;
+; Total combinational functions               ; 284                                        ;
+; Logic element usage by number of LUT inputs ;                                            ;
+;     -- 4 input functions                    ; 203                                        ;
+;     -- 3 input functions                    ; 39                                         ;
+;     -- <=2 input functions                  ; 42                                         ;
+;                                             ;                                            ;
+; Logic elements by mode                      ;                                            ;
+;     -- normal mode                          ; 253                                        ;
+;     -- arithmetic mode                      ; 31                                         ;
+;                                             ;                                            ;
+; Total registers                             ; 51                                         ;
+;     -- Dedicated logic registers            ; 51                                         ;
+;     -- I/O registers                        ; 0                                          ;
+;                                             ;                                            ;
+; I/O pins                                    ; 50                                         ;
+; Embedded Multiplier 9-bit elements          ; 0                                          ;
+; Maximum fan-out node                        ; ula_full:inst|mux_summult:inst9|inst3[3]~4 ;
+; Maximum fan-out                             ; 53                                         ;
+; Total fan-out                               ; 1166                                       ;
+; Average fan-out                             ; 3.03                                       ;
++---------------------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -216,35 +221,41 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Library Name ;
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
-; |calcTest                   ; 96 (4)            ; 14 (0)       ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |calcTest                                               ; work         ;
-;    |checkOpNum:inst8|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|checkOpNum:inst8                              ; work         ;
-;    |decFromKey:inst6|       ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|decFromKey:inst6                              ; work         ;
-;    |decodOp:inst10|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|decodOp:inst10                                ; work         ;
-;    |normReg:inst12|         ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|normReg:inst12                                ; work         ;
-;    |normReg:inst21|         ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|normReg:inst21                                ; work         ;
-;    |reg:inst2|              ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|reg:inst2                                     ; work         ;
-;    |reg:inst3|              ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|reg:inst3                                     ; work         ;
-;    |reg:inst4|              ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|reg:inst4                                     ; work         ;
-;    |regMUX:inst22|          ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|regMUX:inst22                                 ; work         ;
-;    |statesmach:inst7|       ; 2 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|statesmach:inst7                              ; work         ;
-;       |statesrom:inst|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|statesmach:inst7|statesrom:inst               ; work         ;
-;    |ula_full:inst|          ; 45 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst                                 ; work         ;
-;       |Mult:inst6|          ; 28 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|Mult:inst6                      ; work         ;
-;          |FullAdder:inst12| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12     ; work         ;
-;          |FullAdder:inst13| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13     ; work         ;
-;          |FullAdder:inst14| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14     ; work         ;
-;          |FullAdder:inst2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2      ; work         ;
-;          |FullAdder:inst3|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3      ; work         ;
-;          |FullAdder:inst7|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7      ; work         ;
-;          |FullAdder:inst8|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8      ; work         ;
-;          |FullAdder:inst9|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9      ; work         ;
-;       |SumSub6bit:inst|     ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|SumSub6bit:inst                 ; work         ;
-;          |FullAdder:inst1|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1 ; work         ;
-;          |FullAdder:inst2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2 ; work         ;
-;          |FullAdder:inst3|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3 ; work         ;
-;          |FullAdder:inst|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst  ; work         ;
-;          |Selector:inst16|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst16 ; work         ;
-;       |mux_summult:inst9|   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcTest|ula_full:inst|mux_summult:inst9               ; work         ;
+; |calcFPGA                   ; 284 (4)           ; 51 (0)       ; 0           ; 0            ; 0       ; 0         ; 50   ; 0            ; |calcFPGA                                               ; work         ;
+;    |Keyboard:inst1|         ; 3 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|Keyboard:inst1                                ; work         ;
+;       |RingCounter:inst|    ; 3 (3)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|Keyboard:inst1|RingCounter:inst               ; work         ;
+;    |checkOpNum:inst8|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|checkOpNum:inst8                              ; work         ;
+;    |decFromKey:inst6|       ; 26 (26)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|decFromKey:inst6                              ; work         ;
+;    |decodOp:inst10|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|decodOp:inst10                                ; work         ;
+;    |decoder7:inst23|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|decoder7:inst23                               ; work         ;
+;    |decoder7:inst24|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|decoder7:inst24                               ; work         ;
+;    |decoderoutputA:inst25|  ; 120 (120)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|decoderoutputA:inst25                         ; work         ;
+;    |freqdiv:inst28|         ; 50 (50)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|freqdiv:inst28                                ; work         ;
+;    |normReg:inst12|         ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|normReg:inst12                                ; work         ;
+;    |normReg:inst21|         ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|normReg:inst21                                ; work         ;
+;    |reg:inst2|              ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|reg:inst2                                     ; work         ;
+;    |reg:inst3|              ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|reg:inst3                                     ; work         ;
+;    |reg:inst4|              ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|reg:inst4                                     ; work         ;
+;    |regMUX:inst22|          ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|regMUX:inst22                                 ; work         ;
+;    |statesmach:inst7|       ; 2 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|statesmach:inst7                              ; work         ;
+;       |statesrom:inst|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|statesmach:inst7|statesrom:inst               ; work         ;
+;    |ula_full:inst|          ; 45 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst                                 ; work         ;
+;       |Mult:inst6|          ; 28 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|Mult:inst6                      ; work         ;
+;          |FullAdder:inst12| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst12     ; work         ;
+;          |FullAdder:inst13| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst13     ; work         ;
+;          |FullAdder:inst14| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst14     ; work         ;
+;          |FullAdder:inst2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst2      ; work         ;
+;          |FullAdder:inst3|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst3      ; work         ;
+;          |FullAdder:inst7|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst7      ; work         ;
+;          |FullAdder:inst8|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst8      ; work         ;
+;          |FullAdder:inst9|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst9      ; work         ;
+;       |SumSub6bit:inst|     ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|SumSub6bit:inst                 ; work         ;
+;          |FullAdder:inst1|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|SumSub6bit:inst|FullAdder:inst1 ; work         ;
+;          |FullAdder:inst2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|SumSub6bit:inst|FullAdder:inst2 ; work         ;
+;          |FullAdder:inst3|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|SumSub6bit:inst|FullAdder:inst3 ; work         ;
+;          |FullAdder:inst|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|SumSub6bit:inst|FullAdder:inst  ; work         ;
+;          |Selector:inst16|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|SumSub6bit:inst|Selector:inst16 ; work         ;
+;       |mux_summult:inst9|   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calcFPGA|ula_full:inst|mux_summult:inst9               ; work         ;
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -254,10 +265,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 14    ;
+; Total registers                              ; 51    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 12    ;
+; Number of registers using Asynchronous Clear ; 13    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -269,19 +280,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
+; Keyboard:inst1|RingCounter:inst|inst    ; 11      ;
+; reg:inst3|inst3                         ; 17      ;
+; reg:inst3|inst4                         ; 17      ;
+; reg:inst3|inst                          ; 21      ;
+; reg:inst2|inst3                         ; 16      ;
+; reg:inst2|inst4                         ; 17      ;
+; reg:inst2|inst                          ; 20      ;
+; reg:inst3|inst5                         ; 9       ;
+; reg:inst2|inst5                         ; 9       ;
 ; reg:inst4|inst5                         ; 3       ;
 ; reg:inst4|inst                          ; 3       ;
 ; reg:inst4|inst3                         ; 3       ;
 ; reg:inst4|inst4                         ; 3       ;
-; reg:inst2|inst                          ; 15      ;
-; reg:inst2|inst3                         ; 10      ;
-; reg:inst2|inst4                         ; 12      ;
-; reg:inst2|inst5                         ; 3       ;
-; reg:inst3|inst                          ; 14      ;
-; reg:inst3|inst3                         ; 10      ;
-; reg:inst3|inst4                         ; 10      ;
-; reg:inst3|inst5                         ; 3       ;
-; Total number of inverted registers = 12 ;         ;
+; Total number of inverted registers = 13 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -290,7 +302,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |calcTest|regMUX:inst22|Mux0 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |calcFPGA|regMUX:inst22|Mux0 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 
 
@@ -299,7 +311,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -309,18 +321,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun 28 11:41:02 2018
+    Info: Processing started: Thu Jun 28 16:19:49 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ula -c ula
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file FullAdder.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder.bdf
     Info (12023): Found entity 1: FullAdder
-Info (12021): Found 1 design units, including 1 entities, in source file Mult.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file mult.bdf
     Info (12023): Found entity 1: Mult
-Info (12021): Found 1 design units, including 1 entities, in source file Selector.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file selector.bdf
     Info (12023): Found entity 1: Selector
-Info (12021): Found 1 design units, including 1 entities, in source file SumSub.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file sumsub.bdf
     Info (12023): Found entity 1: SumSub
-Info (12021): Found 1 design units, including 1 entities, in source file SumSub6bit.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file sumsub6bit.bdf
     Info (12023): Found entity 1: SumSub6bit
 Info (12021): Found 1 design units, including 1 entities, in source file ula_full.bdf
     Info (12023): Found entity 1: ula_full
@@ -336,47 +348,50 @@ Info (12021): Found 1 design units, including 1 entities, in source file reg.bdf
     Info (12023): Found entity 1: reg
 Info (12021): Found 1 design units, including 1 entities, in source file decoder7.v
     Info (12023): Found entity 1: decoder7
-Info (12021): Found 1 design units, including 1 entities, in source file decoderoutputA.v
+Info (12021): Found 1 design units, including 1 entities, in source file decoderoutputa.v
     Info (12023): Found entity 1: decoderoutputA
 Info (12021): Found 1 design units, including 1 entities, in source file calc.bdf
     Info (12023): Found entity 1: calc
 Info (12021): Found 1 design units, including 1 entities, in source file statesrom.v
     Info (12023): Found entity 1: statesrom
-Info (12021): Found 1 design units, including 1 entities, in source file decFromKey.v
+Info (12021): Found 1 design units, including 1 entities, in source file decfromkey.v
     Info (12023): Found entity 1: decFromKey
 Info (12021): Found 1 design units, including 1 entities, in source file test_decfromkey.bdf
     Info (12023): Found entity 1: test_decfromkey
 Info (12021): Found 1 design units, including 1 entities, in source file test_decfromula.bdf
     Info (12023): Found entity 1: test_decfromula
-Info (12021): Found 1 design units, including 1 entities, in source file checkOpNum.v
+Info (12021): Found 1 design units, including 1 entities, in source file checkopnum.v
     Info (12023): Found entity 1: checkOpNum
-Info (12021): Found 1 design units, including 1 entities, in source file /home/jhosoume/unb/circuitos_digitais/pre-projeto/keyboard/Keyboard.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /pre-projeto/keyboard/keyboard.bdf
     Info (12023): Found entity 1: Keyboard
-Info (12021): Found 1 design units, including 1 entities, in source file /home/jhosoume/unb/circuitos_digitais/pre-projeto/keyboard/RingCounter.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /pre-projeto/keyboard/ringcounter.bdf
     Info (12023): Found entity 1: RingCounter
-Info (12021): Found 1 design units, including 1 entities, in source file /home/jhosoume/unb/circuitos_digitais/pre-projeto/keyboard/test.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /pre-projeto/keyboard/test.bdf
     Info (12023): Found entity 1: test
 Info (12021): Found 1 design units, including 1 entities, in source file ula.bdf
     Info (12023): Found entity 1: ula
 Info (12021): Found 1 design units, including 1 entities, in source file statesmach.bdf
     Info (12023): Found entity 1: statesmach
-Info (12021): Found 1 design units, including 1 entities, in source file regMUX.v
+Info (12021): Found 1 design units, including 1 entities, in source file regmux.v
     Info (12023): Found entity 1: regMUX
-Info (12021): Found 1 design units, including 1 entities, in source file decodOp.v
+Info (12021): Found 1 design units, including 1 entities, in source file decodop.v
     Info (12023): Found entity 1: decodOp
-Info (12021): Found 1 design units, including 1 entities, in source file calcTest.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file calctest.bdf
     Info (12023): Found entity 1: calcTest
-Info (12021): Found 1 design units, including 1 entities, in source file normReg.v
+Info (12021): Found 1 design units, including 1 entities, in source file normreg.v
     Info (12023): Found entity 1: normReg
-Info (12127): Elaborating entity "calcTest" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file calcfpga.bdf
+    Info (12023): Found entity 1: calcFPGA
+Warning (12090): Entity "freqdiv" obtained from "freqdiv.v" instead of from Quartus II megafunction library
+Info (12021): Found 1 design units, including 1 entities, in source file freqdiv.v
+    Info (12023): Found entity 1: freqdiv
+Info (12127): Elaborating entity "calcFPGA" for the top level hierarchy
 Warning (275011): Block or symbol "normReg" of instance "inst12" overlaps another block or symbol
-Info (12128): Elaborating entity "decFromKey" for hierarchy "decFromKey:inst6"
-Info (12128): Elaborating entity "decodOp" for hierarchy "decodOp:inst10"
-Info (12128): Elaborating entity "reg" for hierarchy "reg:inst4"
-Info (12128): Elaborating entity "checkOpNum" for hierarchy "checkOpNum:inst8"
-Info (12128): Elaborating entity "regMUX" for hierarchy "regMUX:inst22"
-Info (12128): Elaborating entity "statesmach" for hierarchy "statesmach:inst7"
-Info (12128): Elaborating entity "statesrom" for hierarchy "statesmach:inst7|statesrom:inst"
+Warning (275008): Primitive "AND2" of instance "inst11" not used
+Warning (275008): Primitive "OR2" of instance "inst5" not used
+Info (12128): Elaborating entity "Keyboard" for hierarchy "Keyboard:inst1"
+Info (12128): Elaborating entity "RingCounter" for hierarchy "Keyboard:inst1|RingCounter:inst"
+Info (12128): Elaborating entity "decoderoutputA" for hierarchy "decoderoutputA:inst25"
 Info (12128): Elaborating entity "ula_full" for hierarchy "ula_full:inst"
 Info (12128): Elaborating entity "mux_summult" for hierarchy "ula_full:inst|mux_summult:inst9"
 Info (12128): Elaborating entity "6to8bit" for hierarchy "ula_full:inst|6to8bit:inst8"
@@ -387,26 +402,35 @@ Info (12128): Elaborating entity "Selector" for hierarchy "ula_full:inst|SumSub6
 Info (12128): Elaborating entity "Mult" for hierarchy "ula_full:inst|Mult:inst6"
 Warning (275002): No superset bus at connection
 Warning (275002): No superset bus at connection
+Info (12128): Elaborating entity "decodOp" for hierarchy "decodOp:inst10"
+Info (12128): Elaborating entity "reg" for hierarchy "reg:inst4"
+Info (12128): Elaborating entity "statesmach" for hierarchy "statesmach:inst7"
+Info (12128): Elaborating entity "statesrom" for hierarchy "statesmach:inst7|statesrom:inst"
+Info (12128): Elaborating entity "freqdiv" for hierarchy "freqdiv:inst28"
+Info (12128): Elaborating entity "checkOpNum" for hierarchy "checkOpNum:inst8"
+Info (12128): Elaborating entity "regMUX" for hierarchy "regMUX:inst22"
+Info (12128): Elaborating entity "decFromKey" for hierarchy "decFromKey:inst6"
 Info (12128): Elaborating entity "normReg" for hierarchy "normReg:inst12"
+Info (12128): Elaborating entity "decoder7" for hierarchy "decoder7:inst24"
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Info (144001): Generated suppressed messages file /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/output_files/ula.map.smsg
+Info (144001): Generated suppressed messages file E:/pre-projeto/ula/output_files/ula.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 142 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 108 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 602 megabytes
-    Info: Processing ended: Thu Jun 28 11:41:04 2018
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info (21057): Implemented 348 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 41 output pins
+    Info (21061): Implemented 298 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4623 megabytes
+    Info: Processing ended: Thu Jun 28 16:21:03 2018
+    Info: Elapsed time: 00:01:14
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/jhosoume/unb/circuitos_digitais/pre-projeto/ula/output_files/ula.map.smsg.
+The suppressed messages can be found in E:/pre-projeto/ula/output_files/ula.map.smsg.
 
 

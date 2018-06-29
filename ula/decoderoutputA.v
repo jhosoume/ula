@@ -1,4 +1,4 @@
-/* Decodificador  bin�rio para display 7 segmentos */
+/* Decodificador  binï¿½rio para display 7 segmentos */
 
 module decoderoutputA (In, OutA, OutB);
 	input [7:0] In;
@@ -143,45 +143,45 @@ module decoderoutputA (In, OutA, OutB);
 			/*30 a 39*/
 			8'b00011110 : begin
 				OutA = ~7'b0111111;
-				OutB = ~7'b1011011;
+				OutB = ~7'b1001111;
 			end	
 			8'b00011111 : begin
 				OutA = ~7'b0000110;
-				OutB = ~7'b1011011;
+				OutB = ~7'b1001111;
 			end
 			8'b00100000 : begin
 				OutA = ~7'b1011011;
-				OutB = ~7'b0000110;
+				OutB = ~7'b1001111;
 			end
 			8'b00100001 : begin
 				OutA = ~7'b1001111;
-				OutB = ~7'b1011011;
+				OutB = ~7'b1001111;
 			end
 			
 			8'b00100010 : begin
 				OutA = ~7'b1100110;
-				OutB = ~7'b1011011;
+				OutB = ~7'b1001111;
 			end	
 			8'b00100011 : begin
 				OutA = ~7'b1101101;
-				OutB = ~7'b1011011;
+				OutB = ~7'b1001111;
 			end
 			8'b00100100 : begin
 				OutA = ~7'b1111101;
-				OutB = ~7'b1011011;
+				OutB = ~7'b1001111;
 			end
 			8'b00100101 : begin
 				OutA = ~7'b0000111;
-				OutB = ~7'b1011011;
+				OutB = ~7'b1001111;
 			end
 			
 			8'b00100110 : begin
 				OutA = ~7'b1111111;
-				OutB = ~7'b1011011;
+				OutB = ~7'b1001111;
 			end
 			8'b00100111 : begin
 				OutA = ~7'b1101111;
-				OutB = ~7'b1011011;
+				OutB = ~7'b1001111;
 			end
 			
 			/*40 a 49*/
@@ -363,87 +363,87 @@ module decoderoutputA (In, OutA, OutB);
 			/*80 a 89*/
 			8'b01010000 : begin
 				OutA = ~7'b0111111;
-				OutB = ~7'b1111101;
+				OutB = ~7'b1111111;
 			end	
 			8'b01010001 : begin
 				OutA = ~7'b0000110;
-				OutB = ~7'b1111101;
+				OutB = ~7'b1111111;
 			end
 			8'b01010010 : begin
 				OutA = ~7'b1011011;
-				OutB = ~7'b1111101;
+				OutB = ~7'b1111111;
 			end
 			8'b01010011 : begin
 				OutA = ~7'b1001111;
-				OutB = ~7'b1111101;
+				OutB = ~7'b1111111;
 			end
 			
 			8'b01010100 : begin
 				OutA = ~7'b1100110;
-				OutB = ~7'b1111101;
+				OutB = ~7'b1111111;
 			end	
 			8'b01010101 : begin
 				OutA = ~7'b1101101;
-				OutB = ~7'b1111101;
+				OutB = ~7'b1111111;
 			end
 			8'b01010110 : begin
 				OutA = ~7'b1111101;
-				OutB = ~7'b1111101;
+				OutB = ~7'b1111111;
 			end
 			8'b01010111 : begin
 				OutA = ~7'b0000111;
-				OutB = ~7'b1111101;
+				OutB = ~7'b1111111;
 			end
 			
 			8'b01011000 : begin
 				OutA = ~7'b1111111;
-				OutB = ~7'b1111101;
+				OutB = ~7'b1111111;
 			end
 			8'b01011001 : begin
 				OutA = ~7'b1101111;
-				OutB = ~7'b1111101;
+				OutB = ~7'b1111111;
 			end
 	
 			/*-1 a -9 */
 			8'b11111111 : begin
-				OutA = ~7'b0111111;
+				OutA = ~7'b0000110;
 				OutB = ~7'b1000000;
 			end	
 			8'b11111110 : begin
-				OutA = ~7'b0000110;
-				OutB = ~7'b1000000;
-			end
-			8'b11111101 : begin
 				OutA = ~7'b1011011;
 				OutB = ~7'b1000000;
 			end
-			8'b11111100 : begin
+			8'b11111101 : begin
 				OutA = ~7'b1001111;
+				OutB = ~7'b1000000;
+			end
+			8'b11111100 : begin
+				OutA = ~7'b1100110;
 				OutB = ~7'b1000000;
 			end
 			
 			8'b11111011 : begin
-				OutA = ~7'b1100110;
+				OutA = ~7'b1101101;
 				OutB = ~7'b1000000;
 			end	
 			8'b11111010 : begin
-				OutA = ~7'b1101101;
-				OutB = ~7'b1000000;
-			end
-			8'b11111001 : begin
 				OutA = ~7'b1111101;
 				OutB = ~7'b1000000;
 			end
-			8'b11111000 : begin
+			8'b11111001 : begin
 				OutA = ~7'b0000111;
+				OutB = ~7'b1000000;
+			end
+			8'b11111000 : begin
+				OutA = ~7'b1111111;
 				OutB = ~7'b1000000;
 			end
 			
 			8'b11110111 : begin
-				OutA = ~7'b1111111;
+				OutA = ~7'b1101111;
 				OutB = ~7'b1000000;
 			end
-
+			
 			
 			default : begin 
 				OutA = ~7'b0000000;

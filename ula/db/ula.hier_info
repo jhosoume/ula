@@ -1,44 +1,90 @@
-|calcTest
-inBinario[0] <= decFromKey:inst6.Out[0]
-inBinario[1] <= decFromKey:inst6.Out[1]
-inBinario[2] <= decFromKey:inst6.Out[2]
-inBinario[3] <= decFromKey:inst6.Out[3]
-num[0] => decFromKey:inst6.In[0]
-num[1] => decFromKey:inst6.In[1]
-num[2] => decFromKey:inst6.In[2]
-num[3] => decFromKey:inst6.In[3]
-num[4] => decFromKey:inst6.In[4]
-num[5] => decFromKey:inst6.In[5]
-num[6] => decFromKey:inst6.In[6]
-num[7] => decFromKey:inst6.In[7]
-operation[0] <= decodOp:inst10.sumsub
-operation[1] <= decodOp:inst10.op
-start => inst5.IN0
-state[0] <= statesmach:inst7.state[0]
-state[1] <= statesmach:inst7.state[1]
-clock => statesmach:inst7.clock
-clock => inst14.IN1
-clock => inst16.IN1
-clock => inst15.IN1
-regNumA[0] <= reg:inst2.r[0]
-regNumA[1] <= reg:inst2.r[1]
-regNumA[2] <= reg:inst2.r[2]
-regNumA[3] <= reg:inst2.r[3]
-regNumB[0] <= reg:inst3.r[0]
-regNumB[1] <= reg:inst3.r[1]
-regNumB[2] <= reg:inst3.r[2]
-regNumB[3] <= reg:inst3.r[3]
-result[0] <= ula_full:inst.RESULT[0]
-result[1] <= ula_full:inst.RESULT[1]
-result[2] <= ula_full:inst.RESULT[2]
-result[3] <= ula_full:inst.RESULT[3]
-result[4] <= ula_full:inst.RESULT[4]
-result[5] <= ula_full:inst.RESULT[5]
-result[6] <= ula_full:inst.RESULT[6]
-result[7] <= ula_full:inst.RESULT[7]
+|calcFPGA
+GPIO_0[0] <= Keyboard:inst1.KEYINPUT[0]
+GPIO_0[1] <= Keyboard:inst1.KEYINPUT[1]
+GPIO_0[2] <= Keyboard:inst1.KEYINPUT[2]
+GPIO_0[3] <= Keyboard:inst1.KEYINPUT[3]
+SW[15] => Keyboard:inst1.CLK
+SW[16] => reg:inst4.CLEAR
+SW[16] => reg:inst2.CLEAR
+SW[16] => reg:inst3.CLEAR
+SW[17] => inst9.IN1
+GPIO_1[0] => Keyboard:inst1.KEYOUTPUT[3]
+GPIO_1[1] => Keyboard:inst1.KEYOUTPUT[2]
+GPIO_1[2] => Keyboard:inst1.KEYOUTPUT[1]
+GPIO_1[3] => Keyboard:inst1.KEYOUTPUT[0]
+HEX4[0] <= decoderoutputA:inst25.OutA[0]
+HEX4[1] <= decoderoutputA:inst25.OutA[1]
+HEX4[2] <= decoderoutputA:inst25.OutA[2]
+HEX4[3] <= decoderoutputA:inst25.OutA[3]
+HEX4[4] <= decoderoutputA:inst25.OutA[4]
+HEX4[5] <= decoderoutputA:inst25.OutA[5]
+HEX4[6] <= decoderoutputA:inst25.OutA[6]
+CLOCK_50 => freqdiv:inst28.clkin
+KEY[0] => inst26.IN1
+HEX5[0] <= decoderoutputA:inst25.OutB[0]
+HEX5[1] <= decoderoutputA:inst25.OutB[1]
+HEX5[2] <= decoderoutputA:inst25.OutB[2]
+HEX5[3] <= decoderoutputA:inst25.OutB[3]
+HEX5[4] <= decoderoutputA:inst25.OutB[4]
+HEX5[5] <= decoderoutputA:inst25.OutB[5]
+HEX5[6] <= decoderoutputA:inst25.OutB[6]
+HEX6[0] <= decoder7:inst24.Out[0]
+HEX6[1] <= decoder7:inst24.Out[1]
+HEX6[2] <= decoder7:inst24.Out[2]
+HEX6[3] <= decoder7:inst24.Out[3]
+HEX6[4] <= decoder7:inst24.Out[4]
+HEX6[5] <= decoder7:inst24.Out[5]
+HEX6[6] <= decoder7:inst24.Out[6]
+HEX7[0] <= decoder7:inst23.Out[0]
+HEX7[1] <= decoder7:inst23.Out[1]
+HEX7[2] <= decoder7:inst23.Out[2]
+HEX7[3] <= decoder7:inst23.Out[3]
+HEX7[4] <= decoder7:inst23.Out[4]
+HEX7[5] <= decoder7:inst23.Out[5]
+HEX7[6] <= decoder7:inst23.Out[6]
+LEDR[0] <= operation[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= operation[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= decFromKey:inst6.Out[0]
+LEDR[5] <= decFromKey:inst6.Out[1]
+LEDR[6] <= decFromKey:inst6.Out[2]
+LEDR[7] <= decFromKey:inst6.Out[3]
+LEDR[8] <= freqdiv:inst28.clkout
 
 
-|calcTest|decFromKey:inst6
+|calcFPGA|Keyboard:inst1
+KEYINPUT[0] <= RingCounter:inst.Q0
+KEYINPUT[1] <= RingCounter:inst.Q1
+KEYINPUT[2] <= RingCounter:inst.Q2
+KEYINPUT[3] <= RingCounter:inst.Q3
+OUTPUT[0] <= KEYOUTPUT[0].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= KEYOUTPUT[1].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= KEYOUTPUT[2].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= KEYOUTPUT[3].DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[4] <= RingCounter:inst.Q0
+OUTPUT[5] <= RingCounter:inst.Q1
+OUTPUT[6] <= RingCounter:inst.Q2
+OUTPUT[7] <= RingCounter:inst.Q3
+KEYOUTPUT[0] => OUTPUT[0].DATAIN
+KEYOUTPUT[1] => OUTPUT[1].DATAIN
+KEYOUTPUT[2] => OUTPUT[2].DATAIN
+KEYOUTPUT[3] => OUTPUT[3].DATAIN
+CLK => RingCounter:inst.CLK
+
+
+|calcFPGA|Keyboard:inst1|RingCounter:inst
+Q3 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+CLK => inst3.CLK
+CLK => inst2.CLK
+CLK => inst1.CLK
+Q2 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Q1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Q0 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcFPGA|decoderoutputA:inst25
 In[0] => Decoder0.IN7
 In[1] => Decoder0.IN6
 In[2] => Decoder0.IN5
@@ -47,128 +93,23 @@ In[4] => Decoder0.IN3
 In[5] => Decoder0.IN2
 In[6] => Decoder0.IN1
 In[7] => Decoder0.IN0
-Out[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-Out[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-Out[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-Out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+OutA[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+OutA[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+OutA[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+OutA[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+OutA[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+OutA[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+OutA[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+OutB[0] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
+OutB[1] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
+OutB[2] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+OutB[3] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+OutB[4] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+OutB[5] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+OutB[6] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|decodOp:inst10
-opKey[0] => Decoder0.IN3
-opKey[1] => Decoder0.IN2
-opKey[2] => Decoder0.IN1
-opKey[3] => Decoder0.IN0
-sumsub <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-op <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calcTest|reg:inst4
-r[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-r[1] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-r[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-r[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
-clock => inst.CLK
-clock => inst5.CLK
-clock => inst3.CLK
-clock => inst4.CLK
-input[0] => inst5.DATAIN
-input[1] => inst4.DATAIN
-input[2] => inst3.DATAIN
-input[3] => inst.DATAIN
-CLEAR => inst8.IN0
-
-
-|calcTest|checkOpNum:inst8
-In[0] => Decoder0.IN3
-In[1] => Decoder0.IN2
-In[2] => Decoder0.IN1
-In[3] => Decoder0.IN0
-Out[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-Out[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calcTest|regMUX:inst22
-state[0] => Mux0.IN1
-state[0] => Mux1.IN1
-state[0] => Mux2.IN1
-state[0] => Mux3.IN1
-state[1] => Mux0.IN0
-state[1] => Mux1.IN0
-state[1] => Mux2.IN0
-state[1] => Mux3.IN0
-regV1[0] => Mux3.IN2
-regV1[1] => Mux2.IN2
-regV1[2] => Mux1.IN2
-regV1[3] => Mux0.IN2
-regV2[0] => Mux3.IN3
-regV2[1] => Mux2.IN3
-regV2[2] => Mux1.IN3
-regV2[3] => Mux0.IN3
-regOP[0] => Mux3.IN4
-regOP[1] => Mux2.IN4
-regOP[2] => Mux1.IN4
-regOP[3] => Mux0.IN4
-keyboard[0] => Mux3.IN5
-keyboard[1] => Mux2.IN5
-keyboard[2] => Mux1.IN5
-keyboard[3] => Mux0.IN5
-Out[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-Out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-Out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-Out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calcTest|reg:inst2
-r[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-r[1] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-r[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-r[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
-clock => inst.CLK
-clock => inst5.CLK
-clock => inst3.CLK
-clock => inst4.CLK
-input[0] => inst5.DATAIN
-input[1] => inst4.DATAIN
-input[2] => inst3.DATAIN
-input[3] => inst.DATAIN
-CLEAR => inst8.IN0
-
-
-|calcTest|statesmach:inst7
-state[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-state[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-clock => inst3.CLK
-clock => inst2.CLK
-input[0] => statesrom:inst.In[0]
-input[1] => statesrom:inst.In[1]
-
-
-|calcTest|statesmach:inst7|statesrom:inst
-In[0] => Decoder0.IN3
-In[1] => Decoder0.IN2
-In[2] => Decoder0.IN1
-In[3] => Decoder0.IN0
-Out[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-Out[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calcTest|reg:inst3
-r[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-r[1] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-r[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-r[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
-clock => inst.CLK
-clock => inst5.CLK
-clock => inst3.CLK
-clock => inst4.CLK
-input[0] => inst5.DATAIN
-input[1] => inst4.DATAIN
-input[2] => inst3.DATAIN
-input[3] => inst.DATAIN
-CLEAR => inst8.IN0
-
-
-|calcTest|ula_full:inst
+|calcFPGA|ula_full:inst
 RESULT[0] <= mux_summult:inst9.S[0]
 RESULT[1] <= mux_summult:inst9.S[1]
 RESULT[2] <= mux_summult:inst9.S[2]
@@ -197,7 +138,7 @@ B[3] => SumSub6bit:inst.B[3]
 B[3] => Mult:inst6.B[3]
 
 
-|calcTest|ula_full:inst|mux_summult:inst9
+|calcFPGA|ula_full:inst|mux_summult:inst9
 S[0] <= inst3[0].DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= inst3[1].DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= inst3[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -233,7 +174,7 @@ A[6] => inst[6].IN0
 A[7] => inst[7].IN0
 
 
-|calcTest|ula_full:inst|6to8bit:inst8
+|calcFPGA|ula_full:inst|6to8bit:inst8
 S[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -252,7 +193,7 @@ A[5] => S[6].DATAIN
 A[5] => S[5].DATAIN
 
 
-|calcTest|ula_full:inst|SumSub6bit:inst
+|calcFPGA|ula_full:inst|SumSub6bit:inst
 S[0] <= FullAdder:inst3.S
 S[1] <= FullAdder:inst2.S
 S[2] <= FullAdder:inst1.S
@@ -280,7 +221,7 @@ A[2] => FullAdder:inst1.A
 A[3] => FullAdder:inst.A
 
 
-|calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst
+|calcFPGA|ula_full:inst|SumSub6bit:inst|FullAdder:inst
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -293,7 +234,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst10
+|calcFPGA|ula_full:inst|SumSub6bit:inst|Selector:inst10
 OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 C => inst1.IN0
 SEL => inst1.IN1
@@ -301,7 +242,7 @@ SEL => inst3.IN0
 N => inst.IN0
 
 
-|calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst1
+|calcFPGA|ula_full:inst|SumSub6bit:inst|FullAdder:inst1
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -314,7 +255,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst15
+|calcFPGA|ula_full:inst|SumSub6bit:inst|Selector:inst15
 OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 C => inst1.IN0
 SEL => inst1.IN1
@@ -322,7 +263,7 @@ SEL => inst3.IN0
 N => inst.IN0
 
 
-|calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst2
+|calcFPGA|ula_full:inst|SumSub6bit:inst|FullAdder:inst2
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -335,7 +276,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst16
+|calcFPGA|ula_full:inst|SumSub6bit:inst|Selector:inst16
 OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 C => inst1.IN0
 SEL => inst1.IN1
@@ -343,7 +284,7 @@ SEL => inst3.IN0
 N => inst.IN0
 
 
-|calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst3
+|calcFPGA|ula_full:inst|SumSub6bit:inst|FullAdder:inst3
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -356,7 +297,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst17
+|calcFPGA|ula_full:inst|SumSub6bit:inst|Selector:inst17
 OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 C => inst1.IN0
 SEL => inst1.IN1
@@ -364,7 +305,7 @@ SEL => inst3.IN0
 N => inst.IN0
 
 
-|calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst22
+|calcFPGA|ula_full:inst|SumSub6bit:inst|FullAdder:inst22
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -377,7 +318,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst18
+|calcFPGA|ula_full:inst|SumSub6bit:inst|Selector:inst18
 OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 C => inst1.IN0
 SEL => inst1.IN1
@@ -385,7 +326,7 @@ SEL => inst3.IN0
 N => inst.IN0
 
 
-|calcTest|ula_full:inst|SumSub6bit:inst|FullAdder:inst23
+|calcFPGA|ula_full:inst|SumSub6bit:inst|FullAdder:inst23
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -398,7 +339,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|SumSub6bit:inst|Selector:inst19
+|calcFPGA|ula_full:inst|SumSub6bit:inst|Selector:inst19
 OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 C => inst1.IN0
 SEL => inst1.IN1
@@ -406,7 +347,7 @@ SEL => inst3.IN0
 N => inst.IN0
 
 
-|calcTest|ula_full:inst|Mult:inst6
+|calcFPGA|ula_full:inst|Mult:inst6
 M[0] <= inst25.DB_MAX_OUTPUT_PORT_TYPE
 M[1] <= FullAdder:inst.S
 M[2] <= FullAdder:inst6.S
@@ -449,7 +390,7 @@ A[3] => inst32.IN1
 A[3] => inst31.IN1
 
 
-|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst14
+|calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst14
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -462,7 +403,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst9
+|calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst9
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -475,7 +416,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst4
+|calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst4
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -488,7 +429,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst3
+|calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst3
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -501,7 +442,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst2
+|calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst2
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -514,7 +455,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst
+|calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -527,7 +468,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst8
+|calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst8
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -540,7 +481,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst7
+|calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst7
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -553,7 +494,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst6
+|calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst6
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -566,7 +507,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst13
+|calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst13
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -579,7 +520,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst12
+|calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst12
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -592,7 +533,7 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|ula_full:inst|Mult:inst6|FullAdder:inst11
+|calcFPGA|ula_full:inst|Mult:inst6|FullAdder:inst11
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst4.IN0
@@ -605,7 +546,174 @@ Cin => inst3.IN1
 Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|normReg:inst12
+|calcFPGA|decodOp:inst10
+opKey[0] => Decoder0.IN3
+opKey[1] => Decoder0.IN2
+opKey[2] => Decoder0.IN1
+opKey[3] => Decoder0.IN0
+sumsub <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+op <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcFPGA|reg:inst4
+r[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+r[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst.CLK
+clock => inst5.CLK
+clock => inst3.CLK
+clock => inst4.CLK
+input[0] => inst5.DATAIN
+input[1] => inst4.DATAIN
+input[2] => inst3.DATAIN
+input[3] => inst.DATAIN
+CLEAR => inst8.IN0
+
+
+|calcFPGA|statesmach:inst7
+state[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst3.CLK
+clock => inst2.CLK
+input[0] => statesrom:inst.In[0]
+input[1] => statesrom:inst.In[1]
+
+
+|calcFPGA|statesmach:inst7|statesrom:inst
+In[0] => Decoder0.IN3
+In[1] => Decoder0.IN2
+In[2] => Decoder0.IN1
+In[3] => Decoder0.IN0
+Out[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcFPGA|freqdiv:inst28
+clkin => clkout~reg0.CLK
+clkin => cont[0].CLK
+clkin => cont[1].CLK
+clkin => cont[2].CLK
+clkin => cont[3].CLK
+clkin => cont[4].CLK
+clkin => cont[5].CLK
+clkin => cont[6].CLK
+clkin => cont[7].CLK
+clkin => cont[8].CLK
+clkin => cont[9].CLK
+clkin => cont[10].CLK
+clkin => cont[11].CLK
+clkin => cont[12].CLK
+clkin => cont[13].CLK
+clkin => cont[14].CLK
+clkin => cont[15].CLK
+clkin => cont[16].CLK
+clkin => cont[17].CLK
+clkin => cont[18].CLK
+clkin => cont[19].CLK
+clkin => cont[20].CLK
+clkin => cont[21].CLK
+clkin => cont[22].CLK
+clkin => cont[23].CLK
+clkin => cont[24].CLK
+clkin => cont[25].CLK
+clkin => cont[26].CLK
+clkin => cont[27].CLK
+clkin => cont[28].CLK
+clkin => cont[29].CLK
+clkin => cont[30].CLK
+clkin => cont[31].CLK
+clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcFPGA|checkOpNum:inst8
+In[0] => Decoder0.IN3
+In[1] => Decoder0.IN2
+In[2] => Decoder0.IN1
+In[3] => Decoder0.IN0
+Out[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcFPGA|regMUX:inst22
+state[0] => Mux0.IN1
+state[0] => Mux1.IN1
+state[0] => Mux2.IN1
+state[0] => Mux3.IN1
+state[1] => Mux0.IN0
+state[1] => Mux1.IN0
+state[1] => Mux2.IN0
+state[1] => Mux3.IN0
+regV1[0] => Mux3.IN2
+regV1[1] => Mux2.IN2
+regV1[2] => Mux1.IN2
+regV1[3] => Mux0.IN2
+regV2[0] => Mux3.IN3
+regV2[1] => Mux2.IN3
+regV2[2] => Mux1.IN3
+regV2[3] => Mux0.IN3
+regOP[0] => Mux3.IN4
+regOP[1] => Mux2.IN4
+regOP[2] => Mux1.IN4
+regOP[3] => Mux0.IN4
+keyboard[0] => Mux3.IN5
+keyboard[1] => Mux2.IN5
+keyboard[2] => Mux1.IN5
+keyboard[3] => Mux0.IN5
+Out[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcFPGA|decFromKey:inst6
+In[0] => Decoder0.IN7
+In[1] => Decoder0.IN6
+In[2] => Decoder0.IN5
+In[3] => Decoder0.IN4
+In[4] => Decoder0.IN3
+In[5] => Decoder0.IN2
+In[6] => Decoder0.IN1
+In[7] => Decoder0.IN0
+Out[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcFPGA|reg:inst2
+r[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+r[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst.CLK
+clock => inst5.CLK
+clock => inst3.CLK
+clock => inst4.CLK
+input[0] => inst5.DATAIN
+input[1] => inst4.DATAIN
+input[2] => inst3.DATAIN
+input[3] => inst.DATAIN
+CLEAR => inst8.IN0
+
+
+|calcFPGA|reg:inst3
+r[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+r[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst.CLK
+clock => inst5.CLK
+clock => inst3.CLK
+clock => inst4.CLK
+input[0] => inst5.DATAIN
+input[1] => inst4.DATAIN
+input[2] => inst3.DATAIN
+input[3] => inst.DATAIN
+CLEAR => inst8.IN0
+
+
+|calcFPGA|normReg:inst12
 In[0] => Decoder3.IN3
 In[1] => Decoder0.IN2
 In[1] => Decoder2.IN1
@@ -623,7 +731,7 @@ Out[2] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
 Out[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calcTest|normReg:inst21
+|calcFPGA|normReg:inst21
 In[0] => Decoder3.IN3
 In[1] => Decoder0.IN2
 In[1] => Decoder2.IN1
@@ -639,5 +747,33 @@ Out[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 Out[1] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
 Out[2] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
 Out[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcFPGA|decoder7:inst24
+In[0] => Decoder0.IN3
+In[1] => Decoder0.IN2
+In[2] => Decoder0.IN1
+In[3] => Decoder0.IN0
+Out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calcFPGA|decoder7:inst23
+In[0] => Decoder0.IN3
+In[1] => Decoder0.IN2
+In[2] => Decoder0.IN1
+In[3] => Decoder0.IN0
+Out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
