@@ -311,6 +311,21 @@ applicable agreement for further details.
 	)
 	(rotate270)
 )
+(symbol
+	(rect 552 208 584 224)
+	(text "VCC" (rect 7 0 28 9)(font "Arial" (font_size 6)))
+	(text "inst1" (rect 3 5 25 15)(font "Arial" )(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 27 18)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 27 18)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
+)
 (connector
 	(pt 320 376)
 	(pt 320 488)
@@ -487,6 +502,54 @@ applicable agreement for further details.
 	(pt 392 552)
 	(pt 392 664)
 )
+(connector
+	(pt 568 424)
+	(pt 464 424)
+)
+(connector
+	(pt 464 424)
+	(pt 464 416)
+)
+(connector
+	(pt 568 536)
+	(pt 464 536)
+)
+(connector
+	(pt 568 224)
+	(pt 568 424)
+)
+(connector
+	(pt 464 536)
+	(pt 464 528)
+)
+(connector
+	(pt 568 648)
+	(pt 464 648)
+)
+(connector
+	(pt 568 424)
+	(pt 568 536)
+)
+(connector
+	(pt 464 648)
+	(pt 464 640)
+)
+(connector
+	(pt 568 760)
+	(pt 464 760)
+)
+(connector
+	(pt 568 536)
+	(pt 568 648)
+)
+(connector
+	(pt 568 648)
+	(pt 568 760)
+)
+(connector
+	(pt 464 760)
+	(pt 464 752)
+)
 (junction (pt 320 488))
 (junction (pt 320 600))
 (junction (pt 320 712))
@@ -499,3 +562,6 @@ applicable agreement for further details.
 (junction (pt 392 328))
 (junction (pt 392 440))
 (junction (pt 392 552))
+(junction (pt 568 424))
+(junction (pt 568 536))
+(junction (pt 568 648))
